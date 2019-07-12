@@ -6,8 +6,6 @@ Repository for the R-package is hosted by Bioconductor and available at: https:/
 
 This is a **beta software** as we are trying to work with the bioinformatics community. Please send us your suggestions (e.g. what do you want Anaquin to do?).
 
-Please email [sequins@garvan.org.au](sequins@garvan.org.au) for any question or issue.
-
 ## Credits
 
 [Kallisto](https://github.com/pachterlab/kallisto) for indexing FASTA files.
