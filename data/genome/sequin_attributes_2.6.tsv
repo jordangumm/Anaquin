@@ -1,0 +1,1027 @@
+NAME	CATEGORY	FEATURE	GENOTYPE	ALLELE FREQUENCY	HUMAN GENOME REGION (hg38)	SPLIT OUTPUT LIBRARY
+S0018_GV_001_A	Common variant	Common indel (var allele)	Homozygous	1.000	chrX:98156064-98157863	split_sequin
+S0019_GV_002_A	Common variant	Common indel (var allele)	Homozygous	1.000	chr5:84325616-84327416	split_sequin
+S0020_GV_003_A	Common variant	Common indel (var allele)	Homozygous	1.000	chr1:160204523-160206320	split_sequin
+S0021_GV_004_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr13:88106880-88108679	split_sequin
+S0022_GV_005_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr4:160612592-160614392	split_sequin
+S0023_GV_006_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr2:85939523-85941319	split_sequin
+S0024_GV_007_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr9:85567690-85569490	split_sequin
+S0025_GV_008_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr9:42926879-42928679	split_sequin
+S0026_GV_009_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr3:160028999-160030799	split_sequin
+S0027_GV_010_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr3:45647081-45648881	split_sequin
+S0028_GV_011_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr2:37661940-37663737	split_sequin
+S0029_GV_012_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr8:72747468-72749267	split_sequin
+S0030_GV_013_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr2:15060769-15062566	split_sequin
+S0031_GV_014_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr8:89180119-89181918	split_sequin
+S0032_GV_015_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr6:159449182-159450982	split_sequin
+S0033_GV_016_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr1:230127980-230129772	split_sequin
+S0034_GV_017_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr1:248001014-248002806	split_sequin
+S0035_GV_018_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr4:134485216-134487016	split_sequin
+S0036_GV_019_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr11:85069187-85070986	split_sequin
+S0037_GV_020_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr11:31666934-31668734	split_sequin
+S0038_GV_021_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr4:34758998-34760798	split_sequin
+S0039_GV_022_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr5:161926288-161928079	split_sequin
+S0040_GV_023_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr3:115436402-115438202	split_sequin
+S0041_GV_024_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr2:155293976-155295772	split_sequin
+S0042_GV_025_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr2:110012875-110014671	split_sequin
+S0043_GV_026_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr13:107674705-107676504	split_sequin
+S0044_GV_027_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr12:38016860-38018659	split_sequin
+S0045_GV_028_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr2:21385385-21387182	split_sequin
+S0046_GV_029_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr4:117273601-117275401	split_sequin
+S0047_GV_030_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr18:37719637-37721437	split_sequin
+S0048_GV_031_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr15:27985747-27987547	split_sequin
+S0049_GV_032_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr5:43534989-43536789	split_sequin
+S0050_GV_033_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr2:141263323-141265119	split_sequin
+S0051_GV_034_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr1:24300010-24301810	split_sequin
+S0052_GV_035_A	Common variant	Common SNV (var allele)	Homozygous	1.000	chr3:189654670-189656469	split_sequin
+S0053_GV_036_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr11:54647446-54649246	split_sequin
+S0054_GV_036_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr11:54647446-54649246	split_sequin
+S0055_GV_037_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr11:132014733-132016528	split_sequin
+S0056_GV_037_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr11:132014733-132016528	split_sequin
+S0057_GV_038_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr1:60004907-60006704	split_sequin
+S0058_GV_038_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr1:60004907-60006704	split_sequin
+S0059_GV_039_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr3:173056215-173058014	split_sequin
+S0060_GV_039_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr3:173056215-173058014	split_sequin
+S0061_GV_040_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr4:167079851-167081651	split_sequin
+S0062_GV_040_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr4:167079851-167081651	split_sequin
+S0063_GV_041_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr5:86491500-86493294	split_sequin
+S0064_GV_041_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr5:86491500-86493294	split_sequin
+S0065_GV_042_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr16:82893829-82895596	split_sequin
+S0066_GV_042_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr16:82893829-82895596	split_sequin
+S0067_GV_043_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr1:58700756-58702556	split_sequin
+S0068_GV_043_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr1:58700756-58702556	split_sequin
+S0069_GV_044_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr7:150555670-150557466	split_sequin
+S0070_GV_044_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr7:150555670-150557466	split_sequin
+S0071_GV_045_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr2:82975953-82977749	split_sequin
+S0072_GV_045_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr2:82975953-82977749	split_sequin
+S0073_GV_046_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr1:206093269-206095069	split_sequin
+S0074_GV_046_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr1:206093269-206095069	split_sequin
+S0075_GV_047_R	Common variant	Common indel (ref allele)	Heterozygous	0.500	chr11:124828376-124830174	split_sequin
+S0076_GV_047_A	Common variant	Common indel (var allele)	Heterozygous	0.500	chr11:124828376-124830174	split_sequin
+S0077_GV_048_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr18:7455196-7456996	split_sequin
+S0078_GV_048_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr18:7455196-7456996	split_sequin
+S0079_GV_049_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr14:50086783-50088583	split_sequin
+S0080_GV_049_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr14:50086783-50088583	split_sequin
+S0081_GV_050_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr15:92823366-92825166	split_sequin
+S0082_GV_050_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr15:92823366-92825166	split_sequin
+S0083_GV_051_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr10:25477692-25479492	split_sequin
+S0084_GV_051_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr10:25477692-25479492	split_sequin
+S0085_GV_052_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr6:89295306-89297106	split_sequin
+S0086_GV_052_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr6:89295306-89297106	split_sequin
+S0087_GV_053_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr6:42684029-42685829	split_sequin
+S0088_GV_053_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr6:42684029-42685829	split_sequin
+S0089_GV_054_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr3:173134249-173136048	split_sequin
+S0090_GV_054_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr3:173134249-173136048	split_sequin
+S0091_GV_055_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr7:113041608-113043404	split_sequin
+S0092_GV_055_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr7:113041608-113043404	split_sequin
+S0093_GV_056_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr7:79104468-79106268	split_sequin
+S0094_GV_056_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr7:79104468-79106268	split_sequin
+S0095_GV_057_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr7:104662655-104664451	split_sequin
+S0096_GV_057_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr7:104662655-104664451	split_sequin
+S0097_GV_058_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr4:145379597-145381397	split_sequin
+S0098_GV_058_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr4:145379597-145381397	split_sequin
+S0099_GV_059_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr12:107379196-107380995	split_sequin
+S0100_GV_059_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr12:107379196-107380995	split_sequin
+S0101_GV_060_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr5:67587378-67589178	split_sequin
+S0102_GV_060_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr5:67587378-67589178	split_sequin
+S0103_GV_061_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr19:14693568-14695368	split_sequin
+S0104_GV_061_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr19:14693568-14695368	split_sequin
+S0105_GV_062_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr8:138585577-138587376	split_sequin
+S0106_GV_062_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr8:138585577-138587376	split_sequin
+S0107_GV_063_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr14:86092429-86094229	split_sequin
+S0108_GV_063_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr14:86092429-86094229	split_sequin
+S0109_GV_064_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr5:153548140-153549931	split_sequin
+S0110_GV_064_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr5:153548140-153549931	split_sequin
+S0111_GV_065_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr2:42276370-42278167	split_sequin
+S0112_GV_065_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr2:42276370-42278167	split_sequin
+S0113_GV_066_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr2:38057731-38059528	split_sequin
+S0114_GV_066_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr2:38057731-38059528	split_sequin
+S0115_GV_067_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr22:24758278-24760077	split_sequin
+S0116_GV_067_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr22:24758278-24760077	split_sequin
+S0117_GV_068_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr4:21024653-21026453	split_sequin
+S0118_GV_068_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr4:21024653-21026453	split_sequin
+S0119_GV_069_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr1:238550474-238552266	split_sequin
+S0120_GV_069_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr1:238550474-238552266	split_sequin
+S0121_GV_070_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr17:13923217-13925017	split_sequin
+S0122_GV_070_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr17:13923217-13925017	split_sequin
+S0123_GV_071_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr19:50219013-50220813	split_sequin
+S0124_GV_071_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr19:50219013-50220813	split_sequin
+S0125_GV_072_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr5:149420923-149422716	split_sequin
+S0126_GV_072_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr5:149420923-149422716	split_sequin
+S0127_GV_073_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr6:20382518-20384318	split_sequin
+S0128_GV_073_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr6:20382518-20384318	split_sequin
+S0129_GV_074_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr6:102282933-102284733	split_sequin
+S0130_GV_074_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr6:102282933-102284733	split_sequin
+S0131_GV_075_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr10:10022575-10024375	split_sequin
+S0132_GV_075_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr10:10022575-10024375	split_sequin
+S0133_GV_076_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr3:194240703-194242502	split_sequin
+S0134_GV_076_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr3:194240703-194242502	split_sequin
+S0135_GV_077_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr13:109014296-109016095	split_sequin
+S0136_GV_077_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr13:109014296-109016095	split_sequin
+S0137_GV_078_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr15:57593656-57595456	split_sequin
+S0138_GV_078_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr15:57593656-57595456	split_sequin
+S0139_GV_079_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr5:19328461-19330261	split_sequin
+S0140_GV_079_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr5:19328461-19330261	split_sequin
+S0141_GV_080_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr1:105420446-105422243	split_sequin
+S0142_GV_080_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr1:105420446-105422243	split_sequin
+S0143_GV_081_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr1:9061443-9063243	split_sequin
+S0144_GV_081_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr1:9061443-9063243	split_sequin
+S0145_GV_082_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr11:86211252-86213051	split_sequin
+S0146_GV_082_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr11:86211252-86213051	split_sequin
+S0147_GV_083_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr15:93601763-93603563	split_sequin
+S0148_GV_083_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr15:93601763-93603563	split_sequin
+S0149_GV_084_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr7:101691288-101693084	split_sequin
+S0150_GV_084_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr7:101691288-101693084	split_sequin
+S0151_GV_085_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr11:24893230-24895030	split_sequin
+S0152_GV_085_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr11:24893230-24895030	split_sequin
+S0153_GV_086_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr4:31587043-31588843	split_sequin
+S0154_GV_086_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr4:31587043-31588843	split_sequin
+S0155_GV_087_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr16:54486272-54488072	split_sequin
+S0156_GV_087_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr16:54486272-54488072	split_sequin
+S0157_GV_088_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr8:5713630-5715430	split_sequin
+S0158_GV_088_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr8:5713630-5715430	split_sequin
+S0159_GV_089_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr3:7075700-7077500	split_sequin
+S0160_GV_089_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr3:7075700-7077500	split_sequin
+S0161_GV_090_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr9:33424249-33426049	split_sequin
+S0162_GV_090_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr9:33424249-33426049	split_sequin
+S0163_GV_091_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr9:95331156-95332956	split_sequin
+S0164_GV_091_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr9:95331156-95332956	split_sequin
+S0165_GV_092_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr16:89738670-89740469	split_sequin
+S0166_GV_092_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr16:89738670-89740469	split_sequin
+S0167_GV_093_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr12:71426618-71428417	split_sequin
+S0168_GV_093_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr12:71426618-71428417	split_sequin
+S0169_GV_094_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr2:214029237-214031033	split_sequin
+S0170_GV_094_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr2:214029237-214031033	split_sequin
+S0171_GV_095_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr13:71947419-71949218	split_sequin
+S0172_GV_095_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr13:71947419-71949218	split_sequin
+S0173_GV_096_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr3:61786531-61788331	split_sequin
+S0174_GV_096_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr3:61786531-61788331	split_sequin
+S0175_GV_097_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr5:53808485-53810285	split_sequin
+S0176_GV_097_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr5:53808485-53810285	split_sequin
+S0177_GV_098_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr11:42416008-42417808	split_sequin
+S0178_GV_098_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr11:42416008-42417808	split_sequin
+S0179_GV_099_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr2:9999623-10001423	split_sequin
+S0180_GV_099_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr2:9999623-10001423	split_sequin
+S0181_GV_100_R	Common variant	Common SNV (ref allele)	Heterozygous	0.500	chr8:99090157-99091956	split_sequin
+S0182_GV_100_A	Common variant	Common SNV (var allele)	Heterozygous	0.500	chr8:99090157-99091956	split_sequin
+S0183_DV_001_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr7:1226827-1228530	split_sequin
+S0184_DV_001_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr7:1226827-1228530	split_sequin
+S0185_DV_002_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr2:178412996-178414793	split_sequin
+S0186_DV_002_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr2:178412996-178414793	split_sequin
+S0187_DV_003_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr3:146249810-146251569	split_sequin
+S0188_DV_003_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr3:146249810-146251569	split_sequin
+S0189_DV_004_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr14:103538467-103540258	split_sequin
+S0190_DV_004_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr14:103538467-103540258	split_sequin
+S0191_DV_005_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr6:17727752-17729515	split_sequin
+S0192_DV_005_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr6:17727752-17729515	split_sequin
+S0193_DV_006_R	Difficult variant	Long di-nucleotide (ref allele)	Heterozygous	0.500	chr8:98184196-98185949	split_sequin
+S0194_DV_006_A	Difficult variant	Long di-nucleotide (var allele)	Heterozygous	0.500	chr8:98184196-98185949	split_sequin
+S0195_DV_007_R	Difficult variant	Long di-nucleotide (ref allele)	Heterozygous	0.500	chr1:231531281-231533036	split_sequin
+S0196_DV_007_A	Difficult variant	Long di-nucleotide (var allele)	Heterozygous	0.500	chr1:231531281-231533036	split_sequin
+S0197_DV_008_R	Difficult variant	Long di-nucleotide (ref allele)	Heterozygous	0.500	chr6:150700567-150702317	split_sequin
+S0198_DV_008_A	Difficult variant	Long di-nucleotide (var allele)	Heterozygous	0.500	chr6:150700567-150702317	split_sequin
+S0199_DV_009_R	Difficult variant	Long di-nucleotide (ref allele)	Heterozygous	0.500	chr1:90823208-90824958	split_sequin
+S0200_DV_009_A	Difficult variant	Long di-nucleotide (var allele)	Heterozygous	0.500	chr1:90823208-90824958	split_sequin
+S0201_DV_010_R	Difficult variant	Long di-nucleotide (ref allele)	Heterozygous	0.500	chr8:130572694-130574447	split_sequin
+S0202_DV_010_A	Difficult variant	Long di-nucleotide (var allele)	Heterozygous	0.500	chr8:130572694-130574447	split_sequin
+S0203_DV_011_R	Difficult variant	Long di-nucleotide (ref allele)	Heterozygous	0.500	chr10:98851263-98853016	split_sequin
+S0204_DV_011_A	Difficult variant	Long di-nucleotide (var allele)	Heterozygous	0.500	chr10:98851263-98853016	split_sequin
+S0205_DV_012_R	Difficult variant	Long mono-nucleotide (ref allele)	Heterozygous	0.500	chr20:17189000-17190726	split_sequin
+S0206_DV_012_A	Difficult variant	Long mono-nucleotide (var allele)	Heterozygous	0.500	chr20:17189000-17190726	split_sequin
+S0207_DV_013_R	Difficult variant	Long mono-nucleotide (ref allele)	Heterozygous	0.500	chr13:30192604-30194328	split_sequin
+S0208_DV_013_A	Difficult variant	Long mono-nucleotide (var allele)	Heterozygous	0.500	chr13:30192604-30194328	split_sequin
+S0209_DV_014_R	Difficult variant	Long mono-nucleotide (ref allele)	Heterozygous	0.500	chr1:115250455-115252178	split_sequin
+S0210_DV_014_A	Difficult variant	Long mono-nucleotide (var allele)	Heterozygous	0.500	chr1:115250455-115252178	split_sequin
+S0211_DV_015_R	Difficult variant	Long mono-nucleotide (ref allele)	Heterozygous	0.500	chr9:91084044-91085766	split_sequin
+S0212_DV_015_A	Difficult variant	Long mono-nucleotide (var allele)	Heterozygous	0.500	chr9:91084044-91085766	split_sequin
+S0213_DV_016_R	Difficult variant	Long mono-nucleotide (ref allele)	Heterozygous	0.500	chr8:9583314-9585038	split_sequin
+S0214_DV_016_A	Difficult variant	Long mono-nucleotide (var allele)	Heterozygous	0.500	chr8:9583314-9585038	split_sequin
+S0215_DV_017_R	Difficult variant	Long mono-nucleotide (ref allele)	Heterozygous	0.500	chr16:78344789-78346513	split_sequin
+S0216_DV_017_A	Difficult variant	Long mono-nucleotide (var allele)	Heterozygous	0.500	chr16:78344789-78346513	split_sequin
+S0217_DV_018_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr5:129908532-129910254	split_sequin
+S0218_DV_018_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr5:129908532-129910254	split_sequin
+S0219_DV_019_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr12:126962189-126963907	split_sequin
+S0220_DV_019_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr12:126962189-126963907	split_sequin
+S0221_DV_020_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr1:178353666-178355439	split_sequin
+S0222_DV_020_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr1:178353666-178355439	split_sequin
+S0223_DV_021_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr8:76537598-76539324	split_sequin
+S0224_DV_021_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr8:76537598-76539324	split_sequin
+S0225_DV_022_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr13:38219266-38221050	split_sequin
+S0226_DV_022_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr13:38219266-38221050	split_sequin
+S0227_DV_023_R	Difficult variant	Long quad-nucleotide (ref allele)	Heterozygous	0.500	chr10:6987666-6989419	split_sequin
+S0228_DV_023_A	Difficult variant	Long quad-nucleotide (var allele)	Heterozygous	0.500	chr10:6987666-6989419	split_sequin
+S0229_DV_024_R	Difficult variant	Long quad-nucleotide (ref allele)	Heterozygous	0.500	chr6:140285467-140287229	split_sequin
+S0230_DV_024_A	Difficult variant	Long quad-nucleotide (var allele)	Heterozygous	0.500	chr6:140285467-140287229	split_sequin
+S0231_DV_025_R	Difficult variant	Long quad-nucleotide (ref allele)	Heterozygous	0.500	chr16:50900907-50902671	split_sequin
+S0232_DV_025_A	Difficult variant	Long quad-nucleotide (var allele)	Heterozygous	0.500	chr16:50900907-50902671	split_sequin
+S0233_DV_026_R	Difficult variant	Long quad-nucleotide (ref allele)	Heterozygous	0.500	chr18:77818799-77820559	split_sequin
+S0234_DV_026_A	Difficult variant	Long quad-nucleotide (var allele)	Heterozygous	0.500	chr18:77818799-77820559	split_sequin
+S0235_DV_027_R	Difficult variant	Long quad-nucleotide (ref allele)	Heterozygous	0.500	chr20:2014918-2016671	split_sequin
+S0236_DV_027_A	Difficult variant	Long quad-nucleotide (var allele)	Heterozygous	0.500	chr20:2014918-2016671	split_sequin
+S0237_DV_028_R	Difficult variant	Long quad-nucleotide (ref allele)	Heterozygous	0.500	chr8:3493704-3495459	split_sequin
+S0238_DV_028_A	Difficult variant	Long quad-nucleotide (var allele)	Heterozygous	0.500	chr8:3493704-3495459	split_sequin
+S0239_DV_029_R	Difficult variant	Long tri-nucleotide (ref allele)	Heterozygous	0.500	chr8:117790019-117791769	split_sequin
+S0240_DV_029_A	Difficult variant	Long tri-nucleotide (var allele)	Heterozygous	0.500	chr8:117790019-117791769	split_sequin
+S0241_DV_030_R	Difficult variant	Long tri-nucleotide (ref allele)	Heterozygous	0.500	chr6:36548479-36550230	split_sequin
+S0242_DV_030_A	Difficult variant	Long tri-nucleotide (var allele)	Heterozygous	0.500	chr6:36548479-36550230	split_sequin
+S0243_DV_031_R	Difficult variant	Long tri-nucleotide (ref allele)	Heterozygous	0.500	chrX:31383459-31385213	split_sequin
+S0244_DV_031_A	Difficult variant	Long tri-nucleotide (var allele)	Heterozygous	0.500	chrX:31383459-31385213	split_sequin
+S0245_DV_032_R	Difficult variant	Long tri-nucleotide (ref allele)	Heterozygous	0.500	chr13:83308788-83310538	split_sequin
+S0246_DV_032_A	Difficult variant	Long tri-nucleotide (var allele)	Heterozygous	0.500	chr13:83308788-83310538	split_sequin
+S0247_DV_033_R	Difficult variant	Long tri-nucleotide (ref allele)	Heterozygous	0.500	chr19:35909795-35911545	split_sequin
+S0248_DV_033_A	Difficult variant	Long tri-nucleotide (var allele)	Heterozygous	0.500	chr19:35909795-35911545	split_sequin
+S0249_DV_034_R	Difficult variant	Long tri-nucleotide (ref allele)	Heterozygous	0.500	chr7:18272063-18273817	split_sequin
+S0250_DV_034_A	Difficult variant	Long tri-nucleotide (var allele)	Heterozygous	0.500	chr7:18272063-18273817	split_sequin
+S0251_DV_035_R	Difficult variant	Short di-nucleotide (ref allele)	Heterozygous	0.500	chr4:189265762-189267476	split_sequin
+S0252_DV_035_A	Difficult variant	Short di-nucleotide (var allele)	Heterozygous	0.500	chr4:189265762-189267476	split_sequin
+S0253_DV_036_R	Difficult variant	Short di-nucleotide (ref allele)	Heterozygous	0.500	chr1:236470519-236472234	split_sequin
+S0254_DV_036_A	Difficult variant	Short di-nucleotide (var allele)	Heterozygous	0.500	chr1:236470519-236472234	split_sequin
+S0255_DV_037_R	Difficult variant	Short di-nucleotide (ref allele)	Heterozygous	0.500	chr7:28848597-28850307	split_sequin
+S0256_DV_037_A	Difficult variant	Short di-nucleotide (var allele)	Heterozygous	0.500	chr7:28848597-28850307	split_sequin
+S0257_DV_038_R	Difficult variant	Short di-nucleotide (ref allele)	Heterozygous	0.500	chr7:93770489-93772200	split_sequin
+S0258_DV_038_A	Difficult variant	Short di-nucleotide (var allele)	Heterozygous	0.500	chr7:93770489-93772200	split_sequin
+S0259_DV_039_R	Difficult variant	Short di-nucleotide (ref allele)	Heterozygous	0.500	chr21:32339294-32341004	split_sequin
+S0260_DV_039_A	Difficult variant	Short di-nucleotide (var allele)	Heterozygous	0.500	chr21:32339294-32341004	split_sequin
+S0261_DV_040_R	Difficult variant	Short di-nucleotide (ref allele)	Heterozygous	0.500	chr5:74229554-74231268	split_sequin
+S0262_DV_040_A	Difficult variant	Short di-nucleotide (var allele)	Heterozygous	0.500	chr5:74229554-74231268	split_sequin
+S0263_DV_041_R	Difficult variant	Short mono-nucleotide (ref allele)	Heterozygous	0.500	chr9:106378994-106380701	split_sequin
+S0264_DV_041_A	Difficult variant	Short mono-nucleotide (var allele)	Heterozygous	0.500	chr9:106378994-106380701	split_sequin
+S0265_DV_042_R	Difficult variant	Short mono-nucleotide (ref allele)	Heterozygous	0.500	chr16:25208242-25209950	split_sequin
+S0266_DV_042_A	Difficult variant	Short mono-nucleotide (var allele)	Heterozygous	0.500	chr16:25208242-25209950	split_sequin
+S0267_DV_043_R	Difficult variant	Short mono-nucleotide (ref allele)	Heterozygous	0.500	chr3:72033030-72034739	split_sequin
+S0268_DV_043_A	Difficult variant	Short mono-nucleotide (var allele)	Heterozygous	0.500	chr3:72033030-72034739	split_sequin
+S0269_DV_044_R	Difficult variant	Short mono-nucleotide (ref allele)	Heterozygous	0.500	chr6:68186009-68187716	split_sequin
+S0270_DV_044_A	Difficult variant	Short mono-nucleotide (var allele)	Heterozygous	0.500	chr6:68186009-68187716	split_sequin
+S0271_DV_045_R	Difficult variant	Short mono-nucleotide (ref allele)	Heterozygous	0.500	chr1:247187136-247188843	split_sequin
+S0272_DV_045_A	Difficult variant	Short mono-nucleotide (var allele)	Heterozygous	0.500	chr1:247187136-247188843	split_sequin
+S0273_DV_046_R	Difficult variant	Short mono-nucleotide (ref allele)	Heterozygous	0.500	chr6:164715211-164716918	split_sequin
+S0274_DV_046_A	Difficult variant	Short mono-nucleotide (var allele)	Heterozygous	0.500	chr6:164715211-164716918	split_sequin
+S0275_DV_047_R	Difficult variant	Short quad-nucleotide (ref allele)	Heterozygous	0.500	chr22:22514551-22516262	split_sequin
+S0276_DV_047_A	Difficult variant	Short quad-nucleotide (var allele)	Heterozygous	0.500	chr22:22514551-22516262	split_sequin
+S0277_DV_048_R	Difficult variant	Short quad-nucleotide (ref allele)	Heterozygous	0.500	chr18:63731335-63733045	split_sequin
+S0278_DV_048_A	Difficult variant	Short quad-nucleotide (var allele)	Heterozygous	0.500	chr18:63731335-63733045	split_sequin
+S0279_DV_049_R	Difficult variant	Short quad-nucleotide (ref allele)	Heterozygous	0.500	chr17:61076683-61078394	split_sequin
+S0280_DV_049_A	Difficult variant	Short quad-nucleotide (var allele)	Heterozygous	0.500	chr17:61076683-61078394	split_sequin
+S0281_DV_050_R	Difficult variant	Short quad-nucleotide (ref allele)	Heterozygous	0.500	chr1:197085222-197086932	split_sequin
+S0282_DV_050_A	Difficult variant	Short quad-nucleotide (var allele)	Heterozygous	0.500	chr1:197085222-197086932	split_sequin
+S0283_DV_051_R	Difficult variant	Short quad-nucleotide (ref allele)	Heterozygous	0.500	chr12:46498178-46499888	split_sequin
+S0284_DV_051_A	Difficult variant	Short quad-nucleotide (var allele)	Heterozygous	0.500	chr12:46498178-46499888	split_sequin
+S0285_DV_052_R	Difficult variant	Short quad-nucleotide (ref allele)	Heterozygous	0.500	chr4:139080392-139082102	split_sequin
+S0286_DV_052_A	Difficult variant	Short quad-nucleotide (var allele)	Heterozygous	0.500	chr4:139080392-139082102	split_sequin
+S0287_DV_053_R	Difficult variant	Short tri-nucleotide (ref allele)	Heterozygous	0.500	chr3:171139572-171141282	split_sequin
+S0288_DV_053_A	Difficult variant	Short tri-nucleotide (var allele)	Heterozygous	0.500	chr3:171139572-171141282	split_sequin
+S0289_DV_054_R	Difficult variant	Short tri-nucleotide (ref allele)	Heterozygous	0.500	chr15:90576086-90577796	split_sequin
+S0290_DV_054_A	Difficult variant	Short tri-nucleotide (var allele)	Heterozygous	0.500	chr15:90576086-90577796	split_sequin
+S0291_DV_055_R	Difficult variant	Short tri-nucleotide (ref allele)	Heterozygous	0.500	chr4:84810579-84812289	split_sequin
+S0292_DV_055_A	Difficult variant	Short tri-nucleotide (var allele)	Heterozygous	0.500	chr4:84810579-84812289	split_sequin
+S0293_DV_056_R	Difficult variant	Short tri-nucleotide (ref allele)	Heterozygous	0.500	chr5:76896452-76898162	split_sequin
+S0294_DV_056_A	Difficult variant	Short tri-nucleotide (var allele)	Heterozygous	0.500	chr5:76896452-76898162	split_sequin
+S0295_DV_057_R	Difficult variant	Short tri-nucleotide (ref allele)	Heterozygous	0.500	chr8:77482187-77483897	split_sequin
+S0296_DV_057_A	Difficult variant	Short tri-nucleotide (var allele)	Heterozygous	0.500	chr8:77482187-77483897	split_sequin
+S0297_DV_058_R	Difficult variant	Short tri-nucleotide (ref allele)	Heterozygous	0.500	chr1:26007592-26009303	split_sequin
+S0298_DV_058_A	Difficult variant	Short tri-nucleotide (var allele)	Heterozygous	0.500	chr1:26007592-26009303	split_sequin
+S0299_DV_059_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr9:109496973-109498689	split_sequin
+S0300_DV_059_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr9:109496973-109498689	split_sequin
+S0301_DV_060_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr15:65422290-65424075	split_sequin
+S0302_DV_060_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr15:65422290-65424075	split_sequin
+S0303_DV_061_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr18:37253337-37255116	split_sequin
+S0304_DV_061_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr18:37253337-37255116	split_sequin
+S0305_DV_062_R	Difficult variant	GC-rich region (ref allele)	Heterozygous	0.500	chr11:1570806-1572528	split_sequin
+S0306_DV_062_A	Difficult variant	GC-rich region (var allele)	Heterozygous	0.500	chr11:1570806-1572528	split_sequin
+S0307_DV_063_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr12:37587058-37588856	split_sequin
+S0308_DV_063_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr12:37587058-37588856	split_sequin
+S0309_DV_064_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr12:87707533-87709322	split_sequin
+S0310_DV_064_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr12:87707533-87709322	split_sequin
+S0311_DV_065_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr6:152024013-152025729	split_sequin
+S0312_DV_065_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr6:152024013-152025729	split_sequin
+S0313_DV_066_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr2:125540929-125542704	split_sequin
+S0314_DV_066_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr2:125540929-125542704	split_sequin
+S0315_DV_067_R	Difficult variant	AT-rich region (ref allele)	Heterozygous	0.500	chr18:66963290-66964997	split_sequin
+S0316_DV_067_A	Difficult variant	AT-rich region (var allele)	Heterozygous	0.500	chr18:66963290-66964997	split_sequin
+S0317_DV_068_R	Difficult variant	GC-rich region (ref allele)	Homozygous	1.000	chr5:180290744-180292479	split_sequin
+S0318_HP_001_A	Common haplotype	Allele 1	Heterozygous	0.500	chr1:212622720-212628700	split_sequin
+S0319_HP_001_B	Common haplotype	Allele 2	Heterozygous	0.500	chr1:212622720-212628700	split_sequin
+S0320_HP_002_A	Common haplotype	Allele 1	Heterozygous	0.500	chr2:78995697-79001662	split_sequin
+S0321_HP_002_B	Common haplotype	Allele 2	Heterozygous	0.500	chr2:78995697-79001662	split_sequin
+S0322_HP_003_A	Common haplotype	Allele 1	Heterozygous	0.500	chr3:150003863-150009843	split_sequin
+S0323_HP_003_B	Common haplotype	Allele 2	Heterozygous	0.500	chr3:150003863-150009843	split_sequin
+S0324_HP_004_A	Common haplotype	Allele 1	Homozygous	1.000	chr4:156138608-156144587	split_sequin
+S0325_HP_005_A	Common haplotype	Allele 1	Heterozygous	0.500	chr5:162812888-162818866	split_sequin
+S0326_HP_005_B	Common haplotype	Allele 2	Heterozygous	0.500	chr5:162812888-162818866	split_sequin
+S0327_HP_006_A	Common haplotype	Allele 1	Heterozygous	0.500	chr6:21138072-21144044	split_sequin
+S0328_HP_006_B	Common haplotype	Allele 2	Heterozygous	0.500	chr6:21138072-21144044	split_sequin
+S0329_HP_007_A	Common haplotype	Allele 1	Heterozygous	0.500	chr7:14860672-14866643	split_sequin
+S0330_HP_007_B	Common haplotype	Allele 2	Heterozygous	0.500	chr7:14860672-14866643	split_sequin
+S0331_HP_008_A	Common haplotype	Allele 1	Heterozygous	0.500	chr8:24551739-24557716	split_sequin
+S0332_HP_008_B	Common haplotype	Allele 2	Heterozygous	0.500	chr8:24551739-24557716	split_sequin
+S0333_HP_009_A	Common haplotype	Allele 1	Heterozygous	0.500	chr9:17976190-17982157	split_sequin
+S0334_HP_009_B	Common haplotype	Allele 2	Heterozygous	0.500	chr9:17976190-17982157	split_sequin
+S0335_HP_010_A	Common haplotype	Allele 1	Heterozygous	0.500	chr10:19324835-19330813	split_sequin
+S0336_HP_010_B	Common haplotype	Allele 2	Heterozygous	0.500	chr10:19324835-19330813	split_sequin
+S0337_HP_011_A	Common haplotype	Allele 1	Heterozygous	0.500	chr11:12459100-12465076	split_sequin
+S0338_HP_011_B	Common haplotype	Allele 2	Heterozygous	0.500	chr11:12459100-12465076	split_sequin
+S0339_HP_012_A	Common haplotype	Allele 1	Homozygous	1.000	chr12:12735586-12741562	split_sequin
+S0340_HP_013_A	Common haplotype	Allele 1	Heterozygous	0.500	chr13:92824224-92830204	split_sequin
+S0341_HP_013_B	Common haplotype	Allele 2	Heterozygous	0.500	chr13:92824224-92830204	split_sequin
+S0342_HP_014_A	Common haplotype	Allele 1	Heterozygous	0.500	chr14:105464243-105470207	split_sequin
+S0343_HP_014_B	Common haplotype	Allele 2	Heterozygous	0.500	chr14:105464243-105470207	split_sequin
+S0344_HP_015_A	Common haplotype	Allele 1	Heterozygous	0.500	chr15:50203028-50209008	split_sequin
+S0345_HP_015_B	Common haplotype	Allele 2	Heterozygous	0.500	chr15:50203028-50209008	split_sequin
+S0346_HP_016_A	Common haplotype	Allele 1	Heterozygous	0.500	chr16:68684701-68690681	split_sequin
+S0347_HP_016_B	Common haplotype	Allele 2	Heterozygous	0.500	chr16:68684701-68690681	split_sequin
+S0348_HP_017_A	Common haplotype	Allele 1	Heterozygous	0.500	chr17:66001894-66007862	split_sequin
+S0349_HP_017_B	Common haplotype	Allele 2	Heterozygous	0.500	chr17:66001894-66007862	split_sequin
+S0350_HP_018_A	Common haplotype	Allele 1	Heterozygous	0.500	chr18:7855032-7861012	split_sequin
+S0351_HP_018_B	Common haplotype	Allele 2	Heterozygous	0.500	chr18:7855032-7861012	split_sequin
+S0352_HP_019_A	Common haplotype	Allele 1	Heterozygous	0.500	chr19:11013601-11019568	split_sequin
+S0353_HP_019_B	Common haplotype	Allele 2	Heterozygous	0.500	chr19:11013601-11019568	split_sequin
+S0354_HP_020_A	Common haplotype	Allele 1	Heterozygous	0.500	chr20:62704754-62710734	split_sequin
+S0355_HP_020_B	Common haplotype	Allele 2	Heterozygous	0.500	chr20:62704754-62710734	split_sequin
+S0356_HP_021_A	Common haplotype	Allele 1	Heterozygous	0.500	chr21:46021448-46027428	split_sequin
+S0357_HP_021_B	Common haplotype	Allele 2	Heterozygous	0.500	chr21:46021448-46027428	split_sequin
+S0358_HP_022_A	Common haplotype	Allele 1	Heterozygous	0.500	chr22:19988114-19994092	split_sequin
+S0359_HP_022_B	Common haplotype	Allele 2	Heterozygous	0.500	chr22:19988114-19994092	split_sequin
+S0360_HP_023_A	Common haplotype	Allele 1	Heterozygous	0.500	chrX:103635591-103641547	split_sequin
+S0361_HP_023_B	Common haplotype	Allele 2	Heterozygous	0.500	chrX:103635591-103641547	split_sequin
+S0362_HP_024_A	Common haplotype	Allele 1	Homozygous	1.000	chrY:5098320-5104265	split_sequin
+S0363_CV_001_R	Cancer mutation	PTEN wild-type	Somatic	0.984	chr10:87960159-87961959	split_sequin
+S0364_CV_001_A	Cancer mutation	PTEN mutation; COSM5801	Somatic	0.016	chr10:87960159-87961959	split_sequin
+S0365_CV_002_R	Cancer mutation	WT1 wild-type	Somatic	0.984	chr11:32395461-32397257	split_sequin
+S0366_CV_002_A	Cancer mutation	WT1 mutation; COSM21392	Somatic	0.016	chr11:32395461-32397257	split_sequin
+S0367_CV_003_R	Cancer mutation	ZNF384 wild-type	Somatic	0.000	chr12:6667003-6668803	split_sequin
+S0368_CV_003_A	Cancer mutation	ZNF384 mutation; COSM431727	Somatic	1.000	chr12:6667003-6668803	split_sequin
+S0369_CV_004_R	Cancer mutation	HNF1A wild-type	Somatic	0.984	chr12:120993425-120995222	split_sequin
+S0370_CV_004_A	Cancer mutation	HNF1A mutation; COSM21481	Somatic	0.016	chr12:120993425-120995222	split_sequin
+S0371_CV_005_R	Cancer mutation	TSC2 wild-type	Somatic	0.969	chr16:2071005-2072805	split_sequin
+S0372_CV_005_A	Cancer mutation	TSC2 mutation; COSM1583165	Somatic	0.031	chr16:2071005-2072805	split_sequin
+S0373_CV_006_R	Cancer mutation	CEBPA wild-type	Somatic	0.000	chr19:33301446-33303245	split_sequin
+S0374_CV_006_A	Cancer mutation	CEBPA mutation; COSM18922	Somatic	1.000	chr19:33301446-33303245	split_sequin
+S0375_CV_007_R	Cancer mutation	MSH6 wild-type	Somatic	0.750	chr2:47802607-47804407	split_sequin
+S0376_CV_007_A	Cancer mutation	MSH6 mutation; COSM13395	Somatic	0.250	chr2:47802607-47804407	split_sequin
+S0377_CV_008_R	Cancer mutation	PDGFRA wild-type	Somatic	0.999	chr4:54273984-54275784	split_sequin
+S0378_CV_008_A	Cancer mutation	PDGFRA mutation; COSM12418	Somatic	0.001	chr4:54273984-54275784	split_sequin
+S0379_CV_009_R	Cancer mutation	IL7R wild-type	Somatic	0.500	chr5:35873571-35875359	split_sequin
+S0380_CV_009_A	Cancer mutation	IL7R mutation; COSM214586	Somatic	0.500	chr5:35873571-35875359	split_sequin
+S0381_CV_010_R	Cancer mutation	APC wild-type	Somatic	0.938	chr5:112838617-112840404	split_sequin
+S0382_CV_010_A	Cancer mutation	APC mutation; COSM18719	Somatic	0.063	chr5:112838617-112840404	split_sequin
+S0383_CV_011_R	Cancer mutation	EGFR wild-type	Somatic	0.969	chr7:55180399-55182187	split_sequin
+S0384_CV_011_A	Cancer mutation	EGFR mutation; COSM26720	Somatic	0.031	chr7:55180399-55182187	split_sequin
+S0385_CV_012_R	Cancer mutation	JAK2 wild-type	Somatic	0.500	chr9:5069134-5070934	split_sequin
+S0386_CV_012_A	Cancer mutation	JAK2 mutation; COSM24440	Somatic	0.500	chr9:5069134-5070934	split_sequin
+S0387_CV_013_R	Cancer mutation	TSC1 wild-type	Somatic	0.992	chr9:132904769-132906569	split_sequin
+S0388_CV_013_A	Cancer mutation	TSC1 mutation; COSM1636659	Somatic	0.008	chr9:132904769-132906569	split_sequin
+S0389_CV_014_R	Cancer mutation	NOTCH1 wild-type	Somatic	0.969	chr9:136495296-136497096	split_sequin
+S0390_CV_014_A	Cancer mutation	NOTCH1 mutation; COSM12774	Somatic	0.031	chr9:136495296-136497096	split_sequin
+S0391_CV_015_R	Cancer mutation	GATA1 wild-type	Somatic	0.996	chrX:48790298-48792098	split_sequin
+S0392_CV_015_A	Cancer mutation	GATA1 mutation; COSM13225	Somatic	0.004	chrX:48790298-48792098	split_sequin
+S0393_CV_016_R	Cancer mutation	ATRX wild-type	Somatic	0.998	chrX:77663785-77665583	split_sequin
+S0394_CV_016_A	Cancer mutation	ATRX mutation; COSM250047	Somatic	0.002	chrX:77663785-77665583	split_sequin
+S0395_CV_017_R	Cancer mutation	MPL wild-type	Somatic	0.500	chr1:43348438-43350238	split_sequin
+S0396_CV_017_A	Cancer mutation	MPL mutation; COSM18918	Somatic	0.500	chr1:43348438-43350238	split_sequin
+S0397_CV_018_R	Cancer mutation	JAK1 wild-type	Somatic	0.750	chr1:64843934-64845734	split_sequin
+S0398_CV_018_A	Cancer mutation	JAK1 mutation; COSM41751	Somatic	0.250	chr1:64843934-64845734	split_sequin
+S0399_CV_019_R	Cancer mutation	TRIM33 wild-type	Somatic	0.999	chr1:114420710-114422510	split_sequin
+S0400_CV_019_A	Cancer mutation	TRIM33 mutation; COSM1559266	Somatic	0.001	chr1:114420710-114422510	split_sequin
+S0401_CV_020_R	Cancer mutation	NRAS wild-type	Somatic	0.996	chr1:114713008-114714808	split_sequin
+S0402_CV_020_A	Cancer mutation	NRAS mutation; COSM583	Somatic	0.004	chr1:114713008-114714808	split_sequin
+S0403_CV_021_R	Cancer mutation	NRAS wild-type	Somatic	0.750	chr1:114715227-114717027	split_sequin
+S0404_CV_021_A	Cancer mutation	NRAS mutation; COSM563	Somatic	0.250	chr1:114715227-114717027	split_sequin
+S0405_CV_022_R	Cancer mutation	H3F3A wild-type	Somatic	0.998	chr1:226063534-226065334	split_sequin
+S0406_CV_022_A	Cancer mutation	H3F3A mutation; COSM327928	Somatic	0.002	chr1:226063534-226065334	split_sequin
+S0407_CV_023_R	Cancer mutation	RET wild-type	Somatic	0.875	chr10:43121068-43122868	split_sequin
+S0408_CV_023_A	Cancer mutation	RET mutation; COSM965	Somatic	0.125	chr10:43121068-43122868	split_sequin
+S0409_CV_024_R	Cancer mutation	BMPR1A wild-type	Somatic	0.000	chr10:86922590-86924390	split_sequin
+S0410_CV_024_A	Cancer mutation	BMPR1A mutation; COSM1349419	Somatic	1.000	chr10:86922590-86924390	split_sequin
+S0411_CV_025_R	Cancer mutation	PTEN wild-type	Somatic	0.500	chr10:87932247-87934047	split_sequin
+S0412_CV_025_A	Cancer mutation	PTEN mutation; COSM5219	Somatic	0.500	chr10:87932247-87934047	split_sequin
+S0413_CV_026_R	Cancer mutation	PTEN wild-type	Somatic	0.938	chr10:87957015-87958815	split_sequin
+S0414_CV_026_A	Cancer mutation	PTEN mutation; COSM5154	Somatic	0.063	chr10:87957015-87958815	split_sequin
+S0415_CV_027_R	Cancer mutation	FGFR2 wild-type	Somatic	0.750	chr10:121519264-121521063	split_sequin
+S0416_CV_027_A	Cancer mutation	FGFR2 mutation; COSM36903	Somatic	0.250	chr10:121519264-121521063	split_sequin
+S0417_CV_028_R	Cancer mutation	HRAS wild-type	Somatic	0.984	chr11:532974-534774	split_sequin
+S0418_CV_028_A	Cancer mutation	HRAS mutation; COSM499	Somatic	0.016	chr11:532974-534774	split_sequin
+S0419_CV_029_R	Cancer mutation	CBL wild-type	Somatic	0.992	chr11:119277281-119279077	split_sequin
+S0420_CV_029_A	Cancer mutation	CBL mutation; COSM34052	Somatic	0.008	chr11:119277281-119279077	split_sequin
+S0421_CV_030_R	Cancer mutation	KRAS wild-type	Somatic	0.969	chr12:25244454-25246251	split_sequin
+S0422_CV_030_A	Cancer mutation	KRAS mutation; COSM516	Somatic	0.031	chr12:25244454-25246251	split_sequin
+S0423_CV_031_R	Cancer mutation	CDK4 wild-type	Somatic	0.984	chr12:57750747-57752547	split_sequin
+S0424_CV_031_A	Cancer mutation	CDK4 mutation; COSM363684	Somatic	0.016	chr12:57750747-57752547	split_sequin
+S0425_CV_032_R	Cancer mutation	SH2B3 wild-type	Somatic	0.992	chr12:111417948-111419745	split_sequin
+S0426_CV_032_A	Cancer mutation	SH2B3 mutation; COSM1235365	Somatic	0.008	chr12:111417948-111419745	split_sequin
+S0427_CV_033_R	Cancer mutation	PTPN11 wild-type	Somatic	0.998	chr12:112449495-112451295	split_sequin
+S0428_CV_033_A	Cancer mutation	PTPN11 mutation; COSM13015	Somatic	0.002	chr12:112449495-112451295	split_sequin
+S0429_CV_034_R	Cancer mutation	FLT3 wild-type	Somatic	0.875	chr13:28017605-28019405	split_sequin
+S0430_CV_034_A	Cancer mutation	FLT3 mutation; COSM783	Somatic	0.125	chr13:28017605-28019405	split_sequin
+S0431_CV_035_R	Cancer mutation	BRCA2 wild-type	Somatic	0.969	chr13:32338499-32340299	split_sequin
+S0432_CV_035_A	Cancer mutation	BRCA2 mutation; COSM1366454	Somatic	0.031	chr13:32338499-32340299	split_sequin
+S0433_CV_036_R	Cancer mutation	RB1 wild-type	Somatic	0.875	chr13:48379186-48380986	split_sequin
+S0434_CV_036_A	Cancer mutation	RB1 mutation; COSM1559416	Somatic	0.125	chr13:48379186-48380986	split_sequin
+S0435_CV_037_R	Cancer mutation	AKT1 wild-type	Somatic	0.000	chr14:104779314-104781114	split_sequin
+S0436_CV_037_A	Cancer mutation	AKT1 mutation; COSM33765	Somatic	1.000	chr14:104779314-104781114	split_sequin
+S0437_CV_038_R	Cancer mutation	MAP2K1 wild-type	Somatic	0.938	chr15:66480893-66482693	split_sequin
+S0438_CV_038_A	Cancer mutation	MAP2K1 mutation; COSM232755	Somatic	0.063	chr15:66480893-66482693	split_sequin
+S0439_CV_039_R	Cancer mutation	MAP2K1 wild-type	Somatic	0.875	chr15:66484186-66485986	split_sequin
+S0440_CV_039_A	Cancer mutation	MAP2K1 mutation; COSM224488	Somatic	0.125	chr15:66484186-66485986	split_sequin
+S0441_CV_040_R	Cancer mutation	IDH2 wild-type	Somatic	0.875	chr15:90087706-90089506	split_sequin
+S0442_CV_040_A	Cancer mutation	IDH2 mutation; COSM33733	Somatic	0.125	chr15:90087706-90089506	split_sequin
+S0443_CV_041_R	Cancer mutation	TRAF7 wild-type	Somatic	0.750	chr16:2174655-2176455	split_sequin
+S0444_CV_041_A	Cancer mutation	TRAF7 mutation; COSM1578119	Somatic	0.250	chr16:2174655-2176455	split_sequin
+S0445_CV_042_R	Cancer mutation	CDH1 wild-type	Somatic	0.969	chr16:68811284-68813084	split_sequin
+S0446_CV_042_A	Cancer mutation	CDH1 mutation; COSM1379165	Somatic	0.031	chr16:68811284-68813084	split_sequin
+S0447_CV_043_R	Cancer mutation	TP53 wild-type	Somatic	0.938	chr17:7672903-7674703	split_sequin
+S0448_CV_043_A	Cancer mutation	TP53 mutation; COSM10659	Somatic	0.063	chr17:7672903-7674703	split_sequin
+S0449_CV_044_R	Cancer mutation	MAP2K4 wild-type	Somatic	0.750	chr17:12106927-12108727	split_sequin
+S0450_CV_044_A	Cancer mutation	MAP2K4 mutation; COSM26105	Somatic	0.250	chr17:12106927-12108727	split_sequin
+S0451_CV_045_R	Cancer mutation	ERBB2 wild-type	Somatic	0.938	chr17:39723847-39725647	split_sequin
+S0452_CV_045_A	Cancer mutation	ERBB2 mutation; COSM14062	Somatic	0.063	chr17:39723847-39725647	split_sequin
+S0453_CV_046_R	Cancer mutation	STAT5B wild-type	Somatic	0.500	chr17:42206811-42208611	split_sequin
+S0454_CV_046_A	Cancer mutation	STAT5B mutation; COSM1716590	Somatic	0.500	chr17:42206811-42208611	split_sequin
+S0455_CV_047_R	Cancer mutation	STAT3 wild-type	Somatic	0.938	chr17:42321502-42323302	split_sequin
+S0456_CV_047_A	Cancer mutation	STAT3 mutation; COSM1155739	Somatic	0.063	chr17:42321502-42323302	split_sequin
+S0457_CV_048_R	Cancer mutation	BRCA1 wild-type	Somatic	0.938	chr17:43103220-43105020	split_sequin
+S0458_CV_048_A	Cancer mutation	BRCA1 mutation; COSM1559465	Somatic	0.063	chr17:43103220-43105020	split_sequin
+S0459_CV_049_R	Cancer mutation	SETBP1 wild-type	Somatic	0.996	chr18:44951042-44952842	split_sequin
+S0460_CV_049_A	Cancer mutation	SETBP1 mutation; COSM1318400	Somatic	0.004	chr18:44951042-44952842	split_sequin
+S0461_CV_050_R	Cancer mutation	SMAD4 wild-type	Somatic	0.500	chr18:51064649-51066449	split_sequin
+S0462_CV_050_A	Cancer mutation	SMAD4 mutation; COSM14122	Somatic	0.500	chr18:51064649-51066449	split_sequin
+S0463_CV_051_R	Cancer mutation	STK11 wild-type	Somatic	0.500	chr19:1222226-1224026	split_sequin
+S0464_CV_051_A	Cancer mutation	STK11 mutation; COSM21360	Somatic	0.500	chr19:1222226-1224026	split_sequin
+S0465_CV_052_R	Cancer mutation	GNA11 wild-type	Somatic	0.996	chr19:3118044-3119844	split_sequin
+S0466_CV_052_A	Cancer mutation	GNA11 mutation; COSM52969	Somatic	0.004	chr19:3118044-3119844	split_sequin
+S0467_CV_053_R	Cancer mutation	SH3GL1 wild-type	Somatic	0.938	chr19:4362894-4364694	split_sequin
+S0468_CV_053_A	Cancer mutation	SH3GL1 mutation; COSM328588	Somatic	0.063	chr19:4362894-4364694	split_sequin
+S0469_CV_054_R	Cancer mutation	DNMT3A wild-type	Somatic	0.875	chr2:25233474-25235274	split_sequin
+S0470_CV_054_A	Cancer mutation	DNMT3A mutation; COSM53042	Somatic	0.125	chr2:25233474-25235274	split_sequin
+S0471_CV_055_R	Cancer mutation	ALK wild-type	Somatic	0.875	chr2:29213094-29214894	split_sequin
+S0472_CV_055_A	Cancer mutation	ALK mutation; COSM28499	Somatic	0.125	chr2:29213094-29214894	split_sequin
+S0473_CV_056_R	Cancer mutation	ALK wild-type	Somatic	0.969	chr2:29222530-29224330	split_sequin
+S0474_CV_056_A	Cancer mutation	ALK mutation; COSM28502	Somatic	0.031	chr2:29222530-29224330	split_sequin
+S0475_CV_057_R	Cancer mutation	SF3B1 wild-type	Somatic	0.000	chr2:197400987-197402787	split_sequin
+S0476_CV_057_A	Cancer mutation	SF3B1 mutation; COSM145923	Somatic	1.000	chr2:197400987-197402787	split_sequin
+S0477_CV_058_R	Cancer mutation	IDH1 wild-type	Somatic	0.999	chr2:208247489-208249289	split_sequin
+S0478_CV_058_A	Cancer mutation	IDH1 mutation; COSM28749	Somatic	0.001	chr2:208247489-208249289	split_sequin
+S0479_CV_059_R	Cancer mutation	ACSL3 wild-type	Somatic	0.996	chr2:222917152-222918951	split_sequin
+S0480_CV_059_A	Cancer mutation	ACSL3 mutation; COSM1494811	Somatic	0.004	chr2:222917152-222918951	split_sequin
+S0481_CV_060_R	Cancer mutation	OLIG2 wild-type	Somatic	0.992	chr21:33026887-33028687	split_sequin
+S0482_CV_060_A	Cancer mutation	OLIG2 mutation; COSM1559585	Somatic	0.008	chr21:33026887-33028687	split_sequin
+S0483_CV_061_R	Cancer mutation	U2AF1 wild-type	Somatic	0.938	chr21:43103446-43105246	split_sequin
+S0484_CV_061_A	Cancer mutation	U2AF1 mutation; COSM166866	Somatic	0.063	chr21:43103446-43105246	split_sequin
+S0485_CV_062_R	Cancer mutation	CHEK2 wild-type	Somatic	0.998	chr22:28694893-28696693	split_sequin
+S0486_CV_062_A	Cancer mutation	CHEK2 mutation; COSM35476	Somatic	0.002	chr22:28694893-28696693	split_sequin
+S0487_CV_063_R	Cancer mutation	NF2 wild-type	Somatic	0.999	chr22:29635905-29637705	split_sequin
+S0488_CV_063_A	Cancer mutation	NF2 mutation; COSM21991	Somatic	0.001	chr22:29635905-29637705	split_sequin
+S0489_CV_064_R	Cancer mutation	VHL wild-type	Somatic	0.500	chr3:10141150-10142950	split_sequin
+S0490_CV_064_A	Cancer mutation	VHL mutation; COSM14372	Somatic	0.500	chr3:10141150-10142950	split_sequin
+S0491_CV_065_R	Cancer mutation	MLH1 wild-type	Somatic	0.000	chr3:37041431-37043231	split_sequin
+S0492_CV_065_A	Cancer mutation	MLH1 mutation; COSM25900	Somatic	1.000	chr3:37041431-37043231	split_sequin
+S0493_CV_066_R	Cancer mutation	MYD88 wild-type	Somatic	0.996	chr3:38140250-38142050	split_sequin
+S0494_CV_066_A	Cancer mutation	MYD88 mutation; COSM85940	Somatic	0.004	chr3:38140250-38142050	split_sequin
+S0495_CV_067_R	Cancer mutation	CTNNB1 wild-type	Somatic	0.992	chr3:41223746-41225546	split_sequin
+S0496_CV_067_A	Cancer mutation	CTNNB1 mutation; COSM5667	Somatic	0.008	chr3:41223746-41225546	split_sequin
+S0497_CV_068_R	Cancer mutation	GATA2 wild-type	Somatic	0.992	chr3:128480987-128482784	split_sequin
+S0498_CV_068_A	Cancer mutation	GATA2 mutation; COSM41611	Somatic	0.008	chr3:128480987-128482784	split_sequin
+S0499_CV_069_R	Cancer mutation	PIK3CA wild-type	Somatic	0.750	chr3:179217403-179219200	split_sequin
+S0500_CV_069_A	Cancer mutation	PIK3CA mutation; COSM763	Somatic	0.250	chr3:179217403-179219200	split_sequin
+S0501_CV_070_R	Cancer mutation	PIK3CA wild-type	Somatic	0.500	chr3:179233397-179235194	split_sequin
+S0502_CV_070_A	Cancer mutation	PIK3CA mutation; COSM776	Somatic	0.500	chr3:179233397-179235194	split_sequin
+S0503_CV_071_R	Cancer mutation	FGFR3 wild-type	Somatic	0.000	chr4:1800941-1802741	split_sequin
+S0504_CV_071_A	Cancer mutation	FGFR3 mutation; COSM715	Somatic	1.000	chr4:1800941-1802741	split_sequin
+S0505_CV_072_R	Cancer mutation	FGFR3 wild-type	Somatic	0.984	chr4:1803462-1805262	split_sequin
+S0506_CV_072_A	Cancer mutation	FGFR3 mutation; COSM716	Somatic	0.016	chr4:1803462-1805262	split_sequin
+S0507_CV_073_R	Cancer mutation	CHIC2 wild-type	Somatic	0.984	chr4:54013215-54015015	split_sequin
+S0508_CV_073_A	Cancer mutation	CHIC2 mutation; COSM159988	Somatic	0.016	chr4:54013215-54015015	split_sequin
+S0509_CV_074_R	Cancer mutation	KIT wild-type	Somatic	0.875	chr4:54726559-54728344	split_sequin
+S0510_CV_074_A	Cancer mutation	KIT mutation; COSM1252	Somatic	0.125	chr4:54726559-54728344	split_sequin
+S0511_CV_075_R	Cancer mutation	TET2 wild-type	Somatic	0.996	chr4:105234705-105236490	split_sequin
+S0512_CV_075_A	Cancer mutation	TET2 mutation; COSM41644	Somatic	0.004	chr4:105234705-105236490	split_sequin
+S0513_CV_076_R	Cancer mutation	TERT wild-type	Somatic	0.750	chr5:1294088-1295888	split_sequin
+S0514_CV_076_A	Cancer mutation	TERT mutation; COSM1717366	Somatic	0.250	chr5:1294088-1295888	split_sequin
+S0515_CV_077_R	Cancer mutation	HIST1H3B wild-type	Somatic	0.992	chr6:26031078-26032878	split_sequin
+S0516_CV_077_A	Cancer mutation	HIST1H3B mutation; COSM829202	Somatic	0.008	chr6:26031078-26032878	split_sequin
+S0517_CV_078_R	Cancer mutation	PIM1 wild-type	Somatic	0.996	chr6:37170274-37172074	split_sequin
+S0518_CV_078_A	Cancer mutation	PIM1 mutation; COSM220740	Somatic	0.004	chr6:37170274-37172074	split_sequin
+S0519_CV_079_R	Cancer mutation	PRDM1 wild-type	Somatic	0.998	chr6:106087549-106089349	split_sequin
+S0520_CV_079_A	Cancer mutation	PRDM1 mutation; COSM97162	Somatic	0.002	chr6:106087549-106089349	split_sequin
+S0521_CV_080_R	Cancer mutation	FOXO3 wild-type	Somatic	0.000	chr6:108663238-108665038	split_sequin
+S0522_CV_080_A	Cancer mutation	FOXO3 mutation; COSM35364	Somatic	1.000	chr6:108663238-108665038	split_sequin
+S0523_CV_081_R	Cancer mutation	EGFR wild-type	Somatic	0.984	chr7:55173115-55174915	split_sequin
+S0524_CV_081_A	Cancer mutation	EGFR mutation; COSM6239	Somatic	0.016	chr7:55173115-55174915	split_sequin
+S0525_CV_082_R	Cancer mutation	MET wild-type	Somatic	0.750	chr7:116782474-116784262	split_sequin
+S0526_CV_082_A	Cancer mutation	MET mutation; COSM700	Somatic	0.250	chr7:116782474-116784262	split_sequin
+S0527_CV_083_R	Cancer mutation	SMO wild-type	Somatic	0.992	chr7:129205657-129207445	split_sequin
+S0528_CV_083_A	Cancer mutation	SMO mutation; COSM216037	Somatic	0.008	chr7:129205657-129207445	split_sequin
+S0529_CV_084_R	Cancer mutation	SMO wild-type	Somatic	0.998	chr7:129209600-129211388	split_sequin
+S0530_CV_084_A	Cancer mutation	SMO mutation; COSM13146	Somatic	0.002	chr7:129209600-129211388	split_sequin
+S0531_CV_085_R	Cancer mutation	BRAF wild-type	Somatic	0.969	chr7:140752436-140754224	split_sequin
+S0532_CV_085_A	Cancer mutation	BRAF mutation; COSM476	Somatic	0.031	chr7:140752436-140754224	split_sequin
+S0533_CV_086_R	Cancer mutation	FGFR1 wild-type	Somatic	0.875	chr8:38427473-38429273	split_sequin
+S0534_CV_086_A	Cancer mutation	FGFR1 mutation; COSM1456955	Somatic	0.125	chr8:38427473-38429273	split_sequin
+S0535_CV_087_R	Cancer mutation	JAK2 wild-type	Somatic	0.998	chr9:5072876-5074670	split_sequin
+S0536_CV_087_A	Cancer mutation	JAK2 mutation; COSM12600	Somatic	0.002	chr9:5072876-5074670	split_sequin
+S0537_CV_088_R	Cancer mutation	CDKN2A wild-type	Somatic	0.999	chr9:21970293-21972087	split_sequin
+S0538_CV_088_A	Cancer mutation	CDKN2A mutation; COSM12473	Somatic	0.001	chr9:21970293-21972087	split_sequin
+S0539_CV_089_R	Cancer mutation	PAX5 wild-type	Somatic	0.999	chr9:37014274-37016068	split_sequin
+S0540_CV_089_A	Cancer mutation	PAX5 mutation; COSM85953	Somatic	0.001	chr9:37014274-37016068	split_sequin
+S0541_CV_090_R	Cancer mutation	GNAQ wild-type	Somatic	0.998	chr9:77793672-77795472	split_sequin
+S0542_CV_090_A	Cancer mutation	GNAQ mutation; COSM28757	Somatic	0.002	chr9:77793672-77795472	split_sequin
+S0543_CV_091_R	Cancer mutation	KLF4 wild-type	Somatic	0.984	chr9:107486173-107487967	split_sequin
+S0544_CV_091_A	Cancer mutation	KLF4 mutation; COSM248828	Somatic	0.016	chr9:107486173-107487967	split_sequin
+S0545_CV_092_R	Cancer mutation	ABL1 wild-type	Somatic	0.969	chr9:130872002-130873796	split_sequin
+S0546_CV_092_A	Cancer mutation	ABL1 mutation; COSM12560	Somatic	0.031	chr9:130872002-130873796	split_sequin
+S0547_CV_093_R	Cancer mutation	CRLF2 wild-type	Somatic	0.992	chrX:1195952-1197752	split_sequin
+S0548_CV_093_A	Cancer mutation	CRLF2 mutation; COSM41268	Somatic	0.008	chrX:1195952-1197752	split_sequin
+S0549_CV_094_R	Cancer mutation	MED12 wild-type	Somatic	0.999	chrX:71118503-71120303	split_sequin
+S0550_CV_094_A	Cancer mutation	MED12 mutation; COSM131593	Somatic	0.001	chrX:71118503-71120303	split_sequin
+S0551_CM_001_R	Cancer mutation	ARID1A wild-type	Somatic	0.984	chr1:26770462-26776387	split_sequin
+S0552_CM_001_A	Cancer mutation	ARID1A.5 mutation; 5 x linked SNVs	Somatic	0.016	chr1:26770462-26776387	split_sequin
+S0553_CM_002_R	Cancer mutation	MUTYH wild-type	Somatic	0.996	chr1:45330505-45334299	split_sequin
+S0554_CM_002_A	Cancer mutation	MUTYH.5 mutation; 5 x linked SNVs	Somatic	0.004	chr1:45330505-45334299	split_sequin
+S0555_CM_003_R	Cancer mutation	MEN1 wild-type	Somatic	0.750	chr11:64803758-64808742	split_sequin
+S0556_CM_003_A	Cancer mutation	MEN1.5 mutation; 5 x linked SNVs	Somatic	0.250	chr11:64803758-64808742	split_sequin
+S0557_CM_004_R	Cancer mutation	SH2B3 wild-type	Somatic	0.998	chr12:111446079-111448979	split_sequin
+S0558_CM_004_A	Cancer mutation	SH2B3.5 mutation; 5 x linked SNVs	Somatic	0.002	chr12:111446079-111448979	split_sequin
+S0559_CM_005_R	Cancer mutation	ERBB2 wild-type	Somatic	0.875	chr17:39706377-39711124	split_sequin
+S0560_CM_005_A	Cancer mutation	ERBB2.5 mutation; 5 x linked SNVs	Somatic	0.125	chr17:39706377-39711124	split_sequin
+S0561_CM_006_R	Cancer mutation	TOP2A wild-type	Somatic	0.992	chr17:40397893-40401753	split_sequin
+S0562_CM_006_A	Cancer mutation	TOP2A.5 mutation; 5 x linked SNVs	Somatic	0.008	chr17:40397893-40401753	split_sequin
+S0563_CM_007_R	Cancer mutation	JAK3 wild-type	Somatic	0.969	chr19:17833901-17838172	split_sequin
+S0564_CM_007_A	Cancer mutation	JAK3.5 mutation; 5 x linked SNVs	Somatic	0.031	chr19:17833901-17838172	split_sequin
+S0565_CM_008_R	Cancer mutation	ERCC2 wild-type	Somatic	0.938	chr19:45351524-45354024	split_sequin
+S0566_CM_008_A	Cancer mutation	ERCC2.5 mutation; 5 x linked SNVs	Somatic	0.063	chr19:45351524-45354024	split_sequin
+S0567_CM_009_R	Cancer mutation	GNAS wild-type	Somatic	0.999	chr20:58908460-58911456	split_sequin
+S0568_CM_009_A	Cancer mutation	GNAS.5 mutation; 5 x linked SNVs	Somatic	0.001	chr20:58908460-58911456	split_sequin
+S0569_CM_010_R	Cancer mutation	FGFR3 wild-type	Somatic	0.500	chr4:1805266-1807927	split_sequin
+S0570_CM_010_A	Cancer mutation	FGFR3.5 mutation; 5 x linked SNVs	Somatic	0.500	chr4:1805266-1807927	split_sequin
+S0571_MS_001_R	Clinical microsatellite	Bethesda BAT25 (ref allele)	Unstable microsatellite	0.500	chr4:54731196-54732920	split_sequin
+S0572_MS_001_A	Clinical microsatellite	Bethesda BAT25 (var allele)	Unstable microsatellite	0.500	chr4:54731196-54732920	split_sequin
+S0573_MS_002_R	Clinical microsatellite	Bethesda BAT26 (ref allele)	Unstable microsatellite	0.500	chr2:47413571-47415297	split_sequin
+S0574_MS_002_A	Clinical microsatellite	Bethesda BAT26 (var allele)	Unstable microsatellite	0.500	chr2:47413571-47415297	split_sequin
+S0575_MS_003_R	Clinical microsatellite	Bethesda D17S250 (ref allele)	Unstable microsatellite	0.500	chr17:38995021-38996760	split_sequin
+S0576_MS_003_A	Clinical microsatellite	Bethesda D17S250 (var allele)	Unstable microsatellite	0.500	chr17:38995021-38996760	split_sequin
+S0577_MS_004_R	Clinical microsatellite	Bethesda D2S123 (ref allele)	Unstable microsatellite	0.500	chr2:51060524-51062266	split_sequin
+S0578_MS_004_A	Clinical microsatellite	Bethesda D2S123 (var allele)	Unstable microsatellite	0.500	chr2:51060524-51062266	split_sequin
+S0579_MS_005_R	Clinical microsatellite	Bethesda D5S346 (ref allele)	Unstable microsatellite	0.500	chr5:112877132-112878872	split_sequin
+S0580_MS_005_A	Clinical microsatellite	Bethesda D5S346 (var allele)	Unstable microsatellite	0.500	chr5:112877132-112878872	split_sequin
+S0581_MS_006_R	Clinical microsatellite	Bethesda NR27 (ref allele)	Stable microsatellite	1.000	chr11:102321778-102323803	split_sequin
+S0582_MS_007_R	Clinical microsatellite	Bethesda NR21 (ref allele)	Stable microsatellite	1.000	chr14:23182138-23184158	split_sequin
+S0583_MS_008_R	Clinical microsatellite	Bethesda NR22 (ref allele)	Stable microsatellite	1.000	chr11:125619871-125621891	split_sequin
+S0584_MS_009_R	Clinical microsatellite	Bethesda NR24 (ref allele)	Stable microsatellite	1.000	chr2:95182614-95184636	split_sequin
+S0585_MS_010_R	Clinical microsatellite	Bethesda CAT25 (ref allele)	Stable microsatellite	1.000	chr7:143305250-143307274	split_sequin
+S0586_MS_011_R	Clinical microsatellite	Bethesda D18S55 (ref allele)	Stable microsatellite	1.000	chr18:64205287-64207338	split_sequin
+S0587_MS_012_R	Clinical microsatellite	Bethesda MONO27 (ref allele)	Stable microsatellite	1.000	chr2:39308549-39310575	split_sequin
+S0588_CL_001_R	Clinical gene region	ABL1 wild-type	Homozygous	1.000	chr9:130861902-130863902	split_sequin
+S0589_CL_002_R	Clinical gene region	ACADM wild-type	Homozygous	1.000	chr1:75760248-75762248	split_sequin
+S0590_CL_003_R	Clinical gene region	ACTA2 wild-type	Homozygous	1.000	chr10:88940311-88942311	split_sequin
+S0591_CL_004_R	Clinical gene region	ACTC1 wild-type	Homozygous	1.000	chr15:34792408-34794408	split_sequin
+S0592_CL_005_R	Clinical gene region	AKT1 wild-type	Homozygous	1.000	chr14:104775716-104777716	split_sequin
+S0593_CL_006_R	Clinical gene region	AKT2 wild-type	Homozygous	1.000	chr19:40255992-40257992	split_sequin
+S0594_CL_007_R	Clinical gene region	AKT3 wild-type	Homozygous	1.000	chr1:243571987-243573987	split_sequin
+S0595_CL_008_R	Clinical gene region	ALK wild-type	Homozygous	1.000	chr2:29208834-29210834	split_sequin
+S0596_CL_009_R	Clinical gene region	ALK wild-type	Homozygous	1.000	chr2:29219773-29222525	split_sequin
+S0597_CL_010_R	Clinical gene region	APC wild-type	Homozygous	1.000	chr5:112779848-112781848	split_sequin
+S0598_CL_011_R	Clinical gene region	APC wild-type	Homozygous	1.000	chr5:112840414-112842417	split_sequin
+S0599_CL_012_R	Clinical gene region	APOA1 wild-type	Homozygous	1.000	chr11:116835187-116838062	split_sequin
+S0600_CL_013_R	Clinical gene region	APOB wild-type	Homozygous	1.000	chr2:21005340-21007340	split_sequin
+S0601_CL_014_R	Clinical gene region	APOE wild-type	Homozygous	1.000	chr19:44907103-44909903	split_sequin
+S0602_CL_015_R	Clinical gene region	ARAF wild-type	Homozygous	1.000	chrX:47565907-47568107	split_sequin
+S0603_CL_016_R	Clinical gene region	ARID1A wild-type	Homozygous	1.000	chr1:26778389-26781374	split_sequin
+S0604_CL_017_R	Clinical gene region	ATM wild-type	Homozygous	1.000	chr11:108311455-108313455	split_sequin
+S0605_CL_018_R	Clinical gene region	ATM wild-type	Homozygous	1.000	chr11:108364296-108366296	split_sequin
+S0606_CL_019_R	Clinical gene region	ATN1 wild-type	Homozygous	1.000	chr12:6935634-6937932	split_sequin
+S0607_CL_020_R	Clinical gene region	ATP7B wild-type	Homozygous	1.000	chr13:51943202-51945202	split_sequin
+S0608_CL_021_R	Clinical gene region	ATP7B wild-type	Homozygous	1.000	chr13:51957429-51959429	split_sequin
+S0609_CL_022_R	Clinical gene region	ATXN1 wild-type	Homozygous	1.000	chr6:16326705-16328955	split_sequin
+S0610_CL_023_R	Clinical gene region	ATXN3 wild-type	Homozygous	1.000	chr14:92069995-92071995	split_sequin
+S0611_CL_024_R	Clinical gene region	ATXN7 wild-type	Homozygous	1.000	chr3:63911713-63913963	split_sequin
+S0612_CL_025_R	Clinical gene region	AURKA wild-type	Homozygous	1.000	chr20:56369468-56371468	split_sequin
+S0613_CL_026_R	Clinical gene region	AURKA wild-type	Homozygous	1.000	chr20:56385411-56387411	split_sequin
+S0614_CL_027_R	Clinical gene region	AXIN2 wild-type	Homozygous	1.000	chr17:65535437-65537437	split_sequin
+S0615_CL_028_R	Clinical gene region	BAP1 wild-type	Homozygous	1.000	chr3:52402218-52405203	split_sequin
+S0616_CL_029_R	Clinical gene region	BCL2 wild-type	Homozygous	1.000	chr18:63317277-63319477	split_sequin
+S0617_CL_030_R	Clinical gene region	BCR wild-type	Homozygous	1.000	chr22:23180368-23182868	split_sequin
+S0618_CL_031_R	Clinical gene region	BLM wild-type	Homozygous	1.000	chr15:90765967-90767967	split_sequin
+S0619_CL_032_R	Clinical gene region	BMPR2 wild-type	Homozygous	1.000	chr2:202554597-202557197	split_sequin
+S0620_CL_033_R	Clinical gene region	BRAF wild-type	Homozygous	1.000	chr7:140776222-140778823	split_sequin
+S0621_CL_034_R	Clinical gene region	BRAF wild-type	Homozygous	1.000	chr7:140780635-140782635	split_sequin
+S0622_CL_035_R	Clinical gene region	BRCA1 wild-type	Homozygous	1.000	chr17:43062545-43064745	split_sequin
+S0623_CL_036_R	Clinical gene region	BRCA1 wild-type	Homozygous	1.000	chr17:43070085-43072085	split_sequin
+S0624_CL_037_R	Clinical gene region	BRCA1 wild-type	Homozygous	1.000	chr17:43081490-43083490	split_sequin
+S0625_CL_038_R	Clinical gene region	BRCA2 wild-type	Homozygous	1.000	chr13:32331613-32334053	split_sequin
+S0626_CL_039_R	Clinical gene region	BRCA2 wild-type	Homozygous	1.000	chr13:32361839-32364159	split_sequin
+S0627_CL_040_R	Clinical gene region	BRCA2 wild-type	Homozygous	1.000	chr13:32369754-32372029	split_sequin
+S0628_CL_041_R	Clinical gene region	BRCA2 wild-type	Homozygous	1.000	chr13:32378614-32380854	split_sequin
+S0629_CL_042_R	Clinical gene region	BTD wild-type	Homozygous	1.000	chr3:15634558-15636558	split_sequin
+S0630_CL_043_R	Clinical gene region	BTK wild-type	Homozygous	1.000	chrX:101355160-101357160	split_sequin
+S0631_CL_044_R	Clinical gene region	C9orf72 wild-type	Homozygous	1.000	chr9:27572532-27574532	split_sequin
+S0632_CL_045_R	Clinical gene region	CACNA1S wild-type	Homozygous	1.000	chr1:201052525-201054525	split_sequin
+S0633_CL_046_R	Clinical gene region	CASR wild-type	Homozygous	1.000	chr3:122283112-122285812	split_sequin
+S0634_CL_047_R	Clinical gene region	CCND1 wild-type	Homozygous	1.000	chr11:69642302-69644677	split_sequin
+S0635_CL_048_R	Clinical gene region	CCND1 wild-type	Homozygous	1.000	chr11:69650200-69652200	split_sequin
+S0636_CL_049_R	Clinical gene region	CCND2 wild-type	Homozygous	1.000	chr12:4298940-4300940	split_sequin
+S0637_CL_050_R	Clinical gene region	CCND3 wild-type	Homozygous	1.000	chr6:41935265-41938065	split_sequin
+S0638_CL_051_R	Clinical gene region	CCNE1 wild-type	Homozygous	1.000	chr19:29821026-29823326	split_sequin
+S0639_CL_052_R	Clinical gene region	CD274 wild-type	Homozygous	1.000	chr9:5461976-5463976	split_sequin
+S0640_CL_053_R	Clinical gene region	CDH1 wild-type	Homozygous	1.000	chr16:68800785-68802785	split_sequin
+S0641_CL_054_R	Clinical gene region	CDH1 wild-type	Homozygous	1.000	chr16:68828726-68830726	split_sequin
+S0642_CL_055_R	Clinical gene region	CDK4 wild-type	Homozygous	1.000	chr12:57747790-57750236	split_sequin
+S0643_CL_056_R	Clinical gene region	CDK6 wild-type	Homozygous	1.000	chr7:92670481-92672481	split_sequin
+S0644_CL_057_R	Clinical gene region	CDKN1A wild-type	Homozygous	1.000	chr6:36683330-36685330	split_sequin
+S0645_CL_058_R	Clinical gene region	CDKN1B wild-type	Homozygous	1.000	chr12:12717176-12719601	split_sequin
+S0646_CL_059_R	Clinical gene region	CDKN2A wild-type	Homozygous	1.000	chr9:21973669-21975862	split_sequin
+S0647_CL_060_R	Clinical gene region	CDKN2A wild-type	Homozygous	1.000	chr9:21993325-21995374	split_sequin
+S0648_CL_061_R	Clinical gene region	CDKN2B wild-type	Homozygous	1.000	chr9:22005153-22007153	split_sequin
+S0649_CL_062_R	Clinical gene region	CFTR wild-type	Homozygous	1.000	chr7:117558561-117560561	split_sequin
+S0650_CL_063_R	Clinical gene region	CFTR wild-type	Homozygous	1.000	chr7:117586805-117588804	split_sequin
+S0651_CL_064_R	Clinical gene region	CSF1R wild-type	Homozygous	1.000	chr5:150076613-150078906	split_sequin
+S0652_CL_065_R	Clinical gene region	CSF3R wild-type	Homozygous	1.000	chr1:36465743-36468728	split_sequin
+S0653_CL_066_R	Clinical gene region	CTNNB1 wild-type	Homozygous	1.000	chr3:41235025-41237425	split_sequin
+S0654_CL_067_R	Clinical gene region	CYP1A2 wild-type	Homozygous	1.000	chr15:74749066-74755756	split_sequin
+S0655_CL_068_R	Clinical gene region	CYP2C19 wild-type	Homozygous	1.000	chr10:94761771-94763771	split_sequin
+S0656_CL_069_R	Clinical gene region	CYP2C19 wild-type	Homozygous	1.000	chr10:94774304-94776304	split_sequin
+S0657_CL_070_R	Clinical gene region	CYP2C19 wild-type	Homozygous	1.000	chr10:94841941-94843941	split_sequin
+S0658_CL_071_R	Clinical gene region	CYP2C19 wild-type	Homozygous	1.000	chr10:94848997-94850997	split_sequin
+S0659_CL_072_R	Clinical gene region	CYP2C9 wild-type	Homozygous	1.000	chr10:94941217-94943267	split_sequin
+S0660_CL_073_R	Clinical gene region	CYP2C9 wild-type	Homozygous	1.000	chr10:94980277-94982277	split_sequin
+S0661_CL_074_R	Clinical gene region	CYP2D6 wild-type	Homozygous	1.000	chr22:42125899-42131506	split_sequin
+S0662_CL_075_R	Clinical gene region	CYP2D7 wild-type	Homozygous	1.000	chr22:42139605-42145177	split_sequin
+S0663_CL_076_R	Clinical gene region	CYP3A5 wild-type	Homozygous	1.000	chr7:99664240-99666240	split_sequin
+S0664_CL_077_R	Clinical gene region	CYP3A5 wild-type	Homozygous	1.000	chr7:99671861-99673861	split_sequin
+S0665_CL_078_R	Clinical gene region	DDR2 wild-type	Homozygous	1.000	chr1:162777655-162779655	split_sequin
+S0666_CL_079_R	Clinical gene region	DMPK wild-type	Homozygous	1.000	chr19:45769486-45771586	split_sequin
+S0667_CL_080_R	Clinical gene region	DSC2 wild-type	Homozygous	1.000	chr18:31079102-31081102	split_sequin
+S0668_CL_081_R	Clinical gene region	DSG2 wild-type	Homozygous	1.000	chr18:31518871-31520871	split_sequin
+S0669_CL_082_R	Clinical gene region	DSP wild-type	Homozygous	1.000	chr6:7583040-7585069	split_sequin
+S0670_CL_083_R	Clinical gene region	EGFR wild-type	Homozygous	1.000	chr7:55153083-55155083	split_sequin
+S0671_CL_084_R	Clinical gene region	EGFR wild-type	Homozygous	1.000	chr7:55190798-55193498	split_sequin
+S0672_CL_085_R	Clinical gene region	EPHA2 wild-type	Homozygous	1.000	chr1:16134341-16136516	split_sequin
+S0673_CL_086_R	Clinical gene region	EPHA3 wild-type	Homozygous	1.000	chr3:89209189-89211189	split_sequin
+S0674_CL_087_R	Clinical gene region	ERBB2 wild-type	Homozygous	1.000	chr17:39711215-39713315	split_sequin
+S0675_CL_088_R	Clinical gene region	ERBB2 wild-type	Homozygous	1.000	chr17:39714532-39718276	split_sequin
+S0676_CL_089_R	Clinical gene region	ERBB2 wild-type	Homozygous	1.000	chr17:39725817-39728802	split_sequin
+S0677_CL_090_R	Clinical gene region	ERBB3 wild-type	Homozygous	1.000	chr12:56083994-56085993	split_sequin
+S0678_CL_091_R	Clinical gene region	ERBB4 wild-type	Homozygous	1.000	chr2:211423229-211425229	split_sequin
+S0679_CL_092_R	Clinical gene region	ERCC1 wild-type	Homozygous	1.000	chr19:45413911-45415911	split_sequin
+S0680_CL_093_R	Clinical gene region	ESR1 wild-type	Homozygous	1.000	chr6:151943340-151945340	split_sequin
+S0681_CL_094_R	Clinical gene region	ESR1 wild-type	Homozygous	1.000	chr6:152097849-152099849	split_sequin
+S0682_CL_095_R	Clinical gene region	EZH2 wild-type	Homozygous	1.000	chr7:148810674-148812674	split_sequin
+S0683_CL_096_R	Clinical gene region	F2 wild-type	Homozygous	1.000	chr11:46738389-46740389	split_sequin
+S0684_CL_097_R	Clinical gene region	F5 wild-type	Homozygous	1.000	chr1:169548909-169550909	split_sequin
+S0685_CL_098_R	Clinical gene region	F8 wild-type	Homozygous	1.000	chrX:154903188-154905688	split_sequin
+S0686_CL_099_R	Clinical gene region	F8 wild-type	Homozygous	1.000	chrX:154927924-154932345	split_sequin
+S0687_CL_100_R	Clinical gene region	F9 wild-type	Homozygous	1.000	chrX:139550165-139552165	split_sequin
+S0688_CL_101_R	Clinical gene region	F9 wild-type	Homozygous	1.000	chrX:139560800-139562800	split_sequin
+S0689_CL_102_R	Clinical gene region	FBXW7 wild-type	Homozygous	1.000	chr4:152327298-152329298	split_sequin
+S0690_CL_103_R	Clinical gene region	FGA wild-type	Homozygous	1.000	chr4:154588059-154590359	split_sequin
+S0691_CL_104_R	Clinical gene region	FGF3 wild-type	Homozygous	1.000	chr11:69809505-69811505	split_sequin
+S0692_CL_105_R	Clinical gene region	FGFR1 wild-type	Homozygous	1.000	chr8:38416612-38419062	split_sequin
+S0693_CL_106_R	Clinical gene region	FGFR2 wild-type	Homozygous	1.000	chr10:121497551-121499551	split_sequin
+S0694_CL_107_R	Clinical gene region	FGFR4 wild-type	Homozygous	1.000	chr5:177091639-177094479	split_sequin
+S0695_CL_108_R	Clinical gene region	FXN wild-type	Homozygous	1.000	chr9:69034785-69036782	split_sequin
+S0696_CL_109_R	Clinical gene region	G6PD wild-type	Homozygous	1.000	chrX:154531736-154536748	split_sequin
+S0697_CL_110_R	Clinical gene region	GALT wild-type	Homozygous	1.000	chr9:34648487-34650487	split_sequin
+S0698_CL_111_R	Clinical gene region	GATA3 wild-type	Homozygous	1.000	chr10:8072883-8074883	split_sequin
+S0699_CL_112_R	Clinical gene region	GBA wild-type	Homozygous	1.000	chr1:155234157-155236457	split_sequin
+S0700_CL_113_R	Clinical gene region	GLA wild-type	Homozygous	1.000	chrX:101397161-101399611	split_sequin
+S0701_CL_114_R	Clinical gene region	HBA1 wild-type	Homozygous	1.000	chr16:175901-178251	split_sequin
+S0702_CL_115_R	Clinical gene region	HBA2 wild-type	Homozygous	1.000	chr16:172079-174429	split_sequin
+S0703_CL_116_R	Clinical gene region	HBB wild-type	Homozygous	1.000	chr11:5224893-5227718	split_sequin
+S0704_CL_117_R	Clinical gene region	HBD wild-type	Homozygous	1.000	chr11:5232293-5235143	split_sequin
+S0705_CL_118_R	Clinical gene region	HBG1 wild-type	Homozygous	1.000	chr11:5247588-5250488	split_sequin
+S0706_CL_119_R	Clinical gene region	HBG2 wild-type	Homozygous	1.000	chr11:5252636-5255411	split_sequin
+S0707_CL_120_R	Clinical gene region	HEXA wild-type	Homozygous	1.000	chr15:72345622-72347622	split_sequin
+S0708_CL_121_R	Clinical gene region	HFE wild-type	Homozygous	1.000	chr6:26090207-26094126	split_sequin
+S0709_CL_122_R	Clinical gene region	HTT wild-type	Homozygous	1.000	chr4:3073905-3075905	split_sequin
+S0710_CL_123_R	Clinical gene region	IKBKAP wild-type	Homozygous	1.000	chr9:108899082-108901081	split_sequin
+S0711_CL_124_R	Clinical gene region	KCNH2 wild-type	Homozygous	1.000	chr7:150946202-150949549	split_sequin
+S0712_CL_125_R	Clinical gene region	KCNH2 wild-type	Homozygous	1.000	chr7:150949568-150953528	split_sequin
+S0713_CL_126_R	Clinical gene region	KCNQ1 wild-type	Homozygous	1.000	chr11:2582492-2584492	split_sequin
+S0714_CL_127_R	Clinical gene region	KIT wild-type	Homozygous	1.000	chr4:54724455-54726550	split_sequin
+S0715_CL_128_R	Clinical gene region	KIT wild-type	Homozygous	1.000	chr4:54728465-54730465	split_sequin
+S0716_CL_129_R	Clinical gene region	KIT wild-type	Homozygous	1.000	chr4:54735649-54738211	split_sequin
+S0717_CL_130_R	Clinical gene region	KRAS wild-type	Homozygous	1.000	chr12:25208712-25210711	split_sequin
+S0718_CL_131_R	Clinical gene region	LDLR wild-type	Homozygous	1.000	chr19:11104412-11106412	split_sequin
+S0719_CL_132_R	Clinical gene region	LMNA wild-type	Homozygous	1.000	chr1:156133791-156135941	split_sequin
+S0720_CL_133_R	Clinical gene region	LYZ wild-type	Homozygous	1.000	chr12:69349190-69351190	split_sequin
+S0721_CL_134_R	Clinical gene region	MAP2K2 wild-type	Homozygous	1.000	chr19:4116526-4118526	split_sequin
+S0722_CL_135_R	Clinical gene region	MAP3K1 wild-type	Homozygous	1.000	chr5:56880883-56883533	split_sequin
+S0723_CL_136_R	Clinical gene region	MCOLN1 wild-type	Homozygous	1.000	chr19:7525689-7527689	split_sequin
+S0724_CL_137_R	Clinical gene region	MDM2 wild-type	Homozygous	1.000	chr12:68838560-68840560	split_sequin
+S0725_CL_138_R	Clinical gene region	MDM4 wild-type	Homozygous	1.000	chr1:204548399-204550399	split_sequin
+S0726_CL_139_R	Clinical gene region	MEK1 wild-type	Homozygous	1.000	chr15:66434365-66437565	split_sequin
+S0727_CL_140_R	Clinical gene region	MET wild-type	Homozygous	1.000	chr7:116698435-116700950	split_sequin
+S0728_CL_141_R	Clinical gene region	MET wild-type	Homozygous	1.000	chr7:116776130-116778130	split_sequin
+S0729_CL_142_R	Clinical gene region	MET wild-type	Homozygous	1.000	chr7:116778167-116780167	split_sequin
+S0730_CL_143_R	Clinical gene region	MLH1 wild-type	Homozygous	1.000	chr3:37024737-37026736	split_sequin
+S0731_CL_144_R	Clinical gene region	MLH1 wild-type	Homozygous	1.000	chr3:37046771-37049769	split_sequin
+S0732_CL_145_R	Clinical gene region	MLL wild-type	Homozygous	1.000	chr11:118501778-118507243	split_sequin
+S0733_CL_146_R	Clinical gene region	MLL2 wild-type	Homozygous	1.000	chr12:49036448-49042202	split_sequin
+S0734_CL_147_R	Clinical gene region	MLL3 wild-type	Homozygous	1.000	chr7:152228977-152230977	split_sequin
+S0735_CL_148_R	Clinical gene region	MSH2 wild-type	Homozygous	1.000	chr2:47474305-47477290	split_sequin
+S0736_CL_149_R	Clinical gene region	MSH3 wild-type	Homozygous	1.000	chr5:80674096-80676096	split_sequin
+S0737_CL_150_R	Clinical gene region	MSH6 wild-type	Homozygous	1.000	chr2:47797890-47801884	split_sequin
+S0738_CL_151_R	Clinical gene region	MTHFR wild-type	Homozygous	1.000	chr1:11793154-11796119	split_sequin
+S0739_CL_152_R	Clinical gene region	MTOR wild-type	Homozygous	1.000	chr1:11123566-11125566	split_sequin
+S0740_CL_153_R	Clinical gene region	MTOR wild-type	Homozygous	1.000	chr1:11156222-11158222	split_sequin
+S0741_CL_154_R	Clinical gene region	MYBPC3 wild-type	Homozygous	1.000	chr11:47336594-47338594	split_sequin
+S0742_CL_155_R	Clinical gene region	MYC wild-type	Homozygous	1.000	chr8:127735944-127741610	split_sequin
+S0743_CL_156_R	Clinical gene region	MYCN wild-type	Homozygous	1.000	chr2:15941311-15946811	split_sequin
+S0744_CL_157_R	Clinical gene region	MYH11 wild-type	Homozygous	1.000	chr16:15725952-15727952	split_sequin
+S0745_CL_158_R	Clinical gene region	MYH7 wild-type	Homozygous	1.000	chr14:23414256-23417056	split_sequin
+S0746_CL_159_R	Clinical gene region	MYH7 wild-type	Homozygous	1.000	chr14:23424639-23427539	split_sequin
+S0747_CL_160_R	Clinical gene region	MYL2 wild-type	Homozygous	1.000	chr12:110918157-110920157	split_sequin
+S0748_CL_161_R	Clinical gene region	MYL3 wild-type	Homozygous	1.000	chr3:46858562-46860562	split_sequin
+S0749_CL_162_R	Clinical gene region	MYLK wild-type	Homozygous	1.000	chr3:123619275-123621275	split_sequin
+S0750_CL_163_R	Clinical gene region	NAT2 wild-type	Homozygous	1.000	chr8:18399395-18401495	split_sequin
+S0751_CL_164_R	Clinical gene region	NF1 wild-type	Homozygous	1.000	chr17:31180746-31183296	split_sequin
+S0752_CL_165_R	Clinical gene region	NF1 wild-type	Homozygous	1.000	chr17:31228431-31231370	split_sequin
+S0753_CL_166_R	Clinical gene region	NF1 wild-type	Homozygous	1.000	chr17:31349251-31351251	split_sequin
+S0754_CL_167_R	Clinical gene region	NF2 wild-type	Homozygous	1.000	chr22:29673888-29675888	split_sequin
+S0755_CL_168_R	Clinical gene region	NOTCH2 wild-type	Homozygous	1.000	chr1:119914602-119917402	split_sequin
+S0756_CL_169_R	Clinical gene region	NPM1 wild-type	Homozygous	1.000	chr5:171409548-171411548	split_sequin
+S0757_CL_170_R	Clinical gene region	OTC wild-type	Homozygous	1.000	chrX:38400350-38402350	split_sequin
+S0758_CL_171_R	Clinical gene region	PAH wild-type	Homozygous	1.000	chr12:102839458-102841458	split_sequin
+S0759_CL_172_R	Clinical gene region	PALB2 wild-type	Homozygous	1.000	chr16:23622052-23624052	split_sequin
+S0760_CL_173_R	Clinical gene region	PAX8 wild-type	Homozygous	1.000	chr2:113243573-113245577	split_sequin
+S0761_CL_174_R	Clinical gene region	PBRM1 wild-type	Homozygous	1.000	chr3:52608634-52610634	split_sequin
+S0762_CL_175_R	Clinical gene region	PCSK9 wild-type	Homozygous	1.000	chr1:55062478-55064478	split_sequin
+S0763_CL_176_R	Clinical gene region	PDGFRA wild-type	Homozygous	1.000	chr4:54276602-54279302	split_sequin
+S0764_CL_177_R	Clinical gene region	PDGFRA wild-type	Homozygous	1.000	chr4:54284602-54287102	split_sequin
+S0765_CL_178_R	Clinical gene region	PDK1 wild-type	Homozygous	1.000	chr2:172585334-172587334	split_sequin
+S0766_CL_179_R	Clinical gene region	PIK3CA wild-type	Homozygous	1.000	chr3:179208942-179211220	split_sequin
+S0767_CL_180_R	Clinical gene region	PIK3CA wild-type	Homozygous	1.000	chr3:179219241-179221799	split_sequin
+S0768_CL_181_R	Clinical gene region	PIK3CA wild-type	Homozygous	1.000	chr3:179223425-179226714	split_sequin
+S0769_CL_182_R	Clinical gene region	PIK3CA wild-type	Homozygous	1.000	chr3:179228436-179231329	split_sequin
+S0770_CL_183_R	Clinical gene region	PIK3CB wild-type	Homozygous	1.000	chr3:138654458-138656908	split_sequin
+S0771_CL_184_R	Clinical gene region	PIK3R1 wild-type	Homozygous	1.000	chr5:68293911-68296086	split_sequin
+S0772_CL_185_R	Clinical gene region	PKD2 wild-type	Homozygous	1.000	chr4:88045759-88047759	split_sequin
+S0773_CL_186_R	Clinical gene region	PKHD1 wild-type	Homozygous	1.000	chr6:52023930-52026830	split_sequin
+S0774_CL_187_R	Clinical gene region	PKP2 wild-type	Homozygous	1.000	chr12:32801480-32803480	split_sequin
+S0775_CL_188_R	Clinical gene region	PLCG2 wild-type	Homozygous	1.000	chr16:81927591-81929591	split_sequin
+S0776_CL_189_R	Clinical gene region	PMS2 wild-type	Homozygous	1.000	chr7:5986047-5988347	split_sequin
+S0777_CL_190_R	Clinical gene region	PPARG wild-type	Homozygous	1.000	chr3:12404937-12406937	split_sequin
+S0778_CL_191_R	Clinical gene region	PPP2R2B wild-type	Homozygous	1.000	chr5:146877394-146879644	split_sequin
+S0779_CL_192_R	Clinical gene region	PRKAG2 wild-type	Homozygous	1.000	chr7:151575411-151577411	split_sequin
+S0780_CL_193_R	Clinical gene region	PRSS1 wild-type	Homozygous	1.000	chr7:142749881-142753711	split_sequin
+S0781_CL_194_R	Clinical gene region	PTCH1 wild-type	Homozygous	1.000	chr9:95446181-95448181	split_sequin
+S0782_CL_195_R	Clinical gene region	PTEN wild-type	Homozygous	1.000	chr10:87863518-87865518	split_sequin
+S0783_CL_196_R	Clinical gene region	PTEN wild-type	Homozygous	1.000	chr10:87951191-87953191	split_sequin
+S0784_CL_197_R	Clinical gene region	PTPN11 wild-type	Homozygous	1.000	chr12:112476719-112478719	split_sequin
+S0785_CL_198_R	Clinical gene region	RAF1 wild-type	Homozygous	1.000	chr3:12603214-12605214	split_sequin
+S0786_CL_199_R	Clinical gene region	RB1 wild-type	Homozygous	1.000	chr13:48372449-48374449	split_sequin
+S0787_CL_200_R	Clinical gene region	RB1 wild-type	Homozygous	1.000	chr13:48452053-48454053	split_sequin
+S0788_CL_201_R	Clinical gene region	RET wild-type	Homozygous	1.000	chr10:43112217-43115359	split_sequin
+S0789_CL_202_R	Clinical gene region	RHCE wild-type	Homozygous	1.000	chr1:25389833-25391833	split_sequin
+S0790_CL_203_R	Clinical gene region	RHCE wild-type	Homozygous	1.000	chr1:25407778-25409778	split_sequin
+S0791_CL_204_R	Clinical gene region	RHD wild-type	Homozygous	1.000	chr1:25302393-25304393	split_sequin
+S0792_CL_205_R	Clinical gene region	ROS1 wild-type	Homozygous	1.000	chr6:117310069-117312069	split_sequin
+S0793_CL_206_R	Clinical gene region	RYR1 wild-type	Homozygous	1.000	chr19:38456500-38458498	split_sequin
+S0794_CL_207_R	Clinical gene region	RYR2 wild-type	Homozygous	1.000	chr1:237783027-237785627	split_sequin
+S0795_CL_208_R	Clinical gene region	SCN5A wild-type	Homozygous	1.000	chr3:38549690-38552190	split_sequin
+S0796_CL_209_R	Clinical gene region	SDHAF2 wild-type	Homozygous	1.000	chr11:61436870-61438870	split_sequin
+S0797_CL_210_R	Clinical gene region	SDHB wild-type	Homozygous	1.000	chr1:17027669-17029669	split_sequin
+S0798_CL_211_R	Clinical gene region	SDHC wild-type	Homozygous	1.000	chr1:161355760-161357760	split_sequin
+S0799_CL_212_R	Clinical gene region	SDHD wild-type	Homozygous	1.000	chr11:112093888-112095888	split_sequin
+S0800_CL_213_R	Clinical gene region	SERPINA1 wild-type	Homozygous	1.000	chr14:94377545-94379545	split_sequin
+S0801_CL_214_R	Clinical gene region	SETD2 wild-type	Homozygous	1.000	chr3:47119492-47125201	split_sequin
+S0802_CL_215_R	Clinical gene region	SLCO1B1 wild-type	Homozygous	1.000	chr12:21173933-21179384	split_sequin
+S0803_CL_216_R	Clinical gene region	SMAD3 wild-type	Homozygous	1.000	chr15:67180351-67182351	split_sequin
+S0804_CL_217_R	Clinical gene region	SMAD4 wild-type	Homozygous	1.000	chr18:51077362-51079362	split_sequin
+S0805_CL_218_R	Clinical gene region	SMN1 wild-type	Homozygous	1.000	chr5:70941559-70943559	split_sequin
+S0806_CL_219_R	Clinical gene region	SMN1 wild-type	Homozygous	1.000	chr5:70945121-70947121	split_sequin
+S0807_CL_220_R	Clinical gene region	SMN2 wild-type	Homozygous	1.000	chr5:70066185-70068185	split_sequin
+S0808_CL_221_R	Clinical gene region	SMPD1 wild-type	Homozygous	1.000	chr11:6390739-6395257	split_sequin
+S0809_CL_222_R	Clinical gene region	SPINK1 wild-type	Homozygous	1.000	chr5:147827076-147829076	split_sequin
+S0810_CL_223_R	Clinical gene region	STK11 wild-type	Homozygous	1.000	chr19:1219546-1221996	split_sequin
+S0811_CL_224_R	Clinical gene region	SUZ12 wild-type	Homozygous	1.000	chr17:31982054-31984054	split_sequin
+S0812_CL_225_R	Clinical gene region	TGFBR1 wild-type	Homozygous	1.000	chr9:99148244-99150244	split_sequin
+S0813_CL_226_R	Clinical gene region	TGFBR2 wild-type	Homozygous	1.000	chr3:30690512-30692512	split_sequin
+S0814_CL_227_R	Clinical gene region	TMEM43 wild-type	Homozygous	1.000	chr3:14140695-14142695	split_sequin
+S0815_CL_228_R	Clinical gene region	TMPRSS2 wild-type	Homozygous	1.000	chr21:41486174-41489159	split_sequin
+S0816_CL_229_R	Clinical gene region	TNNI3 wild-type	Homozygous	1.000	chr19:55150876-55152876	split_sequin
+S0817_CL_230_R	Clinical gene region	TP53 wild-type	Homozygous	1.000	chr17:7667837-7671492	split_sequin
+S0818_CL_231_R	Clinical gene region	TP53 wild-type	Homozygous	1.000	chr17:7674718-7677213	split_sequin
+S0819_CL_232_R	Clinical gene region	TPMT wild-type	Homozygous	1.000	chr6:18129726-18131726	split_sequin
+S0820_CL_233_R	Clinical gene region	TSC1 wild-type	Homozygous	1.000	chr9:132909761-132913260	split_sequin
+S0821_CL_234_R	Clinical gene region	TSC1 wild-type	Homozygous	1.000	chr9:132920671-132922671	split_sequin
+S0822_CL_235_R	Clinical gene region	TSC2 wild-type	Homozygous	1.000	chr16:2061812-2065112	split_sequin
+S0823_CL_236_R	Clinical gene region	TSC2 wild-type	Homozygous	1.000	chr16:2087177-2089287	split_sequin
+S0824_CL_237_R	Clinical gene region	TTR wild-type	Homozygous	1.000	chr18:31592206-31595951	split_sequin
+S0825_CL_238_R	Clinical gene region	UGT1A1 wild-type	Homozygous	1.000	chr2:233759572-233761872	split_sequin
+S0826_CL_239_R	Clinical gene region	VHL wild-type	Homozygous	1.000	chr3:10145576-10147576	split_sequin
+S0827_CL_240_R	Clinical gene region	VHL wild-type	Homozygous	1.000	chr3:10148890-10150890	split_sequin
+S0828_CL_241_R	Clinical gene region	WT1 wild-type	Homozygous	1.000	chr11:32434023-32436023	split_sequin
+S0829_MT_001_R	Mitochondria	chrM (ref)	Homozygous	1.000	chrM:1-4142	split_mito
+S0830_MT_002_R	Mitochondria	chrM (ref)	Homozygous	1.000	chrM:8284-12426	split_mito
+S0831_MT_003_R	Mitochondria	chrM (ref)	Homozygous	1.000	chrM:4142-8284	split_mito
+S0832_HL_001_A	HLA allele	HLA-A*03:01:01:01	Heterozygous	0.500	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0833_HL_001_B	HLA allele	HLA-A*02:01:01:01	Heterozygous	0.500	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0834_HL_002_A	HLA allele	HLA-B*18:01:01	Heterozygous	0.500	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0835_HL_002_B	HLA allele	HLA-B*44:02:01:01	Heterozygous	0.500	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0836_HL_003_A	HLA allele	HLA-C*06:02:01:01	Heterozygous	0.500	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0837_HL_003_B	HLA allele	HLA-C*16:01	Heterozygous	0.500	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0838_HL_004_A	HLA allele	HLA-DQB1*06:02:01	Heterozygous	0.500	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0839_HL_004_B	HLA allele	HLA-DQB1*02:01:01	Heterozygous	0.500	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0840_HL_005_A	HLA allele	HLA-DRB1*03:01:01:01	Homozygous	1.000	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0841_HL_006_A	HLA allele	HLA-DRB1*03:01:01:01	Homozygous	1.000	Multiple scaffolds (sequin_hla_regions_hg38_2.0.bed)	split_hla
+S0842_SV_001_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr10:91208237-91211038	split_sv
+S0843_SV_001_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr10:91208069-91211206	split_sv
+S0844_SV_002_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr11:16973434-16976235	split_sv
+S0845_SV_002_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr11:16973223-16976446	split_sv
+S0846_SV_003_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr14:30792543-30795344	split_sv
+S0847_SV_003_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr14:30792379-30795508	split_sv
+S0848_SV_004_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr15:62654253-62657054	split_sv
+S0849_SV_004_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr15:62654185-62657121	split_sv
+S0850_SV_005_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr16:58784292-58787093	split_sv
+S0851_SV_005_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr16:58784255-58787129	split_sv
+S0852_SV_006_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr20:21868008-21870809	split_sv
+S0853_SV_006_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr20:21867865-21870951	split_sv
+S0854_SV_007_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr3:140901629-140904430	split_sv
+S0855_SV_007_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr3:140901141-140904917	split_sv
+S0856_SV_008_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr9:42257563-42260364	split_sv
+S0857_SV_008_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr9:42257064-42260863	split_sv
+S0858_SV_009_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chr9:97997541-98000342	split_sv
+S0859_SV_009_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chr9:97997377-98000506	split_sv
+S0860_SV_010_R	Structural variant	Common deletion (ref allele)	Heterozygous	0.500	chrX:66882597-66885398	split_sv
+S0861_SV_010_A	Structural variant	Common deletion (var allele)	Heterozygous	0.500	chrX:66882536-66885459	split_sv
+S0862_SV_011_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr10:103991302-103994103	split_sv
+S0863_SV_011_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr10:103991357-103994049	split_sv
+S0864_SV_012_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr10:132520793-132523594	split_sv
+S0865_SV_012_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr10:132521043-132523345	split_sv
+S0866_SV_013_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr11:134703316-134706117	split_sv
+S0867_SV_013_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr11:134703477-134705957	split_sv
+S0868_SV_014_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr14:82274969-82277770	split_sv
+S0869_SV_014_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr14:82275067-82277672	split_sv
+S0870_SV_015_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr1:56529130-56531931	split_sv
+S0871_SV_015_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr1:56529282-56531780	split_sv
+S0872_SV_016_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr20:43695354-43698155	split_sv
+S0873_SV_016_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr20:43695621-43697889	split_sv
+S0874_SV_017_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr4:141520563-141523364	split_sv
+S0875_SV_017_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr4:141520637-141523291	split_sv
+S0876_SV_018_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr5:1236993-1239794	split_sv
+S0877_SV_018_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr5:1237111-1239676	split_sv
+S0878_SV_019_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr6:120442332-120445133	split_sv
+S0879_SV_019_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr6:120442386-120445080	split_sv
+S0880_SV_020_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr8:57258724-57261525	split_sv
+S0881_SV_020_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr8:57258962-57261287	split_sv
+S0882_SV_021_R	Structural variant	Viral sequence insertion; zika (ref allele)	Heterozygous	0.500	chr10:106189981-106192782	split_sv
+S0883_SV_021_A	Structural variant	Viral sequence insertion; zika (var allele)	Heterozygous	0.500	chr10:106190438-106192327	split_sv
+S0884_SV_022_R	Structural variant	Viral sequence insertion; dengue (ref allele)	Heterozygous	0.500	chr11:79126040-79128841	split_sv
+S0885_SV_022_A	Structural variant	Viral sequence insertion; dengue (var allele)	Heterozygous	0.500	chr11:79126069-79128814	split_sv
+S0886_SV_023_R	Structural variant	Viral sequence insertion; lyssa (ref allele)	Heterozygous	0.500	chr18:39480433-39483234	split_sv
+S0887_SV_023_A	Structural variant	Viral sequence insertion; lyssa (var allele)	Heterozygous	0.500	chr18:39480598-39483071	split_sv
+S0888_SV_024_R	Structural variant	Viral sequence insertion; hendra (ref allele)	Heterozygous	0.500	chr1:45899200-45902001	split_sv
+S0889_SV_024_A	Structural variant	Viral sequence insertion; hendra (var allele)	Heterozygous	0.500	chr1:45899365-45901838	split_sv
+S0890_SV_025_R	Structural variant	Viral sequence insertion; hepatitis C (ref allele)	Heterozygous	0.500	chr20:63964075-63966876	split_sv
+S0891_SV_025_A	Structural variant	Viral sequence insertion; hepatitis C (var allele)	Heterozygous	0.500	chr20:63964714-63966239	split_sv
+S0892_SV_026_R	Structural variant	Viral sequence insertion; HIV (ref allele)	Heterozygous	0.500	chr3:195841303-195844104	split_sv
+S0893_SV_026_A	Structural variant	Viral sequence insertion; HIV (var allele)	Heterozygous	0.500	chr3:195841661-195843748	split_sv
+S0894_SV_027_R	Structural variant	Viral sequence insertion; measles (ref allele)	Heterozygous	0.500	chr4:100468166-100470967	split_sv
+S0895_SV_027_A	Structural variant	Viral sequence insertion; measles (var allele)	Heterozygous	0.500	chr4:100468255-100470880	split_sv
+S0896_SV_028_R	Structural variant	Viral sequence insertion; yellow fever (ref allele)	Heterozygous	0.500	chr6:163828429-163831230	split_sv
+S0897_SV_028_A	Structural variant	Viral sequence insertion; yellow fever (var allele)	Heterozygous	0.500	chr6:163828483-163831178	split_sv
+S0898_SV_029_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr10:65667507-65670308	split_sv
+S0899_SV_029_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr10:65667507-65670308	split_sv
+S0900_SV_030_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr11:23945215-23948016	split_sv
+S0901_SV_030_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr11:23945215-23948016	split_sv
+S0902_SV_031_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr15:94937038-94939839	split_sv
+S0903_SV_031_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr15:94937038-94939839	split_sv
+S0904_SV_032_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr16:48870454-48873255	split_sv
+S0905_SV_032_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr16:48870454-48873255	split_sv
+S0906_SV_033_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr17:33355652-33358453	split_sv
+S0907_SV_033_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr17:33355652-33358453	split_sv
+S0908_SV_034_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr1:197786856-197789657	split_sv
+S0909_SV_034_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr1:197786856-197789657	split_sv
+S0910_SV_035_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr21:26000716-26003517	split_sv
+S0911_SV_035_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr21:26000716-26003517	split_sv
+S0912_SV_036_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr3:161635847-161638648	split_sv
+S0913_SV_036_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr3:161635847-161638648	split_sv
+S0914_SV_037_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr3:45041496-45044297	split_sv
+S0915_SV_037_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr3:45041496-45044297	split_sv
+S0916_SV_038_R	Structural variant	Common inversion (ref allele)	Heterozygous	0.500	chr6:154140817-154143618	split_sv
+S0917_SV_038_A	Structural variant	Common inversion (var allele)	Heterozygous	0.500	chr6:154140817-154143617	split_sv
+S0918_SV_039_R	Structural variant	Mobile element insertion; SINE (ref allele)	Heterozygous	0.500	chr3:28664177-28666977	split_sv
+S0919_SV_039_A	Structural variant	Mobile element insertion; SINE (var allele)	Heterozygous	0.500	chr3:28664386-28666769	split_sv
+S0920_SV_040_R	Structural variant	Mobile element insertion; SINE (ref allele)	Heterozygous	0.500	chr5:66272413-66275066	split_sv
+S0921_SV_040_A	Structural variant	Mobile element insertion; SINE (var allele)	Heterozygous	0.500	chr5:66272561-66275076	split_sv
+S0922_SV_041_R	Structural variant	Mobile element insertion; LINE (ref allele)	Heterozygous	0.500	chr12:126316997-126319797	split_sv
+S0923_SV_041_A	Structural variant	Mobile element insertion; LINE (var allele)	Heterozygous	0.500	chr12:126317597-126319198	split_sv
+S0924_SV_042_R	Structural variant	Mobile element insertion; LTR (ref allele)	Heterozygous	0.500	chr1:104687089-104689889	split_sv
+S0925_SV_042_A	Structural variant	Mobile element insertion; LTR (var allele)	Heterozygous	0.500	chr1:104687572-104689407	split_sv
+S0926_SV_043_R	Structural variant	Mobile element insertion; LTR (ref allele)	Heterozygous	0.500	chr21:8605615-8608415	split_sv
+S0927_SV_043_A	Structural variant	Mobile element insertion; LTR (var allele)	Heterozygous	0.500	chr21:8606099-8607932	split_sv
+S0928_SV_044_R	Structural variant	Common tandem duplication (ref allele)	Heterozygous	0.500	chr10:132511284-132514085	split_sv
+S0930_SV_046_R	Structural variant	Viral sequence insertion; rabies (ref allele)	Heterozygous	0.500	chr6:103734072-103736873	split_sv
+S0931_SV_044_A	Structural variant	Common tandem duplication (var allele)	Heterozygous	0.500	chr10:132511428-132513942	split_sv
+S0933_SV_046_A	Structural variant	Viral sequence insertion; rabies (var allele)	Heterozygous	0.500	chr6:103734235-103736712	split_sv
+S0934_TL_001_A	Clinical translocation	FLI-EWS	Heterozygous	0.500	-	split_sv
+S0935_TL_001_B	Clinical translocation	EWS-FLI	Heterozygous	0.500	-	split_sv
+S0936_TL_001_R	Clinical translocation	FLI wild-type	Heterozygous	0.500	chr11:128802565-128804565	split_sv
+S0937_TL_001_R	Clinical translocation	EWS wild-type	Heterozygous	0.500	chr22:29288714-29290714	split_sv
+S0938_TL_002_A	Clinical translocation	RUNX1-RUNXT1	Heterozygous	0.500	-	split_sv
+S0939_TL_002_B	Clinical translocation	RUNXT1-RUNX1	Heterozygous	0.500	-	split_sv
+S0940_TL_002_R	Clinical translocation	RUNX1 wild-type	Heterozygous	0.500	chr21:34845646-34847646	split_sv
+S0941_TL_002_R	Clinical translocation	RUNXT1 wild-type	Heterozygous	0.500	chr8:92064050-92066050	split_sv
+S0942_TL_003_A	Clinical translocation	IGHA-CMYC	Heterozygous	0.500	-	split_sv
+S0943_TL_003_B	Clinical translocation	CMYC-IGHA	Heterozygous	0.500	-	split_sv
+S0944_TL_003_R	Clinical translocation	IGHA wild-type	Heterozygous	0.500	chr8:127733818-127735818	split_sv
+S0945_TL_003_R	Clinical translocation	CMYC wild-type	Heterozygous	0.500	chr14:105860192-105862192	split_sv
+S0946_TL_004_A	Clinical translocation	ETV6-RUNX1	Heterozygous	0.500	-	split_sv
+S0947_TL_004_B	Clinical translocation	RUNX1-ETV6	Heterozygous	0.500	-	split_sv
+S0948_TL_004_R	Clinical translocation	ETV6 wild-type	Heterozygous	0.500	chr12:11878798-11880798	split_sv
+S0949_TL_004_R	Clinical translocation	RUNX1 wild-type	Heterozygous	0.500	chr21:34927527-34929527	split_sv
+S0950_TL_005_A	Clinical translocation	IGHJ6-BCL2	Heterozygous	0.500	-	split_sv
+S0951_TL_005_B	Clinical translocation	BCL2-IGHJ6	Heterozygous	0.500	-	split_sv
+S0952_TL_005_R	Clinical translocation	IGHJ6 wild-type	Heterozygous	0.500	chr14:105862248-105864248	split_sv
+S0953_TL_005_R	Clinical translocation	BCL2 wild-type	Heterozygous	0.500	chr18:63126231-63128231	split_sv
+S0954_TL_006_A	Clinical translocation	BCR-ABL	Heterozygous	0.500	-	split_sv
+S0955_TL_006_B	Clinical translocation	ABL-BCR	Heterozygous	0.500	-	split_sv
+S0956_TL_006_R	Clinical translocation	BCR wild-type	Heterozygous	0.500	chr22:23291077-23293077	split_sv
+S0957_TL_006_R	Clinical translocation	ABL wild-type	Heterozygous	0.500	chr9:130751201-130753201	split_sv
+S0958_TL_007_A	Clinical translocation	NPM1-ALK	Heterozygous	0.500	-	split_sv
+S0959_TL_007_B	Clinical translocation	ALK-NPM1	Heterozygous	0.500	-	split_sv
+S0960_TL_007_R	Clinical translocation	NPM1 wild-type	Heterozygous	0.500	chr5:171392614-171394614	split_sv
+S0961_TL_007_R	Clinical translocation	ALK wild-type	Heterozygous	0.500	chr2:29224505-29226505	split_sv
+S0962_TL_008_A	Clinical translocation	BCL1-IGH	Heterozygous	0.500	-	split_sv
+S0963_TL_008_B	Clinical translocation	IGH-BCL1	Heterozygous	0.500	-	split_sv
+S0964_TL_008_R	Clinical translocation	BCL1 wild-type	Heterozygous	0.500	chr11:69531298-69533298	split_sv
+S0965_TL_008_R	Clinical translocation	IGH wild-type	Heterozygous	0.500	chr14:105864128-105866128	split_sv
+S0966_PV_001_R	HPV insertion	Upstream region (ref allele)	Heterozygous	0.5	chr13:48015651-48018631	split_sv
+S0967_PV_001_A	HPV insertion	Viral sequence insertion; HPV (var allele); chr13:48017140/chr13:48419530 	Heterozygous	0.5	chr13:48015651-48421019	split_sv
+S0968_PV_001_R	HPV insertion	Downstream region (ref allele)	Heterozygous	0.5	chr13:48418039-48421019	split_sv
+S0969_PV_002_R	HPV insertion	Downstream region (ref allele)	Heterozygous	0.5	chr4:86659170-86662150	split_sv
+S0970_PV_002_A	HPV insertion	Viral sequence insertion; HPV (var allele); chr4:86308907/chr4:86660660	Heterozygous	0.5	chr4:86307418-86662150	split_sv
+S0971_PV_002_R	HPV insertion	Upstream region (ref allele)	Heterozygous	0.5	chr4:86307418-86310398	split_sv
+S0972_PV_003_R	HPV insertion	Downstream region (ref allele)	Heterozygous	0.5	chr1:244269214-244272194	split_sv
+S0973_PV_003_A	HPV insertion	Viral sequence insertion; HPV (var allele); chr1:244074253/chr1:244270705	Heterozygous	0.5	chr1:244072764-244272194	split_sv
+S0974_PV_003_R	HPV insertion	Upstream region (ref allele)	Heterozygous	0.5	chr1:244072764-244075744	split_sv
+S0975_PV_004_R	HPV insertion	Upstream region (ref allele)	Heterozygous	0.5	chr13:73341716-73344696	split_sv
+S0976_PV_004_A	HPV insertion	Viral sequence insertion; HPV (var allele); chr13:73474338/chr13:73343207	Heterozygous	0.5	chr13:73341716-73475823	split_sv
+S0977_PV_004_R	HPV insertion	Downstream region (ref allele)	Heterozygous	0.5	chr13:73472843-73475823	split_sv
+S0978_IM_001_R	Immune receptor	TRD; Non-rearranged	Somatic	0.4600	chr14:22421430-22424630	split_immune
+S0979_IM_001_R	Immune receptor	TRD; Non-rearranged	Somatic	0.8200	chr14:22095158-22098358	split_immune
+S0980_IM_001_R	Immune receptor	TRD; Non-rearranged	Somatic	1.0000	chr14:21923093-21926293	split_immune
+S0981_IM_001_R	Immune receptor	TRD; Non-rearranged	Somatic	0.9400	chr14:22225625-22228825	split_immune
+S0982_IM_001_R	Immune receptor	TRD; Non-rearranged	Somatic	0.9800	chr14:22280086-22283286	split_immune
+S0983_IM_001_R	Immune receptor	TRD; Non-rearranged	Somatic	0.9933	chr14:22457272-22460472	split_immune
+S0984_IM_001_A	Immune receptor	TRDV2*01/TRDD3*01/TRDJ1*01/gcctgtgacaccgtcgtactgggggatagacgcgaactcatc	Somatic	0.5400	-	split_immune
+S0985_IM_001_B	Immune receptor	TRDV1*01/TRDJ1*01/gctcttgctgtacggggaaaactcctagaaaggaatgggggatacgcggtctttccatccgataaactcatc	Somatic	0.1800	-	split_immune
+S0986_IM_001_C	Immune receptor	TRAV36/DV7*04/TRDJ1/gctgctgggctcccccacaccgataaactcatc	Somatic	0.0600	-	split_immune
+S0987_IM_001_D	Immune receptor	TRAV38-2/DV8*01/TRD1/gcttataggagcgcgagtctcccttcctcacttactgggggatggcccccctacaccgataaactcatc	Somatic	0.0200	-	split_immune
+S0988_IM_001_R	Immune receptor	TRD; Non-rearranged	Somatic	0.2000	chr14:22448400-22451600	split_immune
+S0989_IM_001_R	Immune receptor	TRDV2*01/TRDJ3*01/gcctgtgaccgactgggggttagctcctgggacacccgacagatgttt	Somatic	0.0067	-	split_immune
+S0990_IM_002_A	Immune receptor	IGKV2-28*01/IGKJ2*02/atgcaagctctacaaactccgtacact	Somatic	0.5400	-	split_immune
+S0991_IM_002_B	Immune receptor	IGKV1-5*03/IGKJ4*02/caacagtataatagttattggacg	Somatic	0.1800	-	split_immune
+S0992_IM_002_C	Immune receptor	IGKV1-16*01/IGKJ1*01/caacagtataatagttaccccctgacg	Somatic	0.0600	-	split_immune
+S0993_IM_002_D	Immune receptor	IGKV3-20*01/IGKJ5*01/cagcagtatggtagctcacctcggacc	Somatic	0.0200	-	split_immune
+S0994_IM_002_R	Immune receptor	IGK; Non-rearranged	Somatic	0.2000	chr2:88859391-88863391	split_immune
+S0995_IM_002_R	Immune receptor	IGK; Non-rearranged	Somatic	1.0000	chr2:89007981-89011981	split_immune
+S0996_IM_002_R	Immune receptor	IGK; Non-rearranged	Somatic	1.0000	chr2:89174327-89178327	split_immune
+S0997_IM_002_R	Immune receptor	IGK; Non-rearranged	Somatic	1.0000	chr2:89317624-89321624	split_immune
+S1005_IM_004_A	Immune receptor	TRBV12-4*01/TRBD2*01/TRBJ2-2*01/gccagcagcccaattacgggggtcgacaccggggagctgttt	Somatic	0.5400	-	split_immune
+S1006_IM_004_B	Immune receptor	TRBV21-1*01/TRBD1*01/TRBJ1-5*01/gccagcagcaaagcttgtacgagggggaggggatcagccccagcat	Somatic	0.1800	-	split_immune
+S1007_IM_004_C	Immune receptor	TRBV9*01/TRBD2*01/TRBJ2-1*01/gccagcagcgtaggtggtagcttgaaacagttc	Somatic	0.0600	-	split_immune
+S1008_IM_004_D	Immune receptor	TRBV7-2*01/TRBD2*01/TRBJ2-3*01/gccagcagcttagtcagcgggagggccggagatacgcagtat	Somatic	0.0200	-	split_immune
+S1009_IM_004_R	Immune receptor	TRB; Non-rearranged	Somatic	1.0000	chr7:142486196-142490396	split_immune
+S1010_IM_004_R	Immune receptor	TRB; Non-rearranged	Somatic	1.0000	chr7:142719061-142723261	split_immune
+S1011_IM_004_R	Immune receptor	TRB; Non-rearranged	Somatic	0.8200	chr7:142785603-142789803	split_immune
+S1012_IM_004_R	Immune receptor	TRB; Non-rearranged	Somatic	0.3800	chr7:142793945-142798145	split_immune
+S1013_IM_005_A	Immune receptor	IGLV2-14*04/IGLJ7*02/agctcatatacaagcagcagcctttgggtg	Somatic	0.5400	-	split_immune
+S1014_IM_005_B	Immune receptor	IGLV2-8*01/IGLJ3*02/agctcatatgcaggcagcaacaattcttgggtg	Somatic	0.1800	-	split_immune
+S1015_IM_005_C	Immune receptor	IGLV2-23*02/IGLJ7*02/tgctcatatgcaggtagtagcacttcggtg	Somatic	0.0600	-	split_immune
+S1016_IM_005_D	Immune receptor	IGLV1-40*02/IGLJ1*01/cagtcctatgacagcagcctgagtggttatgtc	Somatic	0.0200	-	split_immune
+S1017_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	0.4000	chr22:22920129-22922409	split_immune
+S1018_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	0.4600	chr22:22757938-22760218	split_immune
+S1019_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	0.8200	chr22:22903719-22905999	split_immune
+S1020_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	0.8200	chr22:22822016-22824296	split_immune
+S1021_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	0.9400	chr22:22697146-22699426	split_immune
+S1022_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	0.9800	chr22:22892513-22894793	split_immune
+S1023_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	0.9800	chr22:22409006-22411286	split_immune
+S1024_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	1.0000	chr22:22321881-22324081	split_immune
+S1025_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	1.0000	chr22:22811186-22813386	split_immune
+S1026_IM_005_R	Immune receptor	IGL; Non-rearranged	Somatic	1.0000	chr22:22720048-22722248	split_immune
+S1027_IM_006_A	Immune receptor	TRGV10*02/TRGJ2*01/gctgcgtggggtattattataagaaactc	Somatic	0.5400	-	split_immune
+S1028_IM_006_B	Immune receptor	TRGV11*01/TRGJ1*01/gcctgtcagatcctcacagggcgggtttaagaaactc	Somatic	0.1800	-	split_immune
+S1029_IM_006_C	Immune receptor	TRGV9*02/TRGJP*01/gccttgtggggggggaagagttgggcaaaaaaatcaaggta	Somatic	0.0600	-	split_immune
+S1030_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	0.4600	chr7:38252358-38254858	split_immune
+S1031_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	0.8200	chr7:38268487-38270987	split_immune
+S1032_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	1.0000	chr7:38275153-38277653	split_immune
+S1033_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	0.8200	chr7:38290578-38293078	split_immune
+S1034_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	0.4600	chr7:38298782-38301282	split_immune
+S1035_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	0.9400	chr7:38315717-38318217	split_immune
+S1036_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	1.0000	chr7:38329093-38331593	split_immune
+S1037_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	1.0000	chr7:38342643-38345143	split_immune
+S1038_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	1.0000	chr7:38352464-38354964	split_immune
+S1039_IM_006_R	Immune receptor	TRG; Non-rearranged	Somatic	1.0000	chr7:38361713-38364213	split_immune
+S0004_LD_003_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0006_LD_006_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0007_LD_007_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0008_LD_009_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0009_LD_010_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0010_LD_011_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0011_LD_012_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0012_LD_013_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0013_LD_014_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0014_LD_015_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0015_LD_016_A	Synthetic ladder	Linked copy-number variation (1n, 2n, 4n, 8n)	Synthetic	0.500	-	split_ladder
+S0001_IF_001_A	Information	Tumor mix barcode	Synthetic	1.000	-	split_info
+S0002_IF_002_A	Information	Normal mix barcode	Synthetic	1.000	-	split_info

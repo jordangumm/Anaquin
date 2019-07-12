@@ -1,0 +1,41 @@
+rna - analyse sequins within rnagenome samples.
+
+<b>TOOL OPTIONS:</b>
+    Required:
+        -1                          Input FASTQ file (first pair)
+    Or:
+        --combined                  Input BAM file containing sample and sequin alignments (to chrQ*, the decoy chromosomes).
+
+    Optional:
+        -2                          Input FASTQ file (second pair)
+        --mix                       Specify the sequin mixture used (e.g. default = A (mixture A)).
+        --sequin_calibration        Specify the library fraction to which sequin reads/alignments are calibrated (for example 0.01 calibrates
+                                    sequin reads/alignments to 1% of library depth) (default = NA).
+        --report                    Generate html graphic report of sequin performance in library.
+        --nomerge                   Skip merging sample and calibrated outputs. Useful for avoiding the slow merging step.
+        --noflip                    Skip sequin read flipping
+        -o/--output                 Directory to which output files are written (default = output).
+        -t/--threads                Number of threads used (default = 1).
+        --threshold                 Minimum fraction of kmers required to classify read as sequin-derived (default = 0.2).
+        --kmer                      K-mer length (default = 23).
+        --skip                      Assess every nth k-mer in read. Skipping more k-mers allows faster computation (default = 5).
+        -r/--resource_dir           Directory containing resource files (default = resources).
+        --manual_fasta              Supply custom sequence catalog (.FASTA; instead of using default sequin sequence catalog).
+        --manual_bed                Supply custom sequin regions annotation (.BED; instead of using default sequin annotations).
+
+<b>USAGE EXAMPLE:</b>
+    $ anaquin rna -1 file1.fq.gz -2 file2.fq.gz  (to rna a paired-end FASTQ library).
+    $ anaquin rna --combined align.bam (to rna a BAM alignment file).
+
+<b>OUTPUTS:</b>
+        rna_sample_*               FASTQ/BAM file of sample-derived reads (excludes sequin reads).
+        rna_sequin_*               FASTQ/BAM file of reads derived from sequins (orientation is flipped).
+        rna_vector_*               FASTQ/BAM file of excluded reads derived from plasmid vector.
+        rna_sequin_calibrated*     Calibrated FASTQ/BAM file of (flipped) sequin-derived reads (see --sequin_calibrate option).
+        rna_merge_*                Merged FASTQ/BAM file for rna_sample_* and rna_sequin_calibrated* reads.
+        rna_report.html            Graphic report describing sequin (and sample) performance in library (see --report option). Load in browser.
+        rna_summary.stats          Summary results describing rnagenome sequin performance in libraries.        
+        rna_sequins.tsv            Detailed statistics on individual rnagenome sequins.
+        rna_sequins_calibrated.tsv Detailed statistics on individual rnagenome sequins following calibration (see --sequin_calibrate option).    
+        rna_isoform.R              Calibrated R-script for plotting isoform expression.
+        rna_gene.R                 Calibrated R-script for plotting gene expression.<<@@@@>>

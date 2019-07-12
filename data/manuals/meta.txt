@@ -1,0 +1,48 @@
+meta - analyse sequins within metagenome samples.
+
+<b>TOOL OPTIONS:</b>
+    Required:
+        -1                          Input FASTQ file (first pair)
+    Or:
+        --combined                  Input BAM file containing sample and sequin alignments (to chrQ*, the decoy chromosomes).
+
+    Optional:
+        -2                          Input FASTQ file (second pair)
+        --mix                       Specify the sequin mixture used (e.g. default = A (mixture A)).
+        --sequin_calibration        Specify the library fraction to which sequin reads/alignments are calibrated (for example 0.01 calibrates
+                                    sequin reads/alignments to 1% of library depth) (default = NA).
+        --ladder_calibration        Similar to --sequin_calibrate but applies to ladder reads/alignments (default = NA).     
+        --report                    Generate html graphic report of sequin performance in library.
+        --nomerge                   Skip merging sample and calibrated outputs. Useful for avoiding the slow merging step.
+        --noflip                    Skip sequin read flipping
+        -o/--output                 Directory to which output files are written (default = output).
+        -t/--threads                Number of threads used (default = 1).
+        --threshold                 Minimum fraction of kmers required to classify read as sequin-derived (default = 0.2).
+        --kmer                      K-mer length (default = 23).
+        --skip                      Assess every nth k-mer in read. Skipping more k-mers allows faster computation (default = 5).
+        -r/--resource_dir           Directory containing resource files (default = resources).
+        --manual_fasta              Supply custom sequence catalog (.FASTA; instead of using default sequin sequence catalog).
+        --manual_bed                Supply custom sequin regions annotation (.BED; instead of using default sequin annotations).
+
+<b>USAGE EXAMPLE:</b>
+    $ anaquin meta -1 file1.fq.gz -2 file2.fq.gz  (to meta a paired-end FASTQ library).
+    $ anaquin meta --combined align.bam (to meta a BAM alignment file).
+
+<b>OUTPUTS:</b>
+        meta_sample_*               FASTQ/BAM file of sample-derived reads (excludes sequin reads).
+        meta_sequin_*               FASTQ/BAM file of reads derived from sequins (orientation is flipped).
+        meta_vector_*               FASTQ/BAM file of excluded reads derived from plasmid vector.
+        meta_ladder_*               FASTQ/BAM file of reads derived from synthetic DNA ladder.
+        meta_sequin_calibrated*     Calibrated FASTQ/BAM file of (flipped) sequin-derived reads (see --sequin_calibrate option).
+        meta_ladder_calibrated*     Calibrated FASTQ/BAM file of vector reads see --ladder_calibrate option)  
+        meta_merge_*                Merged FASTQ/BAM file for meta_sample_*, meta_sequin_calibrated* and meta_ladder_calibrated* reads.
+        meta_report.html            Graphic report describing sequin (and sample) performance in library (see --report option). Load in browser.
+        meta_summary.stats          Summary results describing metagenome sequin performance in libraries.        
+        meta_sequins.tsv            Detailed statistics on individual metagenome sequins.
+        meta_sequins_calibrated.tsv Detailed statistics on individual metagenome sequins following calibration (see --sequin_calibrate option).    
+        meta_kmers.tsv              Individual k-mers for individual sequins (and only ladder sequins supported currently)
+        meta_calibrated_kmers.tsv   Individual calibrated k-mers for individual sequins (and only ladder sequins supported currently)
+        meta_ladder.tsv             Detailed statistics on individual synthetic DNA ladders.
+        meta_ladder_calibrated.tsv  Detailed statistics on individual metagenome sequins following calibration (see --ladder_calibrate option).
+        meta_ladderCopy.R           Calibrated R-script for plotting synthetic ladder by copy number.
+        meta_ladderDensity.R        Calibrated R-script for plotting synthetic ladder by density.<<@@@@>>

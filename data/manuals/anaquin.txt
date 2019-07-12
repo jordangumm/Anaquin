@@ -1,0 +1,29 @@
+Anaquin - toolkit for sequin data analysis
+Developed at the Garvan Institute of Medical Research.
+
+Please visit our website www.sequinstandards.com for more information. 
+Version: 3.6.2
+
+Usage
+       anaquin <tool> [options]
+
+General options
+       -o <directory> = output
+            All output files will be saved in the directory. The default is "output".
+            
+       -h/--help help usage
+            Display help usage information.
+
+       <tool>
+            Execute the following data analysis tool:
+
+            rna           - Used for analysis of rna sequins within an RNAseq library. This includes partitioning sequins  reads from the accompanying sample,
+                            and reporting on sequin performance.
+            meta          - Used for analysis of metagenome sequins within an NGS library. This includes partitioning sequins reads from the accompanying sample,
+                            and reporting on sequin performance.
+            split         - For use with genomics sequins. Partition a NGS library (.FASTQ) file into two libraries: reads from sequins and reads from the accompanying
+                            (human) sample. Also reports on sequin performance in NGS library. 
+            calibrate     - Sequin alignments are subsampled to match the alignment coverage of the accompanying (human) sample (genome sequins only).
+            germline      - Assess the detection of germline variants in sequins and sample (genome sequins only).   
+            somatic       - Assess the detection of somatic variants in sequins and sample (genome sequins only).
+<<@@@@>>

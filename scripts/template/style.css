@@ -1,0 +1,430 @@
+html {
+    font-size: 12px;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: hsl(0, 0%, 0%);
+    line-height: 1.7;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 979px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+.x-root {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.x-root .site,
+.x-root .x-site {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    position: relative;
+    width: 100%;
+    min-width: 1px;
+}
+
+.x-main {
+    position: relative;
+}
+
+[class*="page-template-template-blank"] .x-main,
+.page-template-template-layout-full-width-php .x-main {
+    float: none;
+    display: block;
+    width: auto;
+}
+
+.hentry {
+    margin-top: 4em;
+}
+
+.hentry:first-child {
+    margin-top: 0;
+}
+
+.entry-content {
+    margin-top: 1.25em;
+}
+
+[class*="page-template-template-blank"] .entry-content {
+    margin-top: 0;
+}
+
+.entry-content:before,
+.entry-content:after {
+    content: " ";
+    display: table;
+}
+
+.x-section {
+    position: relative;
+    margin: 0 0 1.313em;
+    padding: 45px 0;
+}
+
+.x-section:before,
+.x-section:after {
+    content: " ";
+    display: table;
+}
+
+.x-section:after {
+    clear: both;
+}
+
+.x-container {
+    margin: 0 auto;
+}
+
+.x-section .x-container {
+    position: relative;
+    z-index: 1;
+}
+
+.x-container.width {
+    width: 90%;
+}
+
+.x-container:before,
+.x-container:after {
+    content: " ";
+    display: table;
+}
+
+.x-column {
+    position: relative;
+    z-index: 1;
+    float: left;
+    margin-right: 4%;
+}
+
+.x-column.x-1-1 {
+    width: 100%;
+}
+
+.x-column.last,
+.x-column:last-of-type {
+    margin-right: 0;
+}
+
+.x-text {
+    min-width: 1px;
+}
+
+.x-text {
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin: 1.25em 0 0.2em;
+    text-rendering: optimizelegibility;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+    margin-top: 1.75em;
+    margin-bottom: 0.5em;
+    line-height: 1.4;
+}
+
+h5,
+.h5 {
+    font-size: 150%;
+    letter-spacing: 0.143em;
+}
+
+h5 {
+    margin-top: 15px;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+p {
+    margin: 0 0 1.313em;
+}
+
+.x-accordion {
+    margin-bottom: 1.313em;
+}
+
+.x-accordion-group {
+    margin: 0 0 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.125em 0.275em 0 rgba(0, 0, 0, 0.125);
+}
+
+.x-accordion-group {
+    border: 0px;
+    box-shadow: none;
+}
+
+.x-accordion-group:last-child {
+    margin-bottom: 0;
+}
+
+.x-accordion-heading {
+    overflow: hidden;
+    border-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.x-accordion-heading .x-accordion-toggle {
+    display: block;
+    padding: 10px 15px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 114.2%;
+    color: #272727;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.x-accordion-heading .x-accordion-toggle {
+    background-color: transparent;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.x-accordion-heading .x-accordion-toggle.collapsed {
+    background-color: #fff;
+}
+
+.x-accordion-heading .x-accordion-toggle.collapsed {
+    background-color: transparent;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.x-accordion-heading .x-accordion-toggle:before {
+    content: "\f067";
+    position: relative;
+    display: inline-block;
+    bottom: 0.1em;
+    margin-right: 10px;
+    font-size: 74%;
+    color: #ccc;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+    font-family: "FontAwesome" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-decoration: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.x-accordion-heading .x-accordion-toggle:before {
+    color: black;
+}
+
+.x-accordion-heading .x-accordion-toggle.collapsed:before {
+    color: #ccc;
+    transform: rotate(0deg);
+}
+
+.x-accordion-heading .x-accordion-toggle.collapsed:before {
+    color: black;
+}
+
+.collapse {
+    display: none;
+}
+
+.inner {
+    padding: 0px;
+    background-color: transparent;
+    border-top: 0px;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1.313em;
+    border-spacing: 0;
+    background-color: transparent;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 0.5em 0.625em;
+    line-height: 1.3;
+    text-align: left;
+    vertical-align: middle;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table th,
+table td {
+    border-top: 1px solid #ddd;
+}
+
+table thead th {
+    vertical-align: bottom;
+}
+
+.ahead {
+    width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+}
+
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+table td {
+    line-height: 1.4;
+}
+
+.table th,
+table td {
+    border-top: 1px solid #C0C0C0;
+}
+
+.x-container:after {
+    clear: both;
+}
+
+.entry-content:after {
+    clear: both;
+}
+
+.site:before,
+.site:after,
+.x-site:before,
+.x-site:after {
+    content: " ";
+    display: table;
+}
+
+.site:after,
+.x-site:after {
+    clear: both;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease
+}
+
+.fade.in {
+    opacity: 1
+}
+
+.collapse.in {
+    display: block;
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.3s ease;
+    transition: height 0.3s ease
+}
+
+.graph {
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.graph2 {
+    height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partb {
+    width: 350px;
+}
+
+.shead {
+	width:130px;
+	min-width:130px;
+	max-width:130px;
+	white-space:nowrap;
+}
+
+.ttab {
+    margin-top: 20px;
+    width: 1000px;
+    table-layout: fixed
+}
+
+<!-- <<@@@@>> -->

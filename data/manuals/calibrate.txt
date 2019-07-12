@@ -1,0 +1,42 @@
+calibrate - Sequin alignments are calibrated to match the alignment coverage of the accompanying human genome sample. Calibrate calculates the sample
+            alignment coverage within human regions, and then scales the alignment coverage of corresponding sequin regions accordingly.
+
+<b>TOOL OPTIONS</b>
+    Required:
+        --sequin                    Sequin alignments to human genome (e.g. hg38, .SAM/BAM).
+        --sample                    Sample alignments to human genome (e.g. hg38, .SAM/BAM).
+    Or:    
+        --combined                  Alignment file (.SAM/BAM) that contains both sample alignments (to human genome, e.g. hg38)
+                                    and sequin alignments (to sequin decoy chromsomes e.g. chrQ).
+    Optional:
+        --human_regions             Manually supply regions of the human genome (e.g. hg38, .BED) to be used for calibration between sequin
+                                    and sample alignments (compatible with both --sequin/--sample or --combined input option).
+                                    If not specified, anaquin will use its own internal reference file.
+        --decoy_regions             Manually supply regions of the sequin decoy chromsome that will be calibrated to sequin regions in
+                                    the human genome with matching IDs (only when using the --combined input option).
+                                    If not specified, anaquin will use its own internal reference file.
+        --restrict_regions          Restrict calibration to custom regions (.BED) of interest in the human genome (e.g. capture-sequencing targets).
+                                    Anaquin will limit calibration to the intersection of these regions with the sequin regions.
+        --build                     Specify hg38, hg19, grch37 or grch38 human reference genome build (default = hg38).
+        --method                    Method used to calculate sequence coverage. Possible values are mean (default), median and x (fractional
+                                    value for calibration, 0 < x < 1).
+        --edge                      Size (nt) of sequin terminal regions that should be ignored when calculating calibration factor to avoid
+                                    impact of sequencing edge-effects (default = 550).
+        -o/--output                 Directory to which output files are written (default = output).
+        -t/--threads                Number of threads used (default = 1).
+        -r/--resource_dir           Directory containing resource files (default = resources).
+
+<b>USAGE EXAMPLE</b>
+    To calibrate a sequin-derived alignment file to a sample-derived alignment file:
+    $ anaquin calibrate --sequin sequin.hg38.bam --sample sample.hg38.bam
+
+    To calibrate an alignment file containing both sequin and sample alignments:
+    $ anaquin calibrate --combined sample_with_sequins.hg38chrQ.bam
+
+    To calibrate with only the sequin derived alignment file:
+    $ anaquin calibrate --sequin sequin.bam --method 0.10
+
+<b>OUTPUTS</b>
+    calibrate_calibrated.bam        Calibrated sequin alignments in BAM format.
+    calibrate_summary.txt           Summary statistics describing calibration process.
+    calibrate_sequins.csv           Detailed statistics describing calibration of each sequin region.<<@@@@>>
