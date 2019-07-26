@@ -29,16 +29,15 @@ If the --combined option is used, the sample reads in split_sample_* will be emp
 
 <b>OUTPUTS:</b>
     split_sample_*                  FASTQ (or BAM) file of sample-derived reads (only is using -1/-2 FASTQ input)
-    split_sequin_*                  FASTQ (or BAM) file of (flipped) sequin-derived reads (excludes hla, immune, info, ladder, mito, sv and vector sequins).
+    split_sequin_*                  FASTQ (or BAM) file of (flipped) sequin-derived reads (excludes hla, immune, ladder, mito, sv and vector sequins).
     split_hla_*                     FASTQ (or BAM) file of (flipped) sequin HLA reads.
     split_immune_*                  FASTQ (or BAM) file of (flipped) sequin immune reads.
-    split_info_*                    FASTQ (or BAM) file of informative sequin reads.
     split_ladder_*                  FASTQ (or BAM) file of sequin ladder reads.
     split_mito_*                    FASTQ (or BAM) file of (flipped) sequin mitochondria reads.
     split_sv_*                      FASTQ (or BAM) file of (flipped) structural variant reads.
     split_vector_*                  FASTQ (or BAM) file of vector reads.
     split_report.html               Output report describing sequin (and sample) performance in library (--report only).
-    split_summary.stats             Summary statistics describing split libraries.
+    split_summary.txt             Summary statistics describing split libraries.
     split_sequins.tsv               Detailed statistics on individual sequins.
     split_kmers.tsv                 Individual k-mers for individual sequins (only ladder sequins supported for now)
     split_ladder.tsv                Detailed statistics on individual sequins for synthetic ladder.

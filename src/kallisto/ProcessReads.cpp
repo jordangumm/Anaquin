@@ -369,7 +369,7 @@ void ReadProcessor::processBuffer()
         q1 = quals[i].first;
         b1 = bams.empty() ? nullptr : bams[i];
         rc1 = rcs.empty() ? false : rcs[i];
-
+        
         i++;
         s2 = seqs[i].first;
         l2 = seqs[i].second;
@@ -377,7 +377,7 @@ void ReadProcessor::processBuffer()
         q2 = quals[i].first;
         b2 = bams.empty() ? nullptr : bams[i];
         rc2 = rcs.empty() ? false : rcs[i];
-
+        
         numreads++;
         __i__++;
         
@@ -437,7 +437,7 @@ bool SequenceReader::fetchSequences(char *buf,
     umis.clear();
     bams.clear();
     rcs.clear();
-
+    
     if (full) {
         names.clear();
         quals.clear();

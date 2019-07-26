@@ -37,7 +37,7 @@ somatic - Assess the detection of somatic variants in sequins (and sample).
 
 <b>OUTPUTS</b>
     somatic_report.html                Summary report describing detection of sequin (and sample) somatic variants (--report only).
-    somatic_summary.stats              Summary statistics describing variant detection.
+    somatic_summary.txt              Summary statistics describing variant detection.
     somatic_sequins.tsv                Detailed statistics for variants detected in sequins (and sample).
     somatic_tp.vcf                     Annotation file for true positive sequin variants.
     somatic_fp.vcf                     Annotation file for false positive sequin variants.

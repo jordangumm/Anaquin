@@ -1,7 +1,7 @@
 #ifndef SS_MODELT_HPP
 #define SS_MODELT_HPP
 
-#include <ss/data/data.hpp>
+#include "stats/ss/data/data.hpp"
 
 namespace SS
 {

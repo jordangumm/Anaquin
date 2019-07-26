@@ -9,5 +9,5 @@
 library(Anaquin)
 
 data <- read.csv('%3%/%4%', sep='\t')
-plotLinear(data$Name, data$Copy, log2(data$Med), xl="Copy Number", yl="Kmer median coverage (log2)", title="CNV Ladder")
+plotLinear(data$NAME, data$STOICHOMETRY * data$UNIT, log2(data$Q50), xl="Copy Number", yl="Kmer median coverage (log2)", title="CNV Ladder")
 <<@@@@>>

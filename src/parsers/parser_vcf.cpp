@@ -182,6 +182,11 @@ void ParserVCF::parse(const Reader &r, Functor f)
                 free(g1);
             }
 
+            auto fs = [&](const std::string &key, const std::string &to, int i)
+            {
+                // TODO
+            };
+
             auto fi = [&](const std::string &key, const std::string &to, int i)
             {
                 if (bcf_get_format_int32(hdr, line, key.c_str(), &pi, &c) > i)
@@ -242,6 +247,8 @@ void ParserVCF::parse(const Reader &r, Functor f)
             fi("AD", "AD_2_1", 2);
             fi("AD", "AD_2_2", 3);
             
+            fs("PVAL", "PVAL", 0); // VarScan
+
             x.hdr  = (void *) hdr;
             x.line = (void *) line;
             
@@ -283,6 +290,10 @@ void ParserVCF::parse(const Reader &r, Functor f)
             else if (x.iff.count("TLOD"))
             {
                 x.qual[0] = x.qual[1] = x.iff.at("TLOD");
+            }
+            else if (x.fs.count("PVAL"))
+            {
+                x.qual[0] = x.qual[1] = 1.0 / stod(x.fs.at("PVAL"));
             }
 
             f(x);

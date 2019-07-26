@@ -60,7 +60,7 @@ namespace Anaquin
                                                    % label
                                                    % i.qry.alt
                                                    % var2str(i.qry.type())
-                                                   % (sID != "-" ? std::to_string(r.af(sID)) : MISSING)
+                                                   % (sID != MISSING ? std::to_string(r.af(sID)) : MISSING)
                                                    % normalDPR(i.qry)
                                                    % normalDPV(i.qry)
                                                    % (std::isnan(normalAF(i.qry)) ? MISSING : toString(normalAF(i.qry), 4))
@@ -179,21 +179,21 @@ namespace Anaquin
         
         o.generate(file);
         o.writer->open(file);
-        o.writer->write((boost::format(format) % "Name"
-                                               % "Chrom"
-                                               % "Position"
-                                               % "Label"
-                                               % "Allele"
-                                               % "Type"
-                                               % "ExpFreq"
-                                               % "Ref.Depth (Normal)"
-                                               % "Var.Depth (Normal)"
-                                               % "Obs.Freq (Normal)"
-                                               % "Ref.Depth (Tumor)"
-                                               % "Var.Depth (Tumor)"
-                                               % "Obs.Freq (Tumor)"
-                                               % "Size"
-                                               % "Qual"
+        o.writer->write((boost::format(format) % "NAME"
+                                               % "CHROM"
+                                               % "POSITION"
+                                               % "LABEL"
+                                               % "ALLELE"
+                                               % "TYPE"
+                                               % "EXP_FREQ"
+                                               % "REF_DEPTH_NORMAL"
+                                               % "VAR_DEPTH_NORMAL"
+                                               % "OBS_FREQ_NORMAL"
+                                               % "REF_DEPTH_TUMOR"
+                                               % "VAR_DEPTH_TUMOR"
+                                               % "OBS_FREQ_TUMOR"
+                                               % "SIZE"
+                                               % "QUAL"
                                                % r.a1()->strForKeys()).str());
         
         writeSQ(format, stats, o);
@@ -379,17 +379,6 @@ namespace Anaquin
         }
     }
 
-    template <typename O> void writeROC(const FileName &file, const O &o)
-    {
-        o.generate(file);
-        o.writer->open("genome_files/" + file);
-        o.writer->write((boost::format(PlotStrelkaROC()) % date()
-                                                         % o.cmd
-                                                         % o.work
-                                                         % (o.name + "_sequin.tsv")).str());
-        o.writer->close();
-    }
-    
     struct GSomatic : public GVariant
     {
         struct Stats : public GVariant::Stats

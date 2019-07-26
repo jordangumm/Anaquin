@@ -2,7 +2,7 @@
 #define SS_DATA_HPP
 
 #include <cmath>
-#include <ss/data/errors.hpp>
+#include "stats/ss/data/errors.hpp"
 
 namespace SS
 {

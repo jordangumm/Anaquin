@@ -78,12 +78,12 @@
 		return (int)ks->buf[ks->begin++];					\
 	}
 
-#ifndef KSTRING_T
-#define KSTRING_T kstring_t
-typedef struct __kstring_t {
+#ifndef KSTRING_T_
+#define KSTRING_T_ kstring_t__
+typedef struct __kstring_t__ {
 	size_t l, m;
 	char *s;
-} kstring_t;
+} kstring_t__;
 #endif
 
 #ifndef kroundup32
@@ -91,7 +91,7 @@ typedef struct __kstring_t {
 #endif
 
 #define __KS_GETUNTIL(__read, __bufsize)								\
-	static int ks_getuntil2(kstream_t *ks, int delimiter, kstring_t *str, int *dret, int append) \
+	static int ks_getuntil2(kstream_t *ks, int delimiter, kstring_t__ *str, int *dret, int append) \
 	{																	\
 		int gotany = 0;													\
 		if (dret) *dret = 0;											\
@@ -142,7 +142,7 @@ typedef struct __kstring_t {
 		str->s[str->l] = '\0';											\
 		return str->l;													\
 	} \
-	static inline int ks_getuntil(kstream_t *ks, int delimiter, kstring_t *str, int *dret) \
+	static inline int ks_getuntil(kstream_t *ks, int delimiter, kstring_t__ *str, int *dret) \
 	{ return ks_getuntil2(ks, delimiter, str, dret, 0); }
 
 #define KSTREAM_INIT(type_t, __read, __bufsize) \
@@ -219,7 +219,7 @@ typedef struct __kstring_t {
 
 #define __KSEQ_TYPE(type_t)						\
 	typedef struct {							\
-		kstring_t name, comment, seq, qual;		\
+		kstring_t__ name, comment, seq, qual;		\
 		int last_char;							\
 		kstream_t *f;							\
 	} kseq_t;

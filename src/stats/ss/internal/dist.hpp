@@ -2,8 +2,8 @@
 #define SS_INTERNAL_DIST_HPP
 
 #include <math.h>
-#include <ss/data/data.hpp>
-#include <ss/data/errors.hpp>
+#include "stats/ss/data/data.hpp"
+#include "stats/ss/data/errors.hpp"
 
 #ifndef HAVE_RMATH
 #include <boost/math/distributions/normal.hpp>

@@ -19,11 +19,6 @@ namespace Anaquin
     typedef std::string Tok;
     typedef std::vector<Tok> Toks;
 
-    template <typename T> std::string removeNaN(T x)
-    {
-        return (std::isnan(x) ? "-" : std::to_string(x));
-    }
-
     void createD(const Path &);
     void removeD(const Path &);
     
@@ -146,6 +141,13 @@ namespace Anaquin
         r.clear();
         boost::split(r, x, boost::is_any_of(d));
     }
+    
+    template <typename T> static Counts countTok(const Tok &x, const Tok &d)
+    {
+        std::vector<Tok> tmp;
+        split(x, d, tmp);
+        return tmp.size();
+    }
 
     inline Tok join(const Toks &x, const std::string &d)
     {
@@ -218,7 +220,7 @@ namespace Anaquin
             case HumanAssembly::hg38:  { return "hg38";  }
         }
     }
-
+    
     FileName tmpFile();
     FileName script2File(const Scripts &);
 
@@ -277,13 +279,18 @@ namespace Anaquin
         return join(toks, d);
     }
 
-    inline std::string remove(const std::string &s1, const std::string &s2)
+    inline Tok replace(const Tok &x, const Tok &s1, const Tok &s2)
     {
-        auto x = s1;
-        boost::replace_all(x, s2, "");
-        return x;
+        auto t = x;
+        boost::replace_all(t, s1, s2);
+        return t;
     }
     
+    inline std::string remove(const std::string &s1, const std::string &s2)
+    {
+        return replace(s1, s2, "");
+    }
+
     int parseChrID(const ChrID &);
 
     template <typename T1, typename T2, typename T3> std::map<T1, std::map<T2, T3>>
@@ -332,11 +339,18 @@ namespace Anaquin
             return t1.second < t2.second;
         })->first;
     }
+    
+    inline bool isNumber(const std::string &s)
+    {
+        return !s.empty() && std::find_if(s.begin(), s.end(), [](char c) { return !std::isdigit(c); }) == s.end();
+    };
 
     inline bool isSubstr(const std::string &x, const std::string &y)
     {
         return x.find(y) != std::string::npos;
     }
+
+    std::string readFile(const FileName &);
 
     inline ReadName trimRName(const ReadName &x)
     {
@@ -346,14 +360,17 @@ namespace Anaquin
 
     bool isFloat(const std::string &);
 
-    inline std::string noTrailZero(const std::string &x)
+    inline std::string mixToStr(Mixture m)
     {
-        auto r = x;
-        r.erase(r.find_last_not_of('0') + 1, std::string::npos);
-        return r;
+        switch (m)
+        {
+            case Mix_1: { return "A"; }
+            case Mix_2: { return "B"; }
+            case Mix_3: { return "C"; }
+        }
     }
     
-    template <typename T> std::string toString(const T &x, unsigned n = 2)
+    template <typename T> std::string toString(const T &x, unsigned n = 2, bool naTrailZero = false)
     {
         if (std::isnan(x) || !std::isfinite(x))
         {
@@ -365,7 +382,7 @@ namespace Anaquin
 
         auto str = out.str();
         
-        if (!isBegin(str, "0") && isEnd(str, "0") && isSubstr(str, "."))
+        if (isEnd(str, "0") && isSubstr(str, ".") && naTrailZero)
         {
             int offset{1};
             if (str.find_last_not_of('0') == str.find('.')) { offset = 0; }
@@ -377,7 +394,12 @@ namespace Anaquin
     
     #define S0(x) toString(x,0)
     #define S2(x) toString(x,2)
-    #define MISS_STRING(x) (!std::isnan(x) ? toString(x) : MISSING)
+    #define S4(x) toString(x,4)
+
+    template <typename T> std::string replaceNA(T x, unsigned n = 2)
+    {
+        return (std::isnan(x) ? "NA" : toString(x, n));
+    }
 
     template <typename T1, typename T2> std::vector<T2> toVector(const std::map<T1, T2> &m)
     {

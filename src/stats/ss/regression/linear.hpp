@@ -1,11 +1,11 @@
 #ifndef SS_LINEAR_HPP
 #define SS_LINEAR_HPP
 
-#include <ss/dist.hpp>
-#include <ss/matrix.hpp>
-#include <ss/data/errors.hpp>
-#include <ss/internal/vargs.hpp>
-#include <ss/regression/model.hpp>
+#include "stats/ss/dist.hpp"
+#include "stats/ss/matrix.hpp"
+#include "stats/ss/data/errors.hpp"
+#include "stats/ss/internal/vargs.hpp"
+#include "stats/ss/regression/model.hpp"
 
 namespace SS
 {

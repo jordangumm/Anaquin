@@ -1,6 +1,7 @@
 #ifndef G_CALIBRATE_HPP
 #define G_CALIBRATE_HPP
 
+#include "tools/picard.hpp"
 #include "Genomics/g_split.hpp"
 #include "parsers/parser_bambed.hpp"
 
@@ -94,7 +95,7 @@ namespace Anaquin
             Counts nEndo = 0;
             Counts nSeqs = 0;
         };
-        
+
         struct Stats
         {
             // Before calibration
@@ -109,6 +110,12 @@ namespace Anaquin
             
             GenomeSequins tBefore, tAfter;
             GenomeSequins sBefore, sAfter;
+            
+            // Picard statistics after calibration
+            //std::shared_ptr<Picard> P2;
+            
+            // Alignment statistics before and after calibration
+            SAlignStats A1, A2;
             
             std::map<ChrID, std::map<Locus, SampledInfo>> c2v;
         };
@@ -130,6 +137,8 @@ namespace Anaquin
             Method meth = Method::Mean;
 
             CalibrateMode cMode;
+            
+            FileName decoy, nonDecoy;
             
             Base edge;
 
@@ -165,6 +174,7 @@ namespace Anaquin
                                      const FileName &,
                                      const Chr2DInters &,
                                      const Chr2DInters &,
+                                     SAlignStats &,
                                      const Options &);
 
         static CalibrateStats combined(const FileName &,
@@ -173,6 +183,7 @@ namespace Anaquin
                                        const Chr2DInters &,
                                        const Chr2DInters &,
                                        SStats &,
+                                       SAlignStats &,
                                        const Options &);
 
         static Stats analyze(const FileName &, const FileName &, const Options &);

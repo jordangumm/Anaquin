@@ -6,11 +6,11 @@
 namespace Anaquin
 {
     Scripts PlotGene();
+    Scripts PlotInsert();
     Scripts PlotLinear();
     Scripts PlotAllele();
     Scripts PlotLDensity();
     Scripts PlotKSomatic();
-    Scripts PlotLVariation();
     Scripts PlotKSynthetic();
     Scripts PlotStrelkaROC();
     Scripts PlotQualFilter();
@@ -30,6 +30,7 @@ namespace Anaquin
     Scripts GSplitHTML();
     Scripts RSplitHTML();
     Scripts MSplitHTML();
+    Scripts CalibrateHTML();
 }
 
 #endif

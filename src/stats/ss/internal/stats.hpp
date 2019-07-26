@@ -3,7 +3,7 @@
 
 #include <numeric>
 #include <algorithm>
-#include <ss/data/data.hpp>
+#include "stats/ss/data/data.hpp"
 
 namespace SS
 {

@@ -3,6 +3,7 @@
 #include "data/split.hpp"
 #include "tools/tools.hpp"
 #include "data/reader.hpp"
+#include "data/resources.hpp"
 #include "tools/samtools.hpp"
 #include "tools/calibrate.hpp"
 #include "writers/r_writer.hpp"
@@ -37,6 +38,25 @@ template <typename T1, typename T2> void SKFreq(const T1 &x, T2 &m)
     }
 };
 
+double SAlignStats::mInsert(Bin b, Base min, Base max) const
+{
+    assert(ins.count(b));
+    std::vector<double> x;
+    
+    for (auto i : ins.at(b))
+    {
+        if (i.first >= min && i.first <= max)
+        {
+            for (auto j = 0; j < ins.at(b).at(i.first); j++)
+            {
+                x.push_back(i.first);
+            }
+        }
+    }
+    
+    return SS::mean(x);
+}
+
 template <typename T> void SQuantKM(T &x)
 {
     // Descriptive statistics for unique k-mers
@@ -44,11 +64,11 @@ template <typename T> void SQuantKM(T &x)
     {
         std::sort(i.second.begin(), i.second.end());
         x.d2u.mus[i.first]  = SS::mean(i.second);
-        x.d2u.q25[i.first]  = SS::hackQuant(i.second, 0.25);
-        x.d2u.q75[i.first]  = SS::hackQuant(i.second, 0.75);
+        x.d2u.q25[i.first]  = hackQuant(i.second, 0.25);
+        x.d2u.q75[i.first]  = hackQuant(i.second, 0.75);
         x.d2u.sds[i.first]  = SS::SD(i.second);
         x.d2u.mins[i.first] = *(i.second.begin());
-        x.d2u.meds[i.first] = SS::hackQuant(i.second, 0.50);
+        x.d2u.meds[i.first] = hackQuant(i.second, 0.50);
         x.d2u.maxs[i.first] = *(i.second.rbegin());
     }
     
@@ -57,14 +77,38 @@ template <typename T> void SQuantKM(T &x)
     {
         std::sort(i.second.begin(), i.second.end());
         x.d2u.mus[i.first]  = SS::mean(i.second);
-        x.d2s.q25[i.first]  = SS::hackQuant(i.second, 0.25);
-        x.d2s.q75[i.first]  = SS::hackQuant(i.second, 0.75);
+        x.d2s.q25[i.first]  = hackQuant(i.second, 0.25);
+        x.d2s.q75[i.first]  = hackQuant(i.second, 0.75);
         x.d2s.sds[i.first]  = SS::SD(i.second);
         x.d2s.mins[i.first] = *(i.second.begin());
-        x.d2s.meds[i.first] = SS::hackQuant(i.second, 0.50);
+        x.d2s.meds[i.first] = hackQuant(i.second, 0.50);
         x.d2s.maxs[i.first] = *(i.second.rbegin());
     }
-};
+}
+
+void Anaquin::writeLTable(const FileName &src, const FileName &dst, const SOptions &o)
+{
+    const auto tmp = tmpFile();
+    RLadTable(src, tmp, "NAME");
+    o.generate(dst);
+    o.writer->open(dst);
+    o.writer->write(readFile(tmp));
+    o.writer->close();
+}
+
+void Anaquin::writeSTable(const FileName &src, const FileName &dst, const SOptions &o, Counts nExp, Counts nObs, Counts nCV, const Label &expL, const Label &obsL)
+{
+    const auto tmp = tmpFile();
+    RMeanCV(src, tmp, expL, obsL, nExp, nObs, nCV);
+    auto t = readFile(tmp);
+         t = replace(t, "NAME",  "EXPECTED_ABUNDANCE");
+         t = replace(t, "COUNT", "SEQUIN_DETECTED");
+         t = replace(t, "MEAN",  "ABUNDANCE_(MEAN_READ_COUNT)");
+    o.generate(dst);
+    o.writer->open(dst);
+    o.writer->write(t);
+    o.writer->close();
+}
 
 void Anaquin::SWriteReads(Product mode, const FileName &file, const SStats &stats, const SOptions &o)
 {
@@ -73,7 +117,7 @@ void Anaquin::SWriteReads(Product mode, const FileName &file, const SStats &stat
     
     o.generate(file);
     o.writer->open(file);
-    o.writer->write((boost::format(format) % "Name" % "Read1" % "Read2" % "Label").str());
+    o.writer->write((boost::format(format) % "NAME" % "READ1" % "READ2" % "LABEL").str());
     
     auto write = [&](const std::map<ReadName, SequinID> &x, const std::map<ReadName, SequinID> &y, const Label &l)
     {
@@ -159,8 +203,6 @@ void Anaquin::SWriteReads(Product mode, const FileName &file, const SStats &stat
 
 static void SPostCal(SStats &stats, const SOptions &o)
 {
-    o.info("Quantifying k-mers");
-
     SKFreq(stats.K.uniqs, stats.R.s2u);
     SKFreq(stats.K.shared, stats.R.s2s);
     SQuantKM(stats.R);
@@ -170,16 +212,15 @@ static void SPostCal(SStats &stats, const SOptions &o)
         o.warn("Sequin not found. Please check your input files.");
     }
     
-    o.info("Merging k-mers");
     std::set<Bin> only;
     
     switch (o.prod)
     {
-        case Product::RNA:  { only = std::set<Bin> { ES, GR, VC };         break; }
-        case Product::Meta: { only = std::set<Bin> { ES, IF, GR, LD, VC }; break; }
+        case Product::RNA:  { only = std::set<Bin> { ES, GR };         break; }
+        case Product::Meta: { only = std::set<Bin> { ES, GR, LD, VC }; break; }
         case Product::Genomics:
         {
-            only = std::set<Bin> { IF, MT, MS, HL, HP, LD, SV, IM, ES, GR, SO, MI, VC };
+            only = std::set<Bin> { MT, MS, HL, HP, LD, SV, IM, ES, GR, SO, MI, VC };
             break;
         }
     }
@@ -308,7 +349,10 @@ struct BAMMerge : public AbstractMerge
             prim[m] = true;
             assert(__CombinedBAMHeader__);
             w[m] = bgzf_open(file.c_str(), "w");
-            bam_hdr_write(w[m], __CombinedBAMHeader__);
+            if (bam_hdr_write(w[m], __CombinedBAMHeader__) == -1)
+            {
+                throw std::runtime_error("bam_hdr_write() failed");
+            }
         }
 
         f[m] = file;
@@ -323,7 +367,10 @@ struct BAMMerge : public AbstractMerge
     {
         ParserBAM::parse(src, [&](const ParserBAM::Data &x, const ParserBAM::Info &)
         {
-            bam_write1(dst, (const bam1_t *) x.b());
+            if (bam_write1(dst, (const bam1_t *) x.b()) == -1)
+            {
+                throw std::runtime_error("bam_write1() failed");
+            }
         });
     }
 
@@ -417,7 +464,7 @@ void Anaquin::SMerge(SStats &stats, const SOptions &o, const std::set<Bin> &only
         // For each thread...
         for (auto i = 0u; i < stats.K.f1[bin].size(); i++)
         {
-            o.info("Merging thread " + toString(i));
+            //o.info("Merging thread " + toString(i));
 
             for (auto &j : xs)
             {
@@ -436,8 +483,8 @@ void Anaquin::SMerge(SStats &stats, const SOptions &o, const std::set<Bin> &only
 
 SCStats Anaquin::SCalibrateP(Bin b, Proportion p, const SStats &stats, const SOptions &o, const SCalibratePFiles &f)
 {
+    o.info("Running first stage calibration for " + std::to_string(b));
     assert(b == GR || b == LD);
-    o.info("Calibrating by percentage");
 
     SCStats x;
     assert(o.prod == Product::Meta || o.prod == Product::RNA);
@@ -454,31 +501,58 @@ SCStats Anaquin::SCalibrateP(Bin b, Proportion p, const SStats &stats, const SOp
     if (x.bSam == 0) { o.warn("Number of sample reads is zero. Scaling factor set to 1."); }
     if (x.bSeq == 0) { o.warn("Number of sequin reads is zero. Scaling factor set to 0."); }
 
-    if (p == -1)
+    if (p == NO_CALIBRATION) // No calibration?
     {
-        o.info("Skipped calibration");
-        x.p  = -1;
+        o.info("Calibration is NA. Skipped sequin calibration.");
+        x.p  = NO_CALIBRATION;
         x.o1 = f.i1(o); // No calibration
         x.o2 = f.i2(o); // No calibration
         x.aSeq = x.bSeq;
         return x;
     }
-    
-    // Number of target sequin reads after calibration
-    x.tar = (p / (1.0 - p)) * x.bSam;
-    
-    // Make sure our target doesn't goto zero if the sample is non-zero
-    if (x.bSam && !x.tar)
+    else if (p > 1) // Calibrate by reads? (p is the number of target paired reads)
     {
-        x.tar = x.bSam;
+        // Convert to target paired reads (very important)
+        p *= 2;
+        
+        o.info("Calibration by reads");
+        
+        // Number of target sequin reads after calibration
+        x.tar = x.bSeq < p ? x.bSeq : p;
+
+        // Scaling factor for calibration (0.5 because of paired-ends)
+        x.p = x.bSeq ? 0.5 * x.tar / x.bSeq : 0.0;
+        
+        o.logInfo("Targeted: " + std::to_string(x.bSeq));
+        o.logInfo("Target: "   + std::to_string(x.tar));
+        o.logInfo("Scaling: "  + std::to_string(x.p));
+    }
+    else // Calibrate by percentage?
+    {
+        o.info("Calibration by percentage: " + std::to_string(p));
+        
+        // Number of target sequin reads after calibration
+        x.tar = (p / (1.0 - p)) * x.bSam;
+        
+        // Make sure our target doesn't goto zero if the sample is non-zero
+        if (x.bSam && !x.tar)
+        {
+            x.tar = x.bSam;
+        }
+        
+        // Scaling factor for calibration
+        x.p = (x.bSam == 0) ? 1.0 : (x.bSeq == 0) ? 0.0 : (x.tar >= x.bSeq ? 1.0 : ((float) x.tar) / x.bSeq);
+
+        o.logInfo("Before: "   + std::to_string(x.bSeq));
+        o.logInfo("Targeted: " + std::to_string(x.bSam));
+        o.logInfo("Target: "   + std::to_string(x.tar));
+        o.logInfo("Scaling: "  + std::to_string(x.p));
     }
     
-    // Percentage for calibration
-    x.p = (x.bSam == 0) ? 1.0 : (x.bSeq == 0) ? 0.0 : (x.tar >= x.bSeq ? 1.0 : ((float) x.tar) / x.bSeq);
-    
-    assert(x.p >= 0.0 && x.p <= 1.0);   
+    assert(x.p >= 0.0 && x.p <= 1.0);
     
     auto c = (o.writeBAM()) ? Calibrator::createBAM(f.i1(o), f.o1(o)) : Calibrator::createFQ(f.i1(o), f.i2(o), f.o1(o), f.o2(o));
+    
     auto r = c->calibrate(stats.K, x.p, o);
     
     x.o1   = r.o1;
@@ -489,46 +563,69 @@ SCStats Anaquin::SCalibrateP(Bin b, Proportion p, const SStats &stats, const SOp
     return x;
 }
 
-void Anaquin::SWriteLCopy(const FileName &file, const SOptions &o)
+void Anaquin::SWriteLadder(std::shared_ptr<Ladder> l3, const FileName &file, const SStats &stats, const SOptions &o)
 {
-    const auto p1 = o.calibL ? "_ladder_calibrated.tsv" : "_ladder.tsv";
+    const auto format = "%1%\t%2%\t%3%\t%4%\t%5%";
+    
+    o.generate(file);
+    o.writer->open(file);
+    o.writer->write((boost::format(format) % "NAME" % "STOICHOMETRY" % "UNIT" % "Q50" % "READ").str());
+    
+    for (const auto &seq : stats.K.seqs)
+    {
+        if (isSubstr(seq, "LD_"))
+        {
+            auto write = [&](const SequinID &seq)
+            {
+                const auto u = stats.R.d2u.meds.count(seq) ? stats.R.d2u.meds.at(seq) : NAN;
+                const auto m = u;
+                const auto x = stats.K.sqc.count(seq) ? stats.K.sqc.at(seq) : 0;
+                
+                if (l3->contains(seq))
+                {
+                    o.writer->write((boost::format(format) % seq
+                                                           % 1
+                                                           % l3->input(seq)
+                                                           % (std::isnan(m) ? MISSING : toString(m, 2))
+                                                           % x).str());
+                }
+                else
+                {
+                    o.writer->write((boost::format(format) % seq
+                                                           % MISSING
+                                                           % MISSING
+                                                           % (std::isnan(m) ? MISSING : toString(m, 2))
+                                                           % x).str());
+                }
+            };
+            
+            write(seq);
+        }
+    }
+    
+    o.writer->close();
+}
 
+void Anaquin::SWriteLCopy(const FileName &file, const Label &l, const SOptions &o)
+{
     o.generate(file);
     o.writer->open(file);
     o.writer->write((boost::format(PlotKSynthetic()) % date()
                                                      % o.cmd
                                                      % o.work
-                                                     % (o.name + p1)).str());
+                                                     % (o.name + l)).str());
     o.writer->close();
 }
 
-void Anaquin::SWriteLDensity(const FileName &file, const SOptions &o)
+void Anaquin::SWriteLDensity(const FileName &file, const Label &l1, const Label &l2, const SOptions &o)
 {
-    const auto p1 = "_calibrated_kmers.tsv";
-    const auto p2 = "_ladder_calibrated.tsv";
-    
     o.generate(file);
     o.writer->open(file);
     o.writer->write((boost::format(PlotLDensity()) % date()
                                                    % o.cmd
                                                    % o.work
-                                                   % (o.name + p1)
-                                                   % (o.name + p2)).str());
-    o.writer->close();
-}
-
-void Anaquin::SWriteLVariation(const FileName &file, const SOptions &o)
-{
-    const auto p1 = "_calibrated_kmers.tsv";
-    const auto p2 = "_ladder_calibrated.tsv";
-
-    o.generate(file);
-    o.writer->open(file);
-    o.writer->write((boost::format(PlotLVariation()) % date()
-                                                     % o.cmd
-                                                     % o.work
-                                                     % (o.name + p1)
-                                                     % (o.name + p2)).str());
+                                                   % (o.name + l1)
+                                                   % (o.name + l2)).str());
     o.writer->close();
 }
 
@@ -556,7 +653,7 @@ void Anaquin::writeSomatic(const FileName &file, const FileName &src, const SOpt
 {
     o.generate(file);
     o.writer->open(file);
-    o.writer->write(RWriter::createLinear(src, o.work, "Allele Frequency Ladder", "Expected Allele Frequency (log2)", "Measured Allele Frequency (log2)", "data$ExpFreq", "data$ObsFreq"));
+    o.writer->write(RWriter::createLinear(src, o.work, "Allele Frequency Ladder", "Expected Allele Frequency (log2)", "Measured Allele Frequency (log2)", "data$EXP_FREQ", "data$OBS_FREQ"));
     o.writer->close();
 }
 
@@ -611,10 +708,10 @@ void Anaquin::writeKmers(const FileName &file, const SStats &stats, const SOptio
 
     o.generate(file);
     o.writer->open(file);
-    o.writer->write((boost::format(format) % "Sequin"
-                                           % "Sequence"
-                                           % "Position"
-                                           % "Count").str());
+    o.writer->write((boost::format(format) % "NAME"
+                                           % "SEQUENCE"
+                                           % "POSITION"
+                                           % "READ").str());
 
     for (const auto &i : __KMInfo__)
     {
@@ -622,18 +719,60 @@ void Anaquin::writeKmers(const FileName &file, const SStats &stats, const SOptio
         
         for (const auto &j : i.second)
         {
-            o.writer->write((boost::format(format) % seq
-                                                   % j.second.kmer
-                                                   % j.first
-                                                   % j.second.abund).str());
+            if (isSubstr(seq, "LD_"))
+            {
+                o.writer->write((boost::format(format) % seq
+                                                       % j.second.kmer
+                                                       % j.first
+                                                       % j.second.abund).str());
+            }
         }
     }
 
     o.writer->close();
 }
 
-void Anaquin::SCombine(const FileName &file, SStats &stats, const SOptions &o, const std::map<ChrID, DIntervals<>> *r1, bool shouldDecoyReverseC)
+void Anaquin::writeInsertR(const FileName &file, const FileName &src, const SOptions &o)
 {
+    o.generate(file);
+    o.writer->open(file);
+    o.writer->write((boost::format(PlotInsert()) % date()
+                                                 % o.cmd
+                                                 % o.work
+                                                 % src).str());
+    o.writer->close();
+}
+
+void Anaquin::writeInsertTSV(const FileName &file, const SAlignStats &stats, const SOptions &o)
+{
+    o.generate(file);
+    o.writer->open(file);
+    o.writer->write("Frequency\tSample\tSequin");
+
+    const auto &ES = stats.ins.at(Bin::ES);
+    const auto &GR = stats.ins.at(Bin::GR);
+
+    const auto maxES = ES.empty() ? 0 : ES.rbegin()->first;
+    const auto maxGR = GR.empty() ? 0 : GR.rbegin()->first;
+
+    for (auto i = 0u; i < std::max(maxES, maxGR); i++)
+    {
+        const auto sam = ES.count(i) ? ES.at(i) : 0;
+        const auto seq = GR.count(i) ? GR.at(i) : 0;
+
+        if (sam || seq)
+        {
+            o.writer->write(std::to_string(i) + "\t" + std::to_string(sam) + "\t" + std::to_string(seq));
+        }
+    }
+    
+    o.writer->close();
+}
+
+SAlignStats Anaquin::SAlign(const FileName &file, SStats &stats, const SOptions &o, const std::map<ChrID, DIntervals<>> *r1, bool shouldDecoyReverseC)
+{
+    SAlignStats r;
+    
     if (o.bam)
     {
         o.analyze(file);
@@ -677,9 +816,9 @@ void Anaquin::SCombine(const FileName &file, SStats &stats, const SOptions &o, c
             {
                 x.lSeq(); x.lQual(); x.lName();
             }
-
+            
             if (shouldDecoyReverseC && decoy && x.isReverseC)
-            {
+            {                
                 rr.rc = true;
             }
 
@@ -698,6 +837,32 @@ void Anaquin::SCombine(const FileName &file, SStats &stats, const SOptions &o, c
                 w.write(x);
             }
             
+            if (x.mapped && x.isPrimary && rr.isSeq)
+            {
+                x.lMateID(); x.lMatePos();
+                
+                if (x.cID == x.mID)
+                {
+                    // Starting position of this read
+                    auto x1 = x.l.start;
+                    
+                    // Starting position of mate
+                    auto x2 = x.mPos;
+
+                    if (x2 < x1)
+                    {
+                        // Always make sure sure x1 before x2
+                        std::swap(x1, x2);
+                    }
+                    
+                    // Insertion size
+                    const auto ins = x2 - x1;
+
+                    // Update frequency table only for sequin region or decoy reads
+                    r.ins[GR][ins]++;
+                }
+            }
+            
             return rr;
         });
 
@@ -705,4 +870,6 @@ void Anaquin::SCombine(const FileName &file, SStats &stats, const SOptions &o, c
         __HackBAMDecoy2__.clear();
         for (const auto &x : __CombinedBAM1__) { __HackBAMDecoy2__.push_back(&(x.first)); }
     }
+    
+    return r;
 }

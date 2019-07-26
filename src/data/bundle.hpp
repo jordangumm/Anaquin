@@ -13,7 +13,7 @@ namespace Anaquin
     {
         FileName path;
     };
-
+    
     struct Bundle
     {
         static std::vector<std::string> myGlob(const std::string &p)

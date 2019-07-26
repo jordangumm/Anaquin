@@ -2,9 +2,9 @@
 #define SS_DIST_HPP
 
 #include <math.h>
-#include <ss/data/data.hpp>
-#include <ss/data/errors.hpp>
-#include <ss/internal/dist.hpp>
+#include "stats/ss/data/data.hpp"
+#include "stats/ss/data/errors.hpp"
+#include "stats/ss/internal/dist.hpp"
 
 namespace SS
 {

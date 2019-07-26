@@ -47,9 +47,12 @@ namespace Anaquin
                  * Optional fields
                  */
             
-                void lSeq();  // Lazy loadding of sequence
-                void lQual(); // Lazy loading of quality
-                void lName(); // Lazy loading of reads
+                void lSeq();     // Lazy loadding of sequence
+                void lQual();    // Lazy loading of quality
+                void lName();    // Lazy loading of reads
+                void lMateID();  // Lazy loading of mate ID
+                void lMatePos(); // Lazy loading of mate position
+                void lCigar();
 
                 inline void *b() const { return _b; } // bam1_t
                 inline void *h() const { return _h; } // bam_hdr_t
@@ -91,7 +94,7 @@ namespace Anaquin
             
             bool rc = false;
         };
-
+        
         // Functor for parsing alignments selectively
         typedef std::function<ParseResult (Data &, const Info &)> F2;
 

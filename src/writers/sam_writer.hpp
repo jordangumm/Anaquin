@@ -33,7 +33,13 @@ namespace Anaquin
                 if (_head)
                 {
                     if (_cout) { std::cout << std::string(h->text); }
-                    else       { sam_hdr_write(_fp, h); }
+                    else
+                    {
+                        if (sam_hdr_write(_fp, h) == -1)
+                        {
+                            throw std::runtime_error("sam_hdr_write() failed");
+                        }
+                    }
                 }
                 
                 if (sam_write1(_fp, h, b) == -1)

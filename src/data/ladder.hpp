@@ -13,19 +13,22 @@ namespace Anaquin
         inline void add(const SequinID &x, Mixture m, Concent c)
         {
             seqs.insert(x);
-            
+            mix(m)[x] = c;
+        }
+        
+        inline std::map<SequinID, Concent> &mix(Mixture m)
+        {
             switch (m)
             {
-                case Mix_1: { m1[x] = c; break; }
-                case Mix_2: { m2[x] = c; break; }
+                case Mix_1: { return m1; }
+                case Mix_2: { return m2; }
+                case Mix_3: { return m3; }
             }
         }
         
         inline Counts count(Concent i, Mixture m)
         {
-            const auto &p = m == Mix_1 ? m1 : m2;
-            
-            return std::count_if(p.begin(), p.end(), [&](const std::pair<SequinID, Concent> &x)
+            return std::count_if(mix(m).begin(), mix(m).end(), [&](const std::pair<SequinID, Concent> &x)
             {
                 return x.second == i;
             });
@@ -35,25 +38,21 @@ namespace Anaquin
 
         inline bool contains(const SequinID &x, Mixture m = Mix_1)
         {
-            return m == Mix_1 ? m1.count(x) : m2.count(x);
+            return mix(m).count(x);
         }
         
         inline Concent input(const SequinID &x, Mixture m = Mix_1)
         {
-            return m == Mix_1 ? m1.at(x) : m2.at(x);
+            return mix(m).at(x);
         }
 
         inline bool hasMix2() const { return !m2.empty(); }
-        
+        inline bool hasMix3() const { return !m3.empty(); }
+
         FileName src;
         
         std::set<SequinID> seqs;
-        
-        // Ladder for mixture 1
-        std::map<SequinID, Concent> m1;
-        
-        // Ladder for mixture 2
-        std::map<SequinID, Concent> m2;
+        std::map<SequinID, Concent> m1, m2, m3;
     };
 }
 

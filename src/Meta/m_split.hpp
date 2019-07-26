@@ -22,14 +22,14 @@ namespace Anaquin
             // After both synthetic and percentage calibration for "ladders"
             SStats S4;
             
-            // Calibration statistics for "sequins"
+            // Calibration statistics for stage one "sequins"
             SCStats C1;
             
-            // Calibration statistics for "ladders"
+            // Calibration statistics for stage one "ladders"
             SCStats C2;
             
-            // Synthetic calibration
-            GSynthetic::Results S5;
+            // Calibration statistics for stage two "ladders"
+            LadderInternal::Results S5;
             
             SequinStats l1, l2;
         };

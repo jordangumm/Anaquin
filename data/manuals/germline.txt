@@ -37,7 +37,7 @@ germline - Assess the detection of germline variants in sequins (and sample).
 
 <b>OUTPUTS</b>
     germline_report.html                Summary report describing detection of sequin (and sample) germline variants (--report only).
-    germline_summary.stats              Summary statistics describing variant detection.
+    germline_summary.txt              Summary statistics describing variant detection.
     germline_sequins.tsv                Detailed statistics for variants detected in sequins (and sample).
     germline_tp.vcf                     Annotation file for true positive sequin variants.
     germline_fp.vcf                     Annotation file for false positive sequin variants.

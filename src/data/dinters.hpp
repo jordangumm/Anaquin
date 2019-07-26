@@ -135,9 +135,9 @@ namespace Anaquin
                 std::sort(stats.raws.begin(), stats.raws.end());
                 
                 stats.mean   = stats.sums / stats.length;
-                stats.p25    = SS::quant(stats.raws, 0.25);
-                stats.p50    = SS::quant(stats.raws, 0.50);
-                stats.p75    = SS::quant(stats.raws, 0.75);
+                stats.p25    = quant(stats.raws, 0.25);
+                stats.p50    = quant(stats.raws, 0.50);
+                stats.p75    = quant(stats.raws, 0.75);
                 stats.aligns = count();
 
                 return stats;

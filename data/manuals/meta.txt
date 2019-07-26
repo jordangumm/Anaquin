@@ -9,12 +9,7 @@ meta - analyse sequins within metagenome samples.
     Optional:
         -2                          Input FASTQ file (second pair)
         --mix                       Specify the sequin mixture used (e.g. default = A (mixture A)).
-        --sequin_calibration        Specify the library fraction to which sequin reads/alignments are calibrated (for example 0.01 calibrates
-                                    sequin reads/alignments to 1% of library depth) (default = NA).
-        --ladder_calibration        Similar to --sequin_calibrate but applies to ladder reads/alignments (default = NA).     
         --report                    Generate html graphic report of sequin performance in library.
-        --nomerge                   Skip merging sample and calibrated outputs. Useful for avoiding the slow merging step.
-        --noflip                    Skip sequin read flipping
         -o/--output                 Directory to which output files are written (default = output).
         -t/--threads                Number of threads used (default = 1).
         --threshold                 Minimum fraction of kmers required to classify read as sequin-derived (default = 0.2).
@@ -23,26 +18,42 @@ meta - analyse sequins within metagenome samples.
         -r/--resource_dir           Directory containing resource files (default = resources).
         --manual_fasta              Supply custom sequence catalog (.FASTA; instead of using default sequin sequence catalog).
         --manual_bed                Supply custom sequin regions annotation (.BED; instead of using default sequin annotations).
+        --manual_mix                Supply custom mixture concentration file (.TSV; instead of using default sequin concentration).
+        --sequin_fraction           Calibrate sequin reads to specified fraction of the library (for example 0.01 calibrates sequin reads/alignments to 1% of
+                                    library depth) (default = NA).
+        --sequin_absolute           Calibrate sequin reads to a absolute amount (for example 1000 will calibrate sequins to 1000 reads/alignments) (default = NA).
+        --ladder_fraction           Calibrate ladder reads to specified fraction of the library (for example 0.01 calibrates ladder reads/alignments to 1% of
+                                    library depth) (default = NA).
+        --ladder_absolute           Calibrate ladder reads to a absolute amount (for example 1000 will calibrate sequins to 1000 reads/alignments) (default = NA).
+        --ladder_pool               Specify the ladder library fraction to which ladder reads are calibrated (default = NA). If NA, the least abundant
+                                    ladder sequin will be used.
+        --merge                     Generate merged sample and calibrated sequin output file. (default = false)
+        --no_flip                   Skip sequin read flipping
 
 <b>USAGE EXAMPLE:</b>
     $ anaquin meta -1 file1.fq.gz -2 file2.fq.gz  (to meta a paired-end FASTQ library).
     $ anaquin meta --combined align.bam (to meta a BAM alignment file).
 
 <b>OUTPUTS:</b>
+    Always:
         meta_sample_*               FASTQ/BAM file of sample-derived reads (excludes sequin reads).
         meta_sequin_*               FASTQ/BAM file of reads derived from sequins (orientation is flipped).
         meta_vector_*               FASTQ/BAM file of excluded reads derived from plasmid vector.
         meta_ladder_*               FASTQ/BAM file of reads derived from synthetic DNA ladder.
-        meta_sequin_calibrated*     Calibrated FASTQ/BAM file of (flipped) sequin-derived reads (see --sequin_calibrate option).
-        meta_ladder_calibrated*     Calibrated FASTQ/BAM file of vector reads see --ladder_calibrate option)  
-        meta_merge_*                Merged FASTQ/BAM file for meta_sample_*, meta_sequin_calibrated* and meta_ladder_calibrated* reads.
-        meta_report.html            Graphic report describing sequin (and sample) performance in library (see --report option). Load in browser.
-        meta_summary.stats          Summary results describing metagenome sequin performance in libraries.        
-        meta_sequins.tsv            Detailed statistics on individual metagenome sequins.
-        meta_sequins_calibrated.tsv Detailed statistics on individual metagenome sequins following calibration (see --sequin_calibrate option).    
-        meta_kmers.tsv              Individual k-mers for individual sequins (and only ladder sequins supported currently)
-        meta_calibrated_kmers.tsv   Individual calibrated k-mers for individual sequins (and only ladder sequins supported currently)
+        meta_summary.txt            Summary results describing metagenome sequin performance in libraries.        
+        meta_sequin.tsv             Detailed statistics on individual metagenome sequins.
+        meta_kmers.tsv              Individual k-mers for individual sequins (only ladder sequins supported)
         meta_ladder.tsv             Detailed statistics on individual synthetic DNA ladders.
-        meta_ladder_calibrated.tsv  Detailed statistics on individual metagenome sequins following calibration (see --ladder_calibrate option).
-        meta_ladderCopy.R           Calibrated R-script for plotting synthetic ladder by copy number.
-        meta_ladderDensity.R        Calibrated R-script for plotting synthetic ladder by density.<<@@@@>>
+        meta_ladderCopy.R           R-script for plotting synthetic ladder by copy number.
+        meta_ladderDensity.R        R-script for plotting synthetic ladder by density.
+        meta_sequin_table.tsv       Sequin quantification table 
+        meta_ladder_table.tsv       Synthetic ladder table
+        
+    When requested:
+        meta_merge_*                Merged FASTQ/BAM file consisting meta_sample_*, meta_sequin_calibrated* and meta_ladder_calibrated* reads (requires --merge).
+        meta_report.html            Graphic report describing sequin (and sample) performance in library. Load in browser. (requires --report).     
+        meta_calibrated_kmers.tsv   Individual calibrated k-mers for individual sequins (and only ladder sequins supported currently). (requires --ladder_fraction or --ladder_absolute)
+        meta_sequin_calibrated*     Calibrated FASTQ/BAM file of (flipped) sequin-derived reads (requires --sequin_fraction or –sequin_absolute).
+        meta_ladder_calibrated*     Calibrated FASTQ/BAM file of vector reads (requires --ladder_fraction or –ladder_absolute).
+        meta_sequin_calibrated.tsv  Detailed statistics on individual metagenome sequins following calibration (requires --sequin_fraction or –sequin_absolute). 
+        meta_ladder_calibrated.tsv  Detailed statistics on individual metagenome sequins following calibration (requires --ladder_fraction or --ladder_absolute).<<@@@@>>

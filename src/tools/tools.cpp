@@ -239,12 +239,6 @@ FileName Anaquin::hackUZero(const FileName &file)
 
 int Anaquin::parseChrID(const ChrID &x)
 {
-    auto isNumber = [](const std::string &s)
-    {
-        return !s.empty() && std::find_if(s.begin(),
-                                          s.end(), [](char c) { return !std::isdigit(c); }) == s.end();
-    };
-    
     const auto t = remove(x, "chr");
     
     // Eg: chr1, chr2 ...
@@ -354,6 +348,12 @@ bool Anaquin::exists(const FileName &file)
 {
     struct stat buffer;
     return (stat(file.c_str(), &buffer) == 0);
+}
+
+std::string Anaquin::readFile(const FileName &file)
+{
+    std::ifstream x(file);
+    return std::string((std::istreambuf_iterator<char>(x)), std::istreambuf_iterator<char>());
 }
 
 bool Anaquin::isFloat(const std::string &x)

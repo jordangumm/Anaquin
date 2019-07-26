@@ -2,7 +2,7 @@
 #define SS_MATRIX_HPP
 
 #include <Eigen/Dense>
-#include <ss/data/data.hpp>
+#include "stats/ss/data/data.hpp"
 
 namespace SS
 {
