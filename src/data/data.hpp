@@ -44,13 +44,9 @@ namespace Anaquin
     typedef long long Base;
     typedef long long Depth;
     typedef long long Counts;
-
-    enum class SeqOutput
-    {
-        BAM,
-        FASTQ,
-    };
     
+    const auto NO_CALIBRATION = -1.0;
+
     enum Variation
     {
         SNP,
@@ -192,6 +188,7 @@ namespace Anaquin
     {
         Mix_1,
         Mix_2,
+        Mix_3
     };
 
     struct Limit
@@ -208,7 +205,7 @@ namespace Anaquin
         Counts abund = 0;
     };
     
-    const std::string MISSING = "-";
+    const std::string MISSING = "NA";
 }
 
 #endif

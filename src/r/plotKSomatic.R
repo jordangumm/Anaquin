@@ -9,7 +9,7 @@
 library(Anaquin)
 
 data <- read.csv('%3%/%4%', sep='\t')
-data <- data[data$Genotype == 'Somatic' & data$ObsFreq != '-',]
+data <- data[data$GENOTYPE == 'Somatic' & data$OBS_FREQ != '-',]
 
 # Legends
 legs <- c('Sequin Variants')
@@ -17,5 +17,5 @@ legs <- c('Sequin Variants')
 # Plotting colors
 cols <- c('blue')
 
-plotAllele(data$ExpFreq, data$ObsFreq, data$Label, legs=legs, cols=cols)
+plotAllele(data$EXP_FREQ, data$OBS_FREQ, data$LABEL, legs=legs, cols=cols)
 <<@@@@>>

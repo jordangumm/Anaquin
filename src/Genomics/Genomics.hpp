@@ -7,6 +7,8 @@
 
 namespace Anaquin
 {
+    const auto GENOMICS_DECOY_CHROM = "chrQS";
+    
     struct GResource : public Resource
     {
         GResource(const Path &, const FileName &, const FileName &, HumanAssembly);
@@ -22,6 +24,11 @@ namespace Anaquin
         return LResource(p + "/synthetic", "sequin_barcodes", ".tsv", HumanAssembly::None);
     }
 
+    inline Resource GSeqDecoy(const Path &p)
+    {
+        return GResource(p + "/genome/chrQ/", "genome_chrQ_decoys", ".fa", HumanAssembly::None);
+    }
+
     inline Resource GSeqFA(const Path &p)
     {
         return GResource(p + "/genome", "sequin_sequences", ".fa", HumanAssembly::None);
@@ -35,6 +42,11 @@ namespace Anaquin
     inline Resource GVarVCF(const Path &p, HumanAssembly x)
     {
         return GResource(p + "/genome", "sequin_smallvariants", ".vcf", x);
+    }
+    
+    inline Resource GDecoyVCF(const Path &p)
+    {
+        return GResource(p + "/genome/chrQ/", "sequin_smallvariants_chrQS", ".vcf", HumanAssembly::None);
     }
 
     inline Resource GFeatBED(const Path &p, HumanAssembly x)

@@ -31,10 +31,9 @@ namespace Anaquin
         static void rna(const Options &);
         static void meta(const Options &);
         static void genome(const Options &);
+        static void somatic(const Options &);
+        static void germline(const Options &);
         static void calibrate(const Options &);
-
-        static void gReport(const Options &);
-        static void sReport(const Options &);
     };
 }
 

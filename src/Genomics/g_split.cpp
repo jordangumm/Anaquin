@@ -1,4 +1,3 @@
-#include <libgen.h>
 #include "tools/report.hpp"
 #include "Genomics/g_split.hpp"
 #include "Genomics/Genomics.hpp"
@@ -58,8 +57,8 @@ void GSplit::buildAF(Stats &stats, const Options &o)
                 const auto hasR = stats.K.uniqs.count(R) && stats.K.uniqs.at(R).size() >= 3;
                 const auto hasV = stats.K.uniqs.count(V) && stats.K.uniqs.at(V).size() >= 3;
                 
-                stats.VR[seq] = hasR ? SS::med(toVector(stats.K.uniqs.at(R))) : NAN;
-                stats.VV[seq] = hasV ? SS::med(toVector(stats.K.uniqs.at(V))) : NAN;
+                stats.VR[seq] = hasR ? med(toVector(stats.K.uniqs.at(R))) : NAN;
+                stats.VV[seq] = hasV ? med(toVector(stats.K.uniqs.at(V))) : NAN;
             }
         }
     }
@@ -79,10 +78,10 @@ void GSplit::buildAF(Stats &stats, const Options &o)
                 const auto V = seq;
                 
                 // Median k-mer for reference sequin
-                const auto rn = stats.K.uniqs.count(R) ? SS::med(toVector(stats.K.uniqs.at(R))) : 0;
+                const auto rn = stats.K.uniqs.count(R) ? med(toVector(stats.K.uniqs.at(R))) : 0;
                 
                 // Median k-mer for variant sequin
-                const auto vn = stats.K.uniqs.count(V) ? SS::med(toVector(stats.K.uniqs.at(V))) : 0;
+                const auto vn = stats.K.uniqs.count(V) ? med(toVector(stats.K.uniqs.at(V))) : 0;
                 
                 if (!r.l1()->contains(__hack__(V), Mix_1))
                 {
@@ -128,7 +127,7 @@ Stats GSplit::analyze(const FileName &f1, const FileName &f2, const Options &o)
     Stats stats;    
 
     // Running Kallisto
-    SCombine(f1, stats, o, nullptr, true); SKallisto(stats, f1, f2, o);
+    SAlign(f1, stats, o, nullptr, true); SKallisto(stats, f1, f2, o);
 
     // Build somatic allele frequency ladder
     buildAF(stats, o);
@@ -180,57 +179,64 @@ static void writeSummary(const FileName &file, const FileName &f1, const FileNam
     o.generate(file);
     o.writer->open(file);
 
-    const auto format = "-------SUMMARY STATISTICS\n\n"
-                        "-------REFERENCE FILES\n\n"
-                        "       Reference index: %1%\n\n"
-                        "-------LIBRARY INFORMATION\n\n"
-                        "       Version:       %43%\n"
-                        "       Instrument ID: %44%\n"
-                        "       Run number:    %45%\n"
-                        "       Flowcell ID:   %46%\n"
-                        "       Lane:          %47%\n\n"
-                        "-------USER-SUPPLIED FILES\n\n"
-                        "       Input file (first):  %2%\n"
-                        "       Input file (second): %3%\n\n"
-                        "-------PARAMETERS\n\n"
-                        "       K-mer length: %4%\n"
-                        "       Threshold:    %5%\n\n"
-                        "-------PARTITION SUMMARY\n\n"
-                        "       Human reads:             %6%  (%7$.4f%%)\n"
-                        "       Genome reads:            %8% (%9$.4f%%)\n"
-                        "       Ladder reads:            %10% (%11$.4f%%)\n"
-                        "       Vector reads:            %12% (%13$.4f%%)\n"
-                        "       Structural reads:        %14% (%15$.4f%%)\n"
-                        "       Immune reads:            %16% (%17$.4f%%)\n"
-                        "       HLA reads:               %18% (%19$.4f%%)\n"
-                        "       Information reads:       %20% (%21$.4f%%)\n"
-                        "       Mitochondria reads:      %22% (%23$.4f%%)\n"
-                        "       Dilution:                %24%%%\n"
-                        "       Total:                   %25%\n\n"
-                        "-------OUTPUT FASTQ FILES\n\n"
-                        "       Human reads path:        %26%\n"
-                        "       Genome reads path:       %27%\n"
-                        "       Vector reads path:       %28%\n"
-                        "       Ladder reads path:       %29%\n"
-                        "       Structural reads path:   %30%\n"
-                        "       Immune reads path:       %31%\n"
-                        "       HLA reads path:          %32%\n"
-                        "       Information reads path:  %33%\n"
-                        "       Mitochondria reads path: %34%\n\n"
-                        "-------Somatic Allele Frequency Ladder (log2 scale)\n\n"
-                        "       Slope (AF):       %35%\n"
-                        "       R2 (AF):          %36%\n"
-                        "       F-statistic: (AF) %37%\n"
-                        "       P-value (AF):     %38%\n\n"
-                        "-------Synthetic Ladder (log2 scale)\n\n"
-                        "       Slope (SL):       %39%\n"
-                        "       R2 (SL):          %40%\n"
-                        "       F-statistic (SL): %41%\n"
-                        "       P-value (SL):     %42%\n";
+    const auto f = "SEQUIN REPORT:                 %1%\n\n"
+                   "REFERENCE FILES\n"
+                   "Reference index:               %2%\n\n"
+                   "LIBRARY INFORMATION\n"
+                   "Version:                       %3%\n"
+                   "Instrument ID:                 %4%\n"
+                   "Run number:                    %5%\n"
+                   "Flowcell ID:                   %6%\n"
+                   "Lane:                          %7%\n\n"
+                   "USER-SUPPLIED FILES\n"
+                   "Input file (first):            %8%\n"
+                   "Input file (second):           %9%\n\n"
+                   "ANAQUIN PARAMETERS\n"
+                   "K-mer length:                  %10%\n"
+                   "Threshold:                     %11%\n\n"
+                   "PARTITION SUMMARY\n"
+                   "Sample reads:                  %12% (%13%%%)\n"
+                   "Sequin reads:                  %14% (%15%%%)\n"
+                   "Ladder reads:                  %16% (%17%%%)\n"
+                   "Structural reads:              %18% (%19%%%)\n"
+                   "Immune reads:                  %20% (%21%%%)\n"
+                   "HLA reads:                     %22% (%23%%%)\n"
+                   "Mitochondria reads:            %24% (%25%%%)\n"
+                   "Vector reads:                  %26% (%27%%%)\n"
+                   "Information reads:             %28% (%29%%%)\n"
+                   "Dilution:                      %30%%%\n"
+                   "Total reads:                   %31%\n\n"
+                   "OUTPUT FILES\n"
+                   "Sample reads path:             %32%\n"
+                   "Sequin reads path:             %33%\n"
+                   "Ladder reads path:             %34%\n"
+                   "Structural reads path:         %35%\n"
+                   "Immune reads path:             %36%\n"
+                   "Mitochondria reads path:       %37%\n"
+                   "HLA reads path:                %38%\n"
+                   "Information reads path:        %39%\n"
+                   "Vector reads path:             %40%\n\n"
+                   "LADDER - LIBRARY QUALITY\n"
+                   "Slope:                         %41%\n"
+                   "R2:                            %42%\n"
+                   "Mean Ratio:                    %43%\n"
+                   "Ladder table:                  %44%\n\n"
+                   "SEQUIN SOMATIC QUANTIFICATION\n"
+                   "Slope:                         %45%\n"
+                   "R2:                            %46%\n"
+                   "Sequin table:                  %47%";
 
     LinearModel af, ld;
     try { af = stats.af.linear(true, true); } catch(...) {}
     try { ld = stats.ld.linear(true, true); } catch(...) {}
+    
+    const auto tmp = tmpFile();
+    
+    // Only ladder sequins
+    RGrep(o.work + "/split_ladder.tsv", tmp, "NAME", "LD_"); const auto l1 = RLinear(tmp, "NAME", "UNIT", "READ").linear();
+    
+    // Only somatic sequins
+    RGrep(o.work + "/split_sequin.tsv", tmp, "LABEL", "Somatic"); const auto l2 = RLinear(tmp, "NAME", "EXP_FREQ", "OBS_FREQ").linear();
 
     const auto &r = Standard::instance().gen;
     
@@ -242,55 +248,55 @@ static void writeSummary(const FileName &file, const FileName &f1, const FileNam
     assert(gp >= 0 && gp <= 100);
     
     extern FASTQ __KFQInfo__;
-    const auto f = __KFQInfo__.format();
+    const auto fo = __KFQInfo__.format();
 
-    o.writer->write((boost::format(format) % o.index         // 1
-                                           % f1              // 2
-                                           % f2              // 3
-                                           % o.k             // 4
-                                           % o.rule          // 5
-                                           % S0(C(ES))       // 6
-                                           % S2(P(ES))       // 7
-                                           % S0(gn)          // 8
-                                           % S2(gp)          // 9
-                                           % S0(C(LD))       // 10
-                                           % S2(P(LD))       // 11
-                                           % S0(C(VC))       // 12
-                                           % S2(P(VC))       // 13
-                                           % S0(C(SV))       // 14
-                                           % S2(P(SV))       // 15
-                                           % S0(C(IM))       // 16
-                                           % S2(P(IM))       // 17
-                                           % S0(C(HL))       // 18
-                                           % S2(P(HL))       // 19
-                                           % S0(C(IF))       // 20
-                                           % S2(P(IF))       // 21
-                                           % S0(C(MT))       // 22
-                                           % S2(P(MT))       // 23
-                                           % (100.0 * stats.dil())
-                                           % stats.K.total()
-                                           % (o.work + "/split_sample*") // 26
-                                           % (o.work + "/split_sequin*") // 27
-                                           % (o.work + "/split_vector*") // 28
-                                           % (o.work + "/split_ladder*") // 29
-                                           % (o.work + "/split_sv*")     // 30
-                                           % (o.work + "/split_immune*") // 31
-                                           % (o.work + "/split_hla*")    // 32
-                                           % (o.work + "/split_info*")   // 33
-                                           % (o.work + "/split_mito*")   // 34
-                                           % MISS_STRING(af.m)           // 35
-                                           % MISS_STRING(af.r)           // 36
-                                           % MISS_STRING(af.F)           // 37
-                                           % MISS_STRING(af.p)           // 38
-                                           % MISS_STRING(ld.m)           // 39
-                                           % MISS_STRING(ld.r)           // 40
-                                           % MISS_STRING(ld.F)           // 41
-                                           % MISS_STRING(ld.p)           // 42
-                                           % SVersion(Standard::instance().gen, stats.K) // 43
-                                           % __KFQInfo__.inst(f)                         // 44
-                                           % __KFQInfo__.run(f)                          // 45
-                                           % __KFQInfo__.flow(f)                         // 46
-                                           % __KFQInfo__.lane(f)                         // 47
+    o.writer->write((boost::format(f) % date()
+                                      % o.index
+                                      % SVersion(Standard::instance().gen, stats.K)
+                                      % __KFQInfo__.inst(fo) // 4
+                                      % __KFQInfo__.run(fo)  // 5
+                                      % __KFQInfo__.flow(fo) // 6
+                                      % __KFQInfo__.lane(fo) // 7
+                                      % f1                   // 8
+                                      % f2                   // 9
+                                      % o.k                  // 10
+                                      % o.rule               // 11
+                                      % C(ES)                // 12
+                                      % S2(100.0 * stats.K.binP(ES))
+                                      % gn                // 14
+                                      % S2((Proportion) gn / stats.K.total())
+                                      % C(LD)                // 16
+                                      % S2(100.0 * stats.K.binP(LD))
+                                      % C(SV)                // 18
+                                      % S2(100.0 * stats.K.binP(SV))
+                                      % C(IM)                // 20
+                                      % S2(100.0 * stats.K.binP(IM))
+                                      % C(HL)                // 22
+                                      % S2(100.0 * stats.K.binP(HL))
+                                      % C(MI)                // 24
+                                      % S2(100.0 * stats.K.binP(MI))
+                                      % C(VC)               // 26
+                                      % S2(100.0 * stats.K.binP(VC))
+                                      % C(IF)               // 28
+                                      % S2(100.0 * stats.K.binP(IF))
+                                      % (100.0 * stats.dil())
+                                      % stats.K.total()             // 31
+                                      % (o.work + "/split_sample*") // 32
+                                      % (o.work + "/split_sequin*") // 33
+                                      % (o.work + "/split_ladder*") // 34
+                                      % (o.work + "/split_sv*")     // 35
+                                      % (o.work + "/split_immune*") // 36
+                                      % (o.work + "/split_mito*")   // 37
+                                      % (o.work + "/split_hla*")    // 38
+                                      % (o.work + "/split_info*")   // 39
+                                      % (o.work + "/split_vector*") // 40
+                                      % replaceNA(l1.m)  // 41
+                                      % replaceNA(l1.R2) // 42
+                                      % replaceNA(RLadTable(o.work + "/split_ladder.tsv", tmp, "NAME")) // 43
+                                      % (o.work + "/split_ladder_table.tsv") // 44
+                                      % replaceNA(l2.m)  // 45
+                                      % replaceNA(l2.R2) // 46
+                                      % (o.work + "/split_sequin_table.tsv") // 47
                      ).str());
     o.writer->close();
 }
@@ -302,29 +308,29 @@ void GSplit::writeQuin(const FileName &file, const Stats &stats, const SOptions 
 
     o.generate(file);
     o.writer->open(file);
-    o.writer->write((boost::format(format) % "Name"
-                                           % "Label"
-                                           % "Chrom"
-                                           % "Position"
-                                           % "ExpFreq"
-                                           % "ObsFreq"
-                                           % "RefCount"
-                                           % "VarCount"
-                                           % "Min"
+    o.writer->write((boost::format(format) % "NAME"
+                                           % "LABEL"
+                                           % "CHROM"
+                                           % "POSITION"
+                                           % "EXP_FREQ"
+                                           % "OBS_FREQ"
+                                           % "REF_COUNT"
+                                           % "VAR_COUNT"
+                                           % "MIN"
                                            % "Q25"
-                                           % "Med"
+                                           % "Q50"
                                            % "Q75"
-                                           % "Max"
-                                           % "Read"
-                                           % "Genotype"
-                                           % "Type"
+                                           % "MAX"
+                                           % "READ"
+                                           % "GENOTYPE"
+                                           % "TYPE"
                                            % r.a1()->strForKeys()).str());
     
     std::map<SequinID, Base> r1;
     ParserFA::size(o.index, r1);
 
-    #define _S1_(x,y) (x.count(y) ? std::isnan(x.at(y)) ? "-" : toString(x.at(y)) : MISSING)
-    #define _S2_(x,y) (x.count(y) ? std::isnan(x.at(y)) ? "-" : toString(x.at(y), 2) : MISSING)
+    #define _S1_(x,y) (x.count(y) ? std::isnan(x.at(y)) ? MISSING : toString(x.at(y)) : MISSING)
+    #define _S2_(x,y) (x.count(y) ? std::isnan(x.at(y)) ? MISSING : toString(x.at(y), 2) : MISSING)
 
     for (const auto &std : stats.K.stds)
     {
@@ -380,10 +386,10 @@ void GSplit::writeQuin(const FileName &file, const Stats &stats, const SOptions 
                                                    % bin2Label(GBin(GSeq2Std(x)))
                                                    % v->cID
                                                    % v->l.start
-                                                   % removeNaN(exp)
-                                                   % removeNaN(obs)
-                                                   % removeNaN(R)
-                                                   % removeNaN(V)
+                                                   % replaceNA(exp, 6)
+                                                   % replaceNA(obs, 6)
+                                                   % replaceNA(R)
+                                                   % replaceNA(V)
                                                    % _S1_(stats.R.d2u.mins, x)
                                                    % _S2_(stats.R.d2u.q25,  x)
                                                    % _S2_(stats.R.d2u.meds, x)
@@ -411,21 +417,30 @@ void GSplit::report(const FileName &f1, const FileName &f2, const Options &o)
 {
     const auto stats = analyze(f1, f2, o);
     
-    // Generating split_summary.stats
-    writeSummary("split_summary.stats", f1, f2, stats, o);
-
     // Generating split_sequin.tsv
     writeQuin("split_sequin.tsv", stats, o);
     
-    // Generating split_somatic.R
-    writeSomatic("split_somatic.R", "split_sequin.tsv", o);
-
     // Generating split_reads.tsv
     SWriteReads(Product::Genomics, "split_reads.tsv", stats, o);
 
     // Synthetic calibration
-    SCalibSynthetic(stats, GSplit::analyze, o.work, o, Standard::instance().gen.l3());
+    StageTwoLadderCalibration(stats, GSplit::analyze, o.work, o, Standard::instance().gen.l3());
 
-    // Generating HTML report
-    GSplit::writeGReport("split_report.html", o);
+    // Generating ladder table
+    writeLTable(o.work + "/split_ladder.tsv", "split_ladder_table.tsv", o);
+    
+    // Generating sequin abundance table
+    writeSTable(o.work + "/split_sequin.tsv", "split_sequin_table.tsv", o, 6, 6, 6, "EXP_FREQ", "OBS_FREQ");
+
+    // Generating split_summary.txt
+    writeSummary("split_summary.txt", f1, f2, stats, o);
+    
+    if (o.report)
+    {
+        // Generating split_somatic.R
+        writeSomatic("report_files/split_somatic.R", "split_sequin.tsv", o);
+
+        // Generating HTML report
+        GSplit::writeGReport("split_report.html", o);
+    }
 }

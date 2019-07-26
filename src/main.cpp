@@ -34,7 +34,7 @@
 
 #ifdef UNIT_TEST
 #define CATCH_CONFIG_RUNNER
-#include <catch.hpp>
+#include <catch2/catch.hpp>
 #endif
 
 #define DEFAULT_EDGE 550
@@ -47,7 +47,7 @@ typedef std::string Value;
 
 static HumanAssembly __ha__;
 
-static std::string version() { return "3.6.2"; }
+static std::string version() { return "3.8.3"; }
 
 /*
  * Options specified in the command line
@@ -76,18 +76,20 @@ static std::string version() { return "3.6.2"; }
 #define OPT_THREAD   817
 #define OPT_EDGE     818
 #define OPT_SKIP     819
-#define OPT_NO_MERGE 820
+#define OPT_MERGE    820
 #define OPT_WINDOW   821
 #define OPT_1        822
 #define OPT_2        823
 #define OPT_REPORT   824
 #define OPT_SAMPLE   825
 #define OPT_SEQUIN   826
-#define OPT_S_CALIB  827
-#define OPT_L_CALIB  828
-#define OPT_FASTQ    829
-#define OPT_NO_FLIP  830
-#define OPT_MMIX     831
+#define OPT_S_FRAC   827
+#define OPT_S_ABSO   828
+#define OPT_L_FRAC   829
+#define OPT_L_ABSO   830
+#define OPT_FASTQ    831
+#define OPT_NO_FLIP  832
+#define OPT_MMIX     833
 
 // Shared with other modules
 std::string __full_command__;
@@ -130,8 +132,6 @@ struct Parsing
 
 // Wrap the variables so that it'll be easier to reset them
 static Parsing _p;
-
-#define S(x) (_p.opts.count(x) ? _p.opts.at(x) : "-")
 
 static Scripts fixManual(const Scripts &str)
 {
@@ -182,11 +182,6 @@ struct MissingOptionError : public std::exception
     const std::string r;
 };
 
-struct UnknownFormatError : public std::runtime_error
-{
-    UnknownFormatError() : std::runtime_error("Unknown format") {}
-};
-
 struct MissingBundleError : public std::runtime_error
 {
     MissingBundleError(const Path &path) : std::runtime_error(path), path(path) {}
@@ -213,11 +208,12 @@ static const struct option long_opts[] =
     { "sequin",   required_argument, 0, OPT_SEQUIN  },
     { "combined", required_argument, 0, OPT_COMBINE },
     
-    { "fq",      no_argument, 0, OPT_FASTQ    },
-    { "report",  no_argument, 0, OPT_REPORT   },
-    { "nomerge", no_argument, 0, OPT_NO_MERGE },
+    { "fq",      no_argument, 0, OPT_FASTQ   },
+    { "merge",   no_argument, 0, OPT_MERGE   },
+    { "report",  no_argument, 0, OPT_REPORT  },
+    { "no_flip", no_argument, 0, OPT_NO_FLIP },
+    
     { "noflip",  no_argument, 0, OPT_NO_FLIP  },
-
     { "human_regions",    required_argument, 0, OPT_R_HUMAN },
     { "decoy_regions",    required_argument, 0, OPT_R_DECOY },
     { "restrict_regions", required_argument, 0, OPT_R_REGS  },
@@ -234,20 +230,22 @@ static const struct option long_opts[] =
     { "r",            required_argument, 0, OPT_RESOURCE },
     { "resource_dir", required_argument, 0, OPT_RESOURCE },
 
-    { "build",   required_argument, 0, OPT_BUILD }, // Alternative genome assembly
+    { "build", required_argument, 0, OPT_BUILD }, // Alternative genome assembly
 
-    { "mix",       required_argument, 0, OPT_MIXTURE },
-    { "trim",      required_argument, 0, OPT_TRIM    },
-    { "method",    required_argument, 0, OPT_METHOD  },
+    { "mix",    required_argument, 0, OPT_MIXTURE },
+    { "trim",   required_argument, 0, OPT_TRIM    },
+    { "method", required_argument, 0, OPT_METHOD  },
     
-    { "sequin_calibration", required_argument, 0, OPT_S_CALIB },
-    { "ladder_calibration", required_argument, 0, OPT_L_CALIB },
+    { "sequin_fraction", required_argument, 0, OPT_S_FRAC },
+    { "sequin_absolute", required_argument, 0, OPT_S_ABSO },
+    { "ladder_fraction", required_argument, 0, OPT_L_FRAC },
+    { "ladder_absolute", required_argument, 0, OPT_L_ABSO },
+    
+    { "edge",   required_argument, 0, OPT_EDGE   },
+    { "window", required_argument, 0, OPT_WINDOW },
 
-    { "edge",    required_argument, 0, OPT_EDGE   },
-    { "window",  required_argument, 0, OPT_WINDOW },
-
-    { "o",       required_argument, 0, OPT_PATH },
-    { "output",  required_argument, 0, OPT_PATH },
+    { "o",      required_argument, 0, OPT_PATH },
+    { "output", required_argument, 0, OPT_PATH },
 
     {0, 0, 0, 0 }
 };
@@ -388,6 +386,11 @@ template <typename Analyzer, typename O, typename F> void start(const std::strin
     o.info("Path: " + path);
     o.info("Resources: " + _p.opts[OPT_RESOURCE]);
 
+    if (o.report)
+    {
+        createD(o.work + "/report_files");
+    }
+    
     using namespace std::chrono;
     
     auto begin = high_resolution_clock::now();
@@ -442,18 +445,13 @@ template <typename T> std::shared_ptr<Ladder> readTSV(const Reader &r, T &, int 
 {
     Ladder l = Ladder();
     
-    auto isNumber = [&](const std::string &s)
-    {
-        return !s.empty() && std::find_if(s.begin(), s.end(), [](char c) { return !std::isdigit(c); }) == s.end();
-    };
-
     ParserCSV::parse(r, [&](const ParserCSV::Data &x, Progress)
     {
         if (x.size() < 2)
         {
             throw std::runtime_error("Invalid format. Two or more columns expected");
         }
-        else if (x[con] == "-" || !isNumber(x[con]))
+        else if (x[con] == MISSING || !isNumber(x[con]))
         {
             return;
         }
@@ -625,8 +623,10 @@ void parse(int argc, char ** argv)
                 break;
             }
 
-            case OPT_L_CALIB:
-            case OPT_S_CALIB:
+            case OPT_S_FRAC:
+            case OPT_S_ABSO:
+            case OPT_L_FRAC:
+            case OPT_L_ABSO:
             {
                 try
                 {
@@ -675,10 +675,10 @@ void parse(int argc, char ** argv)
             case OPT_FASTQ:
             case OPT_FASTA:
             case OPT_BUILD:
+            case OPT_MERGE:
             case OPT_THREAD:
             case OPT_REPORT:
             case OPT_NO_FLIP:
-            case OPT_NO_MERGE:
             {
                 if (opt == OPT_REPORT)
                 {
@@ -693,6 +693,7 @@ void parse(int argc, char ** argv)
             {
                 if      (val == "A") { _p.mix = Mixture::Mix_1; }
                 else if (val == "B") { _p.mix = Mixture::Mix_2; }
+                else if (val == "C") { _p.mix = Mixture::Mix_3; }
                 else                 { throw InvalidValueException("-mix", val); }
                 break;
             }
@@ -749,6 +750,7 @@ void parse(int argc, char ** argv)
     #define GAttrBED_(x)   (GAttrBED(_p.opts.at(OPT_RESOURCE)).path)
     #define GRegionBED_(x) (GRegionBED(_p.opts.at(OPT_RESOURCE), x).path)
     #define GVarVCF_(x)    (GVarVCF(_p.opts.at(OPT_RESOURCE), x).path)
+    #define GDecoyVCF_()   (GDecoyVCF(_p.opts.at(OPT_RESOURCE)).path)
 
     auto initAR = [&](UserReference &r)
     {
@@ -844,6 +846,7 @@ void parse(int argc, char ** argv)
                     r.v1 = readV(OPT_R_VCF,  r, nullptr, GVarVCF_(HumanAssembly::hg38)); // All variants
                     r.v2 = readGV(OPT_R_VCF, r, nullptr, GVarVCF_(HumanAssembly::hg38)); // Germline variants
                     r.v3 = readSV(OPT_R_VCF, r, nullptr, GVarVCF_(HumanAssembly::hg38)); // Somatic variants
+                    r.v4 = readV(OPT_R_VCF,  r, nullptr, GDecoyVCF_());                  // All variants
 
                     break;
                 }
@@ -960,6 +963,8 @@ void parse(int argc, char ** argv)
                     r.l1 = readL(std::bind(&Standard::readRMix,  &s, std::placeholders::_1), OPT_MMIX, r, RMix());
                     r.l2 = readL(std::bind(&Standard::readRGMix, &s, std::placeholders::_1), OPT_MMIX, r, RMix());
                     r.l3 = readL(std::bind(&Standard::readRLen,  &s, std::placeholders::_1), OPT_MMIX, r, RMix());
+                    r.t1 = readTrans(Reader(GInfoCode(_p.opts.at(OPT_RESOURCE)).path));
+
                     break;
                 }
 
@@ -991,7 +996,11 @@ void parse(int argc, char ** argv)
                     {
                         throw InvalidOptionException("Mixture B specified, but only a single mixture found in reference file: " + r.l1->src);
                     }                    
-                    
+                    else if (_p.mix == Mix_3 && !r.l1->hasMix3())
+                    {
+                        throw InvalidOptionException("Mixture C specified, but only a single mixture found in reference file: " + r.l1->src);
+                    }
+
                     break;
                 }
 
@@ -1004,7 +1013,7 @@ void parse(int argc, char ** argv)
 
             auto initSOptions = [&](SOptions &o, const FileName &ind)
             {
-                assert(o.flip && !o.skipMerge);
+                assert(o.flip && o.skipMerge);
 
                 // How many k-mers to skip?
                 o.skipKM = _p.opts.count(OPT_SKIP) ? stoi(_p.opts[OPT_SKIP]) : 5;
@@ -1020,7 +1029,7 @@ void parse(int argc, char ** argv)
                     o.flip = false;
                 }
                 
-                o.skipMerge = _p.opts.count(OPT_NO_MERGE);
+                o.skipMerge = !_p.opts.count(OPT_MERGE);
 
                 // Classification rule
                 o.rule = _p.opts.count(K_DEFAULT_R) ? stoi(_p.opts[K_DEFAULT_R]) : K_DEFAULT_R;
@@ -1031,6 +1040,33 @@ void parse(int argc, char ** argv)
                 o.forceFQ = _p.opts.count(OPT_FASTQ);
             };
             
+            auto initCalib = [&](int fKey, int aKey, const std::string &fStr, const std::string &aStr, double &calib)
+            {
+                if (_p.od.count(fKey))
+                {
+                    // Calibrate by percentage
+                    calib = _p.od.at(fKey);
+                    
+                    if (calib < 0.0 || calib > 1.0)
+                    {
+                        throw std::runtime_error("Calibration fraction must be within [0,1]");
+                    }
+                }
+                else if (_p.od.count(aKey))
+                {
+                    // Calibrate by absolute
+                    if ((calib = _p.od.at(aKey)) < 1)
+                    {
+                        throw std::runtime_error("Number of reads must not be less than 1");
+                    }
+                }
+                else
+                {
+                    // If no calibration specified, it must be -1
+                    assert(calib == NO_CALIBRATION);
+                }
+            };
+            
             switch (_p.tool)
             {
                 case Tool::Meta:
@@ -1039,11 +1075,16 @@ void parse(int argc, char ** argv)
                     initSOptions(o, MetaFA(_p.opts.at(OPT_RESOURCE)).path);
 
                     o.mix = _p.mix;
-                    assert(o.calibS == -1 && o.calibL == -1);
+                    assert(o.oneS == NO_CALIBRATION && o.oneL == NO_CALIBRATION && o.secL == NO_CALIBRATION);
 
-                    if (_p.od.count(OPT_S_CALIB)) { o.calibS = _p.od.at(OPT_S_CALIB); }
-                    if (_p.od.count(OPT_L_CALIB)) { o.calibL = _p.od.at(OPT_L_CALIB); }
-
+                    double tmp = -1;
+                    
+                    initCalib(OPT_S_FRAC, OPT_S_ABSO, "--sequin_fraction", "--sequin_absolute", o.oneS);
+                    initCalib(OPT_L_FRAC, OPT_L_ABSO, "--ladder_fraction", "--ladder_absolute", tmp);
+                    
+                    if (tmp > 1) { o.oneL = tmp; }
+                    else         { o.secL = tmp; }
+                    
                     start<MSplit>("meta", [&](const MSplit::Options &)
                     {
                         if (o.bam) { MSplit::report(_p.opts[OPT_COMBINE], "", o); }
@@ -1059,9 +1100,9 @@ void parse(int argc, char ** argv)
                     initSOptions(o, RNAFA(_p.opts.at(OPT_RESOURCE)).path);
                     
                     o.mix = _p.mix;
-                    assert(o.calibS == -1 && o.calibL == -1);
+                    assert(o.oneS == NO_CALIBRATION && o.oneL == NO_CALIBRATION && o.secL == NO_CALIBRATION);
                     
-                    if (_p.od.count(OPT_S_CALIB)) { o.calibS = _p.od.at(OPT_S_CALIB); }
+                    initCalib(OPT_S_FRAC, OPT_S_ABSO, "--sequin_fraction", "--sequin_absolute", o.oneS);
                     
                     start<RSplit>("rna", [&](const RSplit::Options &)
                     {
@@ -1096,7 +1137,7 @@ void parse(int argc, char ** argv)
                     o.build    = __ha__;
                     o.combined = _p.opts.count(OPT_COMBINE);
                     o.edge     = _p.opts.count(OPT_EDGE) ? stoi(_p.opts[OPT_EDGE]) : DEFAULT_EDGE;
-                    o.uBED     = _p.opts.count(OPT_R_REGS) ? _p.opts[OPT_R_REGS] : "-";
+                    o.uBED     = _p.opts.count(OPT_R_REGS) ? _p.opts[OPT_R_REGS] : MISSING;
                     o.report   = _p.opts.count(OPT_REPORT);
                     
                     const auto f1 = o.combined ? _p.opts.at(OPT_COMBINE) : _p.opts.count(OPT_SAMPLE) ? _p.opts.at(OPT_SAMPLE) : "";
@@ -1104,32 +1145,16 @@ void parse(int argc, char ** argv)
                     
                     if (_p.tool == Tool::Germline)
                     {
-                        start<GGerm>("germline", [&](const GVariant::Options &)
+                        start<GGerm>(o.base = "germline", [&](const GVariant::Options &)
                         {
                             GGerm::report(f1, f2, o);
-                            
-                            if (o.report)
-                            {
-                                typedef Report::Options Options;
-                                Options o2(o);
-                                o2.v = std::shared_ptr<Options::VOptions>(new Options::VOptions());
-                                Report::gReport(o2);
-                            }
                         }, o);
                     }
                     else
                     {
-                        start<GSomatic>("somatic", [&](const GVariant::Options &)
+                        start<GSomatic>(o.base = "somatic", [&](const GVariant::Options &)
                         {
                             GSomatic::report(f1, f2, o);
-                            
-                            if (o.report)
-                            {
-                                typedef Report::Options Options;
-                                Options o2(o);
-                                o2.v = std::shared_ptr<Options::VOptions>(new Options::VOptions());
-                                Report::sReport(o2);
-                            }
                         }, o);
                     }
 
@@ -1142,7 +1167,10 @@ void parse(int argc, char ** argv)
                     
                     GCalibrate::Options o;
                     initSOptions(o, GSeqFA_());
-                    o.edge = _p.opts.count(OPT_EDGE) ? stoi(_p.opts[OPT_EDGE]) : DEFAULT_EDGE;
+                    o.edge = _p.opts.count(OPT_EDGE) ? stoi(_p.opts[OPT_EDGE]) : DEFAULT_EDGE;                    
+                    
+                    o.decoy = GSeqDecoy(_p.opts.at(OPT_RESOURCE)).path;
+                    o.nonDecoy = GSeqFA_();
                     
                     // How to calibrate?
                     const auto meth = _p.opts.count(OPT_METHOD) ? _p.opts[OPT_METHOD] : "mean";
@@ -1212,10 +1240,6 @@ extern int parse_options(int argc, char ** argv)
     catch (const InvalidFormatException &ex)
     {
         printError("Invalid file format: " + std::string(ex.what()));
-    }
-    catch (const UnknownFormatError &ex)
-    {
-        printError("Unknown format for the input file(s)");
     }
     catch (const InvalidUsageException &)
     {

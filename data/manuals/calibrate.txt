@@ -37,6 +37,10 @@ calibrate - Sequin alignments are calibrated to match the alignment coverage of 
     $ anaquin calibrate --sequin sequin.bam --method 0.10
 
 <b>OUTPUTS</b>
-    calibrate_calibrated.bam        Calibrated sequin alignments in BAM format.
+    calibrate_sequins.bam           Calibrated sequin alignments in BAM format.
     calibrate_summary.txt           Summary statistics describing calibration process.
-    calibrate_sequins.csv           Detailed statistics describing calibration of each sequin region.<<@@@@>>
+    calibrate_regions.tsv           Detailed statistics describing calibration of each sequin region.
+    calibrate_sequin.csv            Detailed statistics describing performance of each individual sequin after calibration.
+    calibrate_insert.tsv            Detailed statistics for paired-end insertion size.
+    calibrate_insert.R              R-script for plotting insertion size density.
+    calibrate_somatic.R             R-script for plotting somatic allele frequency ladder.<<@@@@>>

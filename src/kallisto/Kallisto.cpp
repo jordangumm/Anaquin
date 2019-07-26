@@ -47,7 +47,10 @@ class Partition
     
         void writeB(Bin k, const bam1_t *x)
         {
-            bam_write1(bamW.at(k), x);
+            if (bam_write1(bamW.at(k), x) == -1)
+            {
+                throw std::runtime_error("bam_write1 failed");
+            }
         }
     
         void write(Bin, const char *, const char *, const char *, void *,
@@ -143,13 +146,16 @@ Partition::Partition(const Path &p, Thread tID)
         {
             assert(__CombinedBAMHeader__);
             
-            // Never write sample reads for BAM (because SCombine() did it)
+            // Never write sample reads for BAM (because SAlign() did it)
             if (c != ES)
             {
                 if (!__o__.onlySeqLad || c == GR || c == LD)
                 {
                     bamF[c] = p + "/partition_B" + std::to_string(c) + "_" + toString(tID) + ".bam.tmp";
-                    bam_hdr_write(bamW[c] = bgzf_open(bamF[c].c_str(), "w"), __CombinedBAMHeader__);
+                    if (bam_hdr_write(bamW[c] = bgzf_open(bamF[c].c_str(), "w"), __CombinedBAMHeader__) == -1)
+                    {
+                        throw std::runtime_error("bam_hdr_write() failed");
+                    }
                 }
             }
         }

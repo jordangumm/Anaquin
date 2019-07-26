@@ -62,6 +62,6 @@ void GenomicsRef::validate(const UserReference &r)
     _t1 = r.t1;
     _l1 = r.l1; _l2 = r.l2; _l3 = r.l3;
     _r1 = r.r1; _r2 = r.r2; _r3 = r.r3; _r4 = r.r4; _r5 = r.r5;
-    _v1 = r.v1; _v2 = r.v2; _v3 = r.v3;
+    _v1 = r.v1; _v2 = r.v2; _v3 = r.v3; _v4 = r.v4;
     _a1 = r.a1; _a2 = r.a2;
 }

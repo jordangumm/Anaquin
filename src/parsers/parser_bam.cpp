@@ -5,6 +5,16 @@
 
 using namespace Anaquin;
 
+void ParserBAM::Data::lMateID()
+{
+    mID = std::string(static_cast<bam_hdr_t *>(_h)->target_name[static_cast<bam1_t *>(_b)->core.mtid]);
+}
+
+void ParserBAM::Data::lMatePos()
+{
+    mPos = static_cast<bam1_t *>(_b)->core.mpos;
+}
+
 void ParserBAM::Data::lName()
 {
     name = bam_get_qname(static_cast<bam1_t *>(_b));
@@ -30,6 +40,18 @@ void * ParserBAM::Data::copyB() const
 {
     assert(_b);
     return bam_dup1(static_cast<bam1_t *>(_b));
+}
+
+void ParserBAM::Data::lCigar()
+{
+    const auto x = static_cast<bam1_t *>(_b);
+    const auto cig = bam_get_cigar(x);
+    cigars.clear();
+    
+    for (auto i = 0u; i < x->core.n_cigar; i++)
+    {
+        cigars.push_back(std::pair<Cigar, Base>(bam_cigar_op(cig[i]), bam_cigar_oplen(cig[i])));
+    }
 }
 
 bool ParserBAM::Data::nextCigar(Locus &l, bool &spliced)
@@ -182,8 +204,8 @@ void ParserBAM::parse(const FileName &file, Functor x)
         info.b = t;
         info.h = h;
 
-        align._b  = t;
-        align._h  = h;
+        align._b = t;
+        align._h = h;
 
         align.mapq = t->core.qual;
         align.flag = t->core.flag;

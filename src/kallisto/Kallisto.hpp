@@ -54,10 +54,10 @@ namespace Anaquin
         // Number of reads not matching this index (e.g. genome)
         Counts nNMatch = 0;
         
-        // Number of matching k-mers in all reads matching this index
+        // Number of k-mers in all reads matching this index
         Counts nMKMatch = 0;
         
-        // Number of non-matching k-mers in all reads matching this index
+        // Number of k-mers in all reads not matching this index
         Counts nNMKMatch = 0;
         
         // Number of reads for each sequin (2x for paired-end)
@@ -66,7 +66,7 @@ namespace Anaquin
         // Information about paired-end reads
         std::map<Bin, std::map<ReadName, SequinID>> r1, r2;
     };
-
+    
     struct KOptions
     {
         KOptions() : flipBefore(false), flip(true), onlySeqLad(false), forceFQ(false) {}

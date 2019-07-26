@@ -24,19 +24,21 @@ xl <- 'Quality Score'
 yl <- 'False Postivies per Kb'
 
 # ROC only for sequins
-data <- data[data$Label != 'SV',]
+data <- data[data$LABEL != 'SV',]
 
 # Drop the "SV" label
-data$Label <- factor(data$Label)
+data$LABEL <- factor(data$LABEL)
 
 # Unique identifiers for variants
-seqs <- paste(paste(data$Name, data$Pos, sep='_'), data$Type, data$Allele, sep='_')
+seqs <- paste(paste(data$NAME, data$POSITION, sep='_'), data$TYPE, data$ALLELE, sep='_')
+
+data[is.na(data$EXP_FREQ),]$EXP_FREQ <- "-"
 
 # How to group sequins
-grp <- data$ExpFreq
+grp <- data$EXP_FREQ
 
-data$score <- suppressWarnings(data$score <- as.numeric(as.character(data$Qual)))
-data$Label <- revalue(data$Label, c("TP"="1", "FN"="0", 'FP'='0'))
+data$SCORE <- suppressWarnings(data$SCORE <- as.numeric(as.character(data$QUAL)))
+data$LABEL <- revalue(data$LABEL, c("TP"="1", "FN"="0", 'FP'='0'))
 
-plotROC(seqs, data$score, grp, data$Label, xl, yl, title, refGroup='-', legTitle="Allele Freq.")
+plotROC(seqs, data$SCORE, grp, data$LABEL, xl, yl, title, refGroup='-', legTitle="Allele Freq.")
 <<@@@@>>

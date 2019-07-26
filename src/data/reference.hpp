@@ -42,7 +42,7 @@ namespace Anaquin
         
         std::shared_ptr<Ladder> l1, l2, l3, l4;
 
-        std::shared_ptr<VCFLadder> v1, v2, v3;
+        std::shared_ptr<VCFLadder> v1, v2, v3, v4;
         
         std::shared_ptr<Translation> t1;
         
@@ -77,6 +77,7 @@ namespace Anaquin
             inline std::shared_ptr<VCFLadder> v1() const { return _v1; }
             inline std::shared_ptr<VCFLadder> v2() const { return _v2; }
             inline std::shared_ptr<VCFLadder> v3() const { return _v3; }
+            inline std::shared_ptr<VCFLadder> v4() const { return _v4; }
 
             inline std::shared_ptr<Translation> t1() const { return _t1; }
         
@@ -96,7 +97,7 @@ namespace Anaquin
             std::shared_ptr<BedData> _r1, _r2, _r3, _r4, _r5;
 
             // VCF references and allele frequency ladder
-            std::shared_ptr<VCFLadder> _v1, _v2, _v3;
+            std::shared_ptr<VCFLadder> _v1, _v2, _v3, _v4;
         
             // Sequin ladders
             std::shared_ptr<Ladder> _l1, _l2, _l3;

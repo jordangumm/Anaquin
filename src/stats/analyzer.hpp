@@ -95,7 +95,7 @@ namespace Anaquin
         AnalyzerOptions() {}
         AnalyzerOptions(const AnalyzerOptions &x) : WriterOptions(x), name(x.name), cmd(x.cmd), build(x.build) {}
         
-        // Eg: "split"_summary.stats
+        // Eg: "split"_summary.txt
         std::string name;
         
         // Full comamnd

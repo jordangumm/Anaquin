@@ -1,6 +1,6 @@
 #include "stats/linear.hpp"
 #include "tools/errors.hpp"
-#include <ss/regression/linear.hpp>
+#include "stats/ss/regression/linear.hpp"
 
 using namespace Anaquin;
 

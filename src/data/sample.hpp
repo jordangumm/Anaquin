@@ -1,11 +1,11 @@
-#ifndef STATS_HPP
-#define STATS_HPP
+#ifndef __SAMPLE_HPP__
+#define __SAMPLE_HPP__
 
 #include <iomanip>
 #include <sstream>
-#include "ss/stats.hpp"
-#include "data/data.hpp"
 #include <boost/format.hpp>
+#include "data/data.hpp"
+#include "stats/ss/stats.hpp"
 #include <boost/algorithm/string/join.hpp>
 #include <boost/range/adaptor/transformed.hpp>
 

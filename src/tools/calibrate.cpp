@@ -129,7 +129,7 @@ struct FQCalibrator : public Calibrator
             const auto r1 = trimRName(x.name1);
             const auto r2 = trimRName(x.name2);
             
-            assert(r1 == r2);
+            assert(r1 == r2); // After trimmed, the paired-end must still have identical read names
             assert(stats.r1.at(LD).count(r1));
             assert(stats.r2.at(LD).count(r2));
             

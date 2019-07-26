@@ -58,7 +58,16 @@ namespace Anaquin
         Sequence seq;
         
         // ASCII of base QUALity plus 33
-        std::string qual;        
+        std::string qual;
+        
+        // Mate's chromsome
+        ChrID mID;
+
+        // Mate's starting position
+        Base mPos;
+
+        typedef unsigned Cigar;        
+        std::vector<std::pair<Cigar, Base>> cigars;
     };
 }
 

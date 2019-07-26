@@ -209,6 +209,39 @@ static void analyzeMode(Mode mode, const GVariant &v, GVariant::Stats &stats, co
     }
 }
 
+GVariant::TableRow GVariant::getTRow(const Label &col, const std::string &x, const GVariant::Options &o, bool keep)
+{
+    TableRow t;
+    const auto src = o.work + "/" + o.base + "_sequin.tsv";
+    
+    if (!RHead(src, col))
+    {
+        return t;
+    }
+    
+    t.valid = true;
+    const auto tmp = tmpFile();
+    RGrep(src, tmp, col, x, keep);
+    
+    t.tp = RCount(tmp, "LABEL", "TP");
+    t.fp = RCount(tmp, "LABEL", "FP");
+    t.fn = RCount(tmp, "LABEL", "FN");
+    t.nr = t.tp + t.fn;
+    t.sn = (Proportion) t.tp / t.nr;
+    t.pc = (Proportion) t.tp / (t.tp + t.fp);
+    
+    const auto l = RSum(tmp, "SIZE");
+    t.fpKB = l ? (double) t.fp / l : NAN;
+    
+    t.sample = RCount(tmp, "LABEL", "SV");
+    t.depth  = (RHead(tmp, "REF_DEPTH")       ? RSum(tmp, "REF_DEPTH")       : 0) +
+               (RHead(tmp, "VAR_DEPTH")       ? RSum(tmp, "VAR_DEPTH")       : 0) +
+               (RHead(tmp, "REF_DEPTH_TUMOR") ? RSum(tmp, "REF_DEPTH_TUMOR") : 0) +
+               (RHead(tmp, "VAR_DEPTH_TUMOR") ? RSum(tmp, "VAR_DEPTH_TUMOR") : 0);
+
+    return t;
+}
+
 GVariant::Stats GVariant::analyze(Stats &stats, const GVariant &x, const FileName &f1, const FileName &f2, const Options &o, std::shared_ptr<VCFLadder> vl)
 {
     o.info("Edge: " + toString(o.edge));

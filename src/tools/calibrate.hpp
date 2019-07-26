@@ -13,7 +13,7 @@ namespace Anaquin
         public:
             struct Result
             {
-                // Number of reads selected
+                // Number of paired reads selected
                 Counts n = 0;
                 
                 FileName o1, o2;

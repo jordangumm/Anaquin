@@ -82,13 +82,20 @@ static Ladder readLadder(const Reader &r, Mixture m, MixtureFormat format, Ladde
             {
                 return;
             }
+
+            std::string val;
             
             switch (format)
             {
-                case X_M:     { x.add(d[0], m, stold(d[1])); break; }
-                case X_M_X_M: { x.add(d[1], m, stold(d[3])); break; }
-                case M_X_M:   { x.add(d[0], m, stold(d[2])); break; }
-                case X_X_X_M: { x.add(d[0], m, stold(d[3])); break; }
+                case X_M:     { val = d[1]; break; }
+                case X_M_X_M: { val = d[3]; break; }
+                case M_X_M:   { val = d[2]; break; }
+                case X_X_X_M: { val = d[3]; break; }
+            }
+            
+            if (val != "NA")
+            {
+                x.add(d[0], m, stold(val));
             }
         }, delim);
         

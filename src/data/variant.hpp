@@ -128,7 +128,8 @@ namespace Anaquin
         
         std::map<std::string, int> fi;
         std::map<std::string, float> ff;
-        
+        std::map<std::string, std::string> fs;
+
         void *hdr, *line;
     };
 }

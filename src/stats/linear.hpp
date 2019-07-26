@@ -7,33 +7,6 @@
 
 namespace Anaquin
 {
-    struct SLinearStats
-    {
-        SStrings files;
-        
-        // Pearson's correlation
-        SReals r;
-        
-        // Regression slope
-        SReals sl;
-        
-        // Coefficient of determination
-        SReals R2;
-        
-        // P-value under the null hypothesis
-        SReals p;
-        
-        SReals SSM, SSE, SST;
-        
-        SCounts SSM_D, SSE_D, SST_D;
-    };
-    
-    /*
-     * Represents a simple linear regression fitted by maximum-likehihood estimation.
-     *
-     *   Model: y ~ c + m*x
-     */
-    
     struct LinearModel
     {
         // Constant coefficient

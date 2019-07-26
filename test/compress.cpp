@@ -1,5 +1,7 @@
+#ifdef UNIT_TEST
+
 #include <fstream>
-#include <catch.hpp>
+#include <catch2/catch.hpp>
 #include "data/reader.hpp"
 #include "tools/tools.hpp"
 
@@ -65,3 +67,5 @@ TEST_CASE("Compress_3")
     std::string x2((std::istreambuf_iterator<char>(f2)), std::istreambuf_iterator<char>());
     REQUIRE(x1 == x2);
 }
+
+#endif

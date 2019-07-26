@@ -5,9 +5,9 @@
 #include <limits.h>
 #include <algorithm>
 #include <functional>
-#include <ss/data/data.hpp>
-#include <ss/data/errors.hpp>
-#include <ss/internal/stats.hpp>
+#include "stats/ss/data/data.hpp"
+#include "stats/ss/data/errors.hpp"
+#include "stats/ss/internal/stats.hpp"
 
 namespace SS
 {
@@ -23,7 +23,7 @@ namespace SS
     
     template <typename T> typename T::value_type SD(const T &x)
     {
-        return sqrt(var(x));
+        return (x.size() >= 2) ? sqrt(var(x)) : NAN;
     }
     
     template <typename T> typename T::value_type mean(const T &x)
