@@ -309,7 +309,7 @@ void MSplit::report(const FileName &f1, const FileName &f2, const Options &o)
     // Generating meta_sequin.tsv
     writeQuin("meta_sequin.tsv", stats.S1, o);
 
-    if (o.isLCalib())
+    if (o.isSCalib())
     {
         // Generating meta_sequin_calibrated.tsv
         writeQuin("meta_sequin_calibrated.tsv", stats.S2, o);
