@@ -101,7 +101,7 @@ SequinStats Anaquin::RLinear(const FileName &src, const Label &name, const Label
     {
         const auto row = doc.GetRow<std::string>(k);
         
-        if (!isMissing(row[j]))
+        if (!isMissing(row[i]) && !isMissing(row[j]))
         {
             s.add(row[n], stod(row[i]), stod(row[j]));
         }
