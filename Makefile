@@ -8,7 +8,7 @@ CFLAGS   = -g -O2
 CXXFLAGS = -c -std=c++11
 LIBS     = -pthread -lstdc++ -lcurl -lz -lbz2
 DFLAGS   = $(DBACKWARD)
-INCLUDE  = -I third_party/htslib/htslib-1.9 -I third_party/eigen/eigen-3.3.7 -I third_party/boost/boost_1_69_0 -I src -I src/stats -I src/kallisto -I third_party/gzip-hpp/gzip-hpp-master/include -I third_party/zlib/zlib-1.2.11
+INCLUDE  = -I third_party/rapidcsv/src -I third_party/htslib/htslib-1.9 -I third_party/eigen/eigen-3.3.7 -I third_party/boost/boost_1_69_0 -I src -I src/stats -I src/kallisto -I third_party/gzip-hpp/gzip-hpp-master/include -I third_party/zlib/zlib-1.2.11
 
 EXEC         = anaquin
 SOURCES      = $(wildcard src/*.cpp src/RNA/*.cpp src/Meta/*.cpp src/kallisto/*.cpp src/tools/*.cpp src/analyzers/*.cpp src/Genomics/*.cpp src/data/*.cpp src/parsers/*.cpp src/writers/*.cpp src/stats/*.cpp)
