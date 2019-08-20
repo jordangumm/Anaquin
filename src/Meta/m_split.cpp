@@ -225,7 +225,7 @@ static void writeSummary(const FileName &file, const FileName &f1, const FileNam
 
 static void writeQuin(const FileName &file, const SStats &stats, const Options &o)
 {
-    const auto form = "%1%\t%2%\t%3%\t%4%\t%5%\t%6%\t%7%\t%8%\t%9%\t%10%\t%11%";
+    const auto form = "%1%\t%2%\t%3%\t%4%";
     
     #define _S1_(x,y) (x.count(y) && std::isnan(x.at(y)) ? toString(x.at(y)) : MISSING)
     #define _S2_(x,y) (x.count(y) && std::isnan(x.at(y)) ? toString(x.at(y), 2) : MISSING)
@@ -237,13 +237,6 @@ static void writeQuin(const FileName &file, const SStats &stats, const Options &
     o.writer->open(file);
     o.writer->write((boost::format(form) % "NAME"
                                          % "MIX"
-                                         % "SD"
-                                         % "MEAN"
-                                         % "MIN"
-                                         % "Q25"
-                                         % "Q50"
-                                         % "Q75"
-                                         % "MAX"
                                          % "READ"
                                          % "TPM").str());
 
@@ -284,13 +277,6 @@ static void writeQuin(const FileName &file, const SStats &stats, const Options &
         
         o.writer->write((boost::format(form) % x
                                              % mix
-                                             % _S1_(stats.R.d2u.sds, x)
-                                             % _S1_(stats.R.d2u.mus, x)
-                                             % _S1_(stats.R.d2u.mins, x)
-                                             % _S2_(stats.R.d2u.q25,  x)
-                                             % _S2_(stats.R.d2u.meds, x)
-                                             % _S2_(stats.R.d2u.q75,  x)
-                                             % _S1_(stats.R.d2u.maxs, x)
                                              % replaceNA(cn)
                                              % tpm).str());
     }
