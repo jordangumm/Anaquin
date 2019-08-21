@@ -329,7 +329,7 @@ double Anaquin::RLadTable(const FileName &src, const FileName &dst, const Label 
     
     for (auto i = 0; i < keys.size(); i++)
     {
-        const auto cv = mu[keys[i]] == 0.0 ? "NA" : toString(100 * ((double) sd[keys[i]] / mu[keys[i]]), 4.0);
+        const auto cv = mu[keys[i]] == 0.0 ? "NA" : toString((double) sd[keys[i]] / mu[keys[i]], 4.0);
         const auto ro = !i ? NAN : q50[keys[i]] / q50[keys[i-1]];
         const auto cn = std::to_string((int) std::pow(2, i));
         
