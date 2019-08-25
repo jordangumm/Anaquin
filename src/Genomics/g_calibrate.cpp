@@ -990,8 +990,8 @@ static void writeSummary(const FileName &file, const FileName &f1, const FileNam
                                       % o.rule                  // 11
                                       % C(ES)                   // 12
                                       % S2(100.0 * stats.S1.K.binP(ES))
-                                      % C(GR)                // 14
-                                      % S2(100.0 * stats.S1.K.binP(GR))
+                                      % (C(GR) + C(SO))         // 14
+                                      % S2(100.0 * (stats.S1.K.binP(GR) + stats.S1.K.binP(SO)))
                                       % C(LD)                // 16
                                       % S2(100.0 * stats.S1.K.binP(LD))
                                       % C(SV)               // 18
