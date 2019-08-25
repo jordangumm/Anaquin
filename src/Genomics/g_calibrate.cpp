@@ -1008,15 +1008,15 @@ static void writeSummary(const FileName &file, const FileName &f1, const FileNam
                                       % S2(100.0 * stats.S1.K.binP(IF))
                                       % S2(100.0 * s1.dil()) // 30
                                       % stats.S1.K.total()   // 31
-                                      % (o.work + "/split_sample*") // 32
-                                      % (o.work + "/split_sequin*") // 33
-                                      % (o.work + "/split_ladder*") // 34
-                                      % (o.work + "/split_sv*")     // 35
-                                      % (o.work + "/split_immune*") // 36
-                                      % (o.work + "/split_mito*")   // 37
-                                      % (o.work + "/split_hla*")    // 38
-                                      % (o.work + "/split_info*")   // 39
-                                      % (o.work + "/split_vector*") // 40
+                                      % (o.work + "/calibrate_sample*") // 32
+                                      % (o.work + "/calibrate_sequin*") // 33
+                                      % (o.work + "/calibrate_ladder*") // 34
+                                      % (o.work + "/calibrate_sv*")     // 35
+                                      % (o.work + "/calibrate_immune*") // 36
+                                      % (o.work + "/calibrate_mito*")   // 37
+                                      % (o.work + "/calibrate_hla*")    // 38
+                                      % (o.work + "/calibrate_info*")   // 39
+                                      % (o.work + "/calibrate_vector*") // 40
                                       % stats.tBefore.nEndo         // 41
                                       % stats.tBefore.nSeqs         // 42
                                       % (o.meth == Method::Percent ? MISSING : toString(stats.cStats.meanBEndo())) // 43
