@@ -47,7 +47,7 @@ typedef std::string Value;
 
 static HumanAssembly __ha__;
 
-static std::string version() { return "3.8.3"; }
+static std::string version() { return "3.9.0"; }
 
 /*
  * Options specified in the command line
