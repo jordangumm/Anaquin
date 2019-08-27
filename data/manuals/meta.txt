@@ -25,8 +25,6 @@ meta - analyse sequins within metagenome samples.
         --ladder_fraction           Calibrate ladder reads to specified fraction of the library (for example 0.01 calibrates ladder reads/alignments to 1% of
                                     library depth) (default = NA).
         --ladder_absolute           Calibrate ladder reads to a absolute amount (for example 1000 will calibrate sequins to 1000 reads/alignments) (default = NA).
-        --ladder_pool               Specify the ladder library fraction to which ladder reads are calibrated (default = NA). If NA, the least abundant
-                                    ladder sequin will be used.
         --merge                     Generate merged sample and calibrated sequin output file. (default = false)
         --no_flip                   Skip sequin read flipping
 
