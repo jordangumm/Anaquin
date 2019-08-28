@@ -275,6 +275,19 @@ static void writeQuin(const FileName &file, const SStats &stats, const Options &
         // Transcripts per million
         const auto tpm = !std::isnan(cn) && scale ? toString(cn / scale) : MISSING;
         
+        /*
+         * Metagenomics sequins skipped for the release
+         */
+        
+        const auto badSeqs = std::set<SequinID> {
+            "S1124_MG_038_A", "S1128_MG_042_A", "S1093_MG_007_A", "S1094_MG_008_A", "S1116_MG_030_A", "S1111_MG_025_A"
+        };
+        
+        if (badSeqs.count(x))
+        {
+            continue;
+        }
+        
         o.writer->write((boost::format(form) % x
                                              % mix
                                              % replaceNA(cn)
@@ -353,7 +366,7 @@ void MSplit::report(const FileName &f1, const FileName &f2, const Options &o)
     writeLTable(tsv1, "meta_ladder_table.tsv", o);
     
     // Generating sequin abundance table
-    writeSTable(tsv2, "meta_sequin_table.tsv", o, 6, 6, 6, "MIX", "TPM");
+    writeSTable(tsv2, "meta_sequin_table.tsv", o, 6, 6, 6, "MIX", "READ");
 
     // Generating meta_summary.txt
     writeSummary("meta_summary.txt", f1, f2, tsv1, tsv2, stats, o);
