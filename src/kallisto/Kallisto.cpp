@@ -596,7 +596,7 @@ void KPartition(Thread tID,
 
         auto flip = !(k == ES || k == VC || k == IF || k == LD);
        
-        if (__o__.prod == Product::RNA || d->__o__.prod == Product::Meta)
+        if (__o__.prod == Product::RNA || __o__.prod == Product::Meta)
         {
            flip = false;
         }
